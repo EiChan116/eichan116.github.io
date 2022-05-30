@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.header {
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+    background-color: grey;
+    color: rgb(241, 161, 145);
+    font-size: 45px;
+    text-transform: uppercase;
+}
+form {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 200px;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+form, input, select, textarea{
+    width: 100%;
+    background: transparent;
+}
+div {
+    padding-bottom: 20px;
+}
+
+input, select{
+    height: 30px;
+}
+button {
+    color: white;
+    background-color: gray;
+    cursor: pointer;
+    /* padding: 1.4rem; */
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    height: 27px;
+    width: 100%;
+
+    
+}
+button:hover {
+    background-color: rgb(127, 240, 255);
+    color: black;
+}
