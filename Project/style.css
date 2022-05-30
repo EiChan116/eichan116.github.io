@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-
-
 .container {
     margin-left: 200px;
     margin-right: 200px;
@@ -16,9 +14,6 @@
     margin: 50px;
     padding: 50px;
     background-color: grey;
-    color: rgb(241, 161, 145);
-    font-size: 45px;
-    text-transform: uppercase;
 }
 form {
     width: 100%;
@@ -29,7 +24,7 @@ form {
     flex-direction: column;
 }
 
-form, input, select, textarea{
+form, input, select, textarea, button {
     width: 100%;
     background: transparent;
 }
@@ -37,28 +32,14 @@ div {
     padding-bottom: 20px;
 }
 
-input, select{
+input, select, button {
     height: 30px;
 }
 button {
     color: white;
     background-color: gray;
     cursor: pointer;
-    /* padding: 1.4rem; */
-    height: 45px;
-    width: 100%;
-    border-radius: 5px;
-    height: 27px;
-    width: 100%;
 
-    
-}
-button:hover {
-    background-color: rgb(127, 240, 255);
-    color: black;
-}
-@media only screen and (max-width:700px) {
-    div {
-        width: 100%;
-    }
+    padding: 1.4rem;
+
 }
