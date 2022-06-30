@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2</title>
+    <script></script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum 
+        natus, distinctio possimus suscipit nesciunt hic corrupti recusandae 
+        eum nostrum fugiat nihil ullam amet provident. Id facere dolorem 
+        soluta vel voluptas.</p>
+        <p class="mname">This is a second paragraph.</p>
+        <h2 class="mname">Toyoda Yasuhiro</h2>
+        <h2 class="mname">Sakumi Himawari</h2>
+        
+
+        <button id="mybtn">Click me</button>
+        <ul>
+            <li>first year</li>
+            <li>second year</li>
+            <li>third year</li>
+        </ul>
+        <section id = "contents">
+            <ul class="peopel">
+                <li>su su</li>
+                <li>moe moe</li>
+                <li>pu puu</li>
+            </ul>
+        </section>
+        <form action="">
+            <input type="text">
+        </form>
+
+        <script src="jquery.min.js"></script>
+        <script>
+            $(function() {
+                //element selector
+                var p = $("p");
+                console.log(p);
+
+                //class selector
+                var c = $(".mname");
+                console.log(c);
+
+                //id selector
+                var d = $("#mybtn");
+                console.log(d);
+
+                var e = $("h2.mname");
+                console.log(e);
+
+                //first li of first ul
+                var f = $("ul li:first");
+                console.log(f);
+
+                //parent and child selector
+                var pc = $("#contents ul.people li");
+                console.log(pc);
+
+                //filtering 
+
+                //working with form
+            })
+        </script>
+</body>
+</html>

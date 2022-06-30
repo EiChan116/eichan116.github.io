@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3 Assignment</title>
+    <style type="text/css">
+
+        #div {
+            margin-left: 100px;
+            
+            border-radius: 10px;
+            background: black;
+            color: white;
+            width: 290px;
+            padding: 5px;
+        }
+        form {
+            padding-left: 70px;
+            padding-top: 20px;
+        }
+        .display {
+            display: inline-block;
+            width: 145px;
+            height: 25px;
+            background-color: wheat;
+            color: black;
+            text-align: center;
+        }
+        .select {
+            color: white;
+            background-color: black;
+        }
+        .sub {
+            width: 65%;
+            display: block;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="div">
+        <form action="">
+            <input type="text" name="username">
+            <br><br>
+            <input type="number" name="age">
+            <br><br>
+            <input id="single" type="radio" name="select" value="0" checked>
+            <label class="select" for="single">Single</label>
+
+            <input id="marriage" type="radio" name="select" value="1">
+            <label class="select" for="marriage">Marriage</label><br><br>
+
+            <!-- <label class="display" for="" name="result">Spouse</label><br><br>  -->
+            <input type="text" name="spouse" placeholder="Spouse name" id="display"><br><br>
+            <input class="sub" type="submit" value="save"><br>
+        </form>
+        <script src="../jquery.min.js"></script>
+
+        <script>
+
+            $(function() {
+                $(document).ready(function () {
+                    $("#display").hide();
+                })
+                $("#single").click(function () {
+                    $("#display").hide(500);
+                })
+                $("#marriage").click(function () {
+                    $("#display").show(500);
+                })
+
+                    $("form").on("submit", function (e) {
+                        var username = $("input[name = 'username']").val();
+                        var age = $("input[name = 'age']").val();
+                        console.log(age);
+                        console.log(username);
+                        
+                        e.preventDefault();
+                    })
+            })
+        </script>
+    </div>
+    <script>
+        
+    </script>
+</body>
+</html>
