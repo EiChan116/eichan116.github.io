@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event assignment</title>
+
+</head>
+<body>
+    <form action="">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name"><br>
+        
+        <label for="category">Choose category: </label>
+        <select name="category" id="category">
+            <optgroup label="choose category">
+                <option value="1">Fashion</option>
+                <option value="2">Funiture</option>
+                <option value="3">Electronic</option>
+                <option value="4">Cosmatic</option>
+            </optgroup>
+        </select><br><br>
+        <label for="dis">Discount%</label>
+        <input type="text" name="dis" id="dis" value="15" readonly><br><br>
+
+        <input type="submit" value="Save">
+    </form>
+
+    <!-- script -->
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("select[name = 'category']").on("change", function () {
+                var selected = $(this).val();
+                //alert(selected);
+                var dis = 15;
+                if(selected == 1) {
+                    dis = 15;
+                }
+                else if(selected == 2) {
+                    dis = 20;
+                }
+                else if(selected == 3) {
+                    dis = 10;
+                }
+                else if(selected == 4) {
+                    dis = 5;
+                }
+                $("input[name = 'dis']").val(dis);
+            })
+
+           $("form").on("submit", function (e) {
+                e.preventDefault();
+                var name = $("input[name = 'name']").val();
+                var category = $("select[name = 'category']").val();
+                console.log(`${name}, ${category}`);
+           })
+        })
+    </script>
+</body>
+</html>

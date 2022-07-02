@@ -31,13 +31,7 @@
                 alert("The paragraph is hidden now.");
                 });
             })
-            //without call back
-            // $("button").click(function() {
-            //     $("p").hide(1000);
-            //     alert("Thie paragraph is now hidden.");
-            // });
 
-            //from submit
             $("form").on("submit", function(e) {//event of form 
                 var username = $("input[name = 'username']").val()
                 var age = $("input[name = 'age']").val()

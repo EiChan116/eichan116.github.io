@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            background-color: rgb(219, 219, 223);
+            width: 30%;
+            height: 50%;
+            margin-left: 430px;
+            
+            
+        }
+        h3 {
+            padding-top: 25px;
+            text-align: center;
+        }
+        hr {
+            margin-bottom: 25px;
+            margin-top: -10px;
+        }
+        .save {
+            border: none;
+            background-color: rgb(86, 140, 160);
+            color: rgb(207, 207, 210);
+            padding: 15x 32px;
+            text-align: center;
+            font-size: 16px;
+            width: 90px;
+            height: 30px;
+            border-radius: 7px;
+        }
+        #name {
+            width: 210px;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form style="text-align: center;" action="">
+        <h3>Checking user's hobby</h3><hr>
+        <input type="text" name="name" id="name" placeholder="Enter name..."><br><br>
+        <label for="hobbies">Hobbies</label><br>
+
+        <input type="checkbox" id="travelling" value="Travelling" name="hobby" id="">Travelling
+        <input type="checkbox" id="reading" value="Reading" name="hobby1">Reading
+        <input type="checkbox" id="singing" value="Singing" name="hobby2">Singing
+        <br><br>
+        <input class="save" type="submit" value="Save"><br><br>
+        
+        
+    </form>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#hobby").hide();
+            //start form submitting
+           $("form").on("submit", function(e) {
+            e.preventDefault();
+            var name = $("input[name = 'name']").val();
+            
+            // data assign
+            var hobby = $("input[name = 'hobby']:checked").val();
+            var hobby1 = $("input[name = 'hobby1']:checked").val();
+            var hobby2 = $("input[name = 'hobby2']:checked").val();
+           //console.log(`${name}, ${hobby},${hobby1},${hobby2}`);
+        
+            var sentence = "";
+            if(hobby && hobby1 && hobby2) {
+                alert(`User name is ${name} and hobbies are ${hobby}, ${hobby1} and ${hobby2}.`);
+            }
+            else if(hobby && hobby2) {
+                alert(`User name is ${name} and hobbies are ${hobby} and ${hobby2}.`);
+            }
+            else if(hobby && hobby1) {
+                alert(`User name is ${name} and hobbies are ${hobby} and ${hobby1}.`);
+            }
+            else if(hobby1 && hobby2) {
+                alert(`User name is ${name} and hobbies are ${hobby1} and ${hobby2}`);
+            }
+            else if(hobby) {
+                var h = $("input[name = 'hobby']").val();
+                alert(`User name is ${name} and hobby is ${h}.`);              
+            }
+            else if(hobby1) {
+                var h1 = $("input[name = 'hobby1']").val();
+                alert(`User name is ${name} and hobby is ${h1}.`);
+            }
+            else if(hobby2) {
+                var h2 = $("input[name = 'hobby2']").val();
+                alert(`User name is $${name} and hobby is ${h2}.`);
+            }
+           })
+        });
+    </script>
+</body>
+</html>
