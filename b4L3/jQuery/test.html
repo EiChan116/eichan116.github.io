@@ -26,12 +26,21 @@
     <script>
         $(function () {
             $(".spouse").hide();
-            $("#marriage").on("click", function () {
-                $(".spouse").show();
-            })
-            $("#single").on("click", function() {
-                $(".spouse").hide();
-            })
+                
+                $("#single").click(function () {
+                    $(".spouse").hide(500);
+                })
+                $("#marriage").click(function () {
+                    $(".spouse").show(500);
+                })    
+
+            // $(".spouse").hide();
+            // $("#marriage").on("click", function () {
+            //     $(".spouse").show();
+            // })
+            // $("#single").on("click", function() {
+            //     $(".spouse").hide();
+            // })
             $("form").on("submit", function (e) {
                 e.preventDefault();//stop a moment
                 var name = $("input[name = 'name']").val()
@@ -47,6 +56,7 @@
                 else if(status == 0) {
                     data += `User name is ${name} and ${age} year old and single.`;
                 }
+                alert(data);
             })
 
         })

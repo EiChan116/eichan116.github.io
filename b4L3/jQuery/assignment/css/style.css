@@ -17,21 +17,37 @@
     height: 200px;
     background-color: gray;
     margin-bottom: 20px;
+    border-radius: 7px;
+    position: relative;;
+}
+p {
+    text-align: left;
+    font-size: 18px;
+    text-align: center;
+    margin-left: -40px;
+    margin-bottom: -15px;
 }
 .product {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 30px;
+    /* grid-gap: 30px; */
     margin: 0px 50px;
     text-align: center;
     width: 50%;
-
+    position: inherit;
+}
+button:hover {
+    cursor: pointer;
+    background-color: aqua;
+    color: gray;
 }
 button {
     margin-top: 20px;
     padding: 11px 34px;
     border-radius: 11px;
     background-color: rgb(243, 124, 143);
-    border-color: rgb(243, 124, 143);
     text-decoration: none;
+    border: none;
+    position: inherit;
+    margin-left: -40px;
 }
