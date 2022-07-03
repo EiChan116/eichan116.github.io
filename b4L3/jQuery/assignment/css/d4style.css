@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+}
+hr {
+    width: 100px;
+    border: 1px solid #52e4fb;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+.product {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+img {
+    width: 50%;
+    border-radius: 16px;
+    grid-gap: 100px;
+    margin: 0px 50px;
+    box-shadow: 0 10px 20px rgb(101, 103, 103);
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgba(251, 74, 95, 0.388);
+    color: #fbe6e0;
+}
+
+button {
+    border: none;
+    width: 100px;
+    height: 24px;
+    color: rgb(101, 103, 103);
+    background-color: #52e4fb;
+    border-radius: 5px;
+}
