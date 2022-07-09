@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="pp">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quod nisi cumque consequatur recusandae quae rem ut dignissimos facilis veritatis, dolorem esse natus! Quod, minima quaerat doloremque ducimus quidem fugit.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatum adipisci, repellendus quisquam ab dignissimos. Quo, recusandae ad! Aut velit molestias nobis perferendis magnam rerum reiciendis corrupti est iste tenetur.</p>
+    <button class="btn">Ok</button>
+    <button class="ok">OOK</button><br><br>
+
+    <form action="">
+        <input type="text" name="name" id=""><br>
+        <input type="number" name="age"><br><br>
+        <input type="submit" name="" value="Save"><br>
+    </form>
+
+
+
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".para").on("click", function() {
+                alert(`Click on the paragraph!`);
+                console.log($(this));
+            }) 
+           $(".btn").on("click", function() {
+                $("p.para").hide("slow", function () {
+                    alert("Paragraph has hidden.")
+                });
+           })
+           $(".ok").on("click", function() {
+                $(".pp").hide(1000);
+                    alert(`Hidden`);
+           })
+           $("form").on("submit", function(e) {
+                var name = $("input[name = name]").val();
+                var age = $("input[name = age]").val();
+                console.log(name);
+
+                var err = false;
+                
+                if(name.length<5) {
+                    err = true;
+                }
+                if(age <=17) {
+                    err = true;
+                }
+                if(err) {
+
+                
+                e.preventDefault();
+                }
+           })
+        })
+    </script>
+</body>
+</html>

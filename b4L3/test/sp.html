@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <label for="name">Enter name: </label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="age">Enter age: </label>
+        <input type="number" name="age" id="age"><br>
+
+        <input type="radio" id="single" value="0" name="status" checked>
+        <label for="single">Single</label>
+        <input type="radio" id="married" value="1" name="status">
+        <label for="married">Married</label>
+
+        <div class="spouse">
+            <label for="spouse">Enter spouse name: </label>
+            <input type="text" id="spouse" name="spouse">
+        </div><br>
+        <textarea name="display" id="display" cols="30" rows="10"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".spouse").hide();
+
+            $("#married").on("click", function() {
+                $(".spouse").show();
+            })
+
+            $("#single").on("click", function() {
+                $(".spouse").hide();
+            })
+            
+            $("form").on("submit", function(e) {
+                e.preventDefault();
+                var name = $("input[name = 'name']").val();
+                var age = $("input[name = 'age']").val();
+                var status = $("input[name = 'status']:checked").val();
+                console.log(`${name},${age},${status}`);
+                var data = "";
+                if(status == 1) {
+                    var spouse = $("input[name = 'spouse']").val();
+                    data += `User name is ${name} and ${age} year old. Spouse name is ${spouse}.`;
+                }
+                else if(status == 0) {
+                    data += `User name is ${name} and ${age} year old.`;
+                }
+                // alert(data);
+                $("textarea[name = 'display']").val(data);
+            });
+        });
+    </script>
+</body>
+</html>

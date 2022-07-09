@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: gray;
+            width: 900px;
+            height: 700px;
+            
+        }
+        .container p {
+            border: solid wheat;
+            max-height: 120px;
+            max-width: 900px;
+            border-radius: 7px;
+            display: flex;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <p class="memeImgs"></p>
+    <div class="memeEdit" >
+        <img class="seletedMeMe" data-id="181913649" data-url="https://i.imgflip.com/30b1gx.jpg" data-name="Drake Hotline Bling" src="https://i.imgflip.com/30b1gx.jpg">
+    </div>
+    <button class="generate">Generate</button>
+</div>
+<script src="jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(function() {
+        $.get("https://api.imgflip.com/get_memes", function(response) {
+                if(response.success) {
+                    var memes = response.data.memes;
+                    var data = "";
+                    for (const row of memes) {
+                        data += `<img src = "${row.url}" alt = "${row.name}" width = "100px" height = "100px"/>`;
+                    }
+                    $(".memeImgs").html(data)
+                    
+                }
+            });
+    });
+
+
+$(".generate").on("click", function() {
+        var id = $(this).data("url");
+                var name = $(this).data("name");
+                var count = $(this).data("box");
+                console.log(`${url},${name},${count}`)
+                
+                    Swal.fire({
+                    title: 'Sweet!',
+                    text: 'Modal with a custom image.',
+                    imageUrl: 'https://i.imgflip.com/30b1gx.jpg',
+                    imageWidth: 400,
+                    imageHeight: 400,
+                    imageAlt: 'Custom image',
+                    })
+    });
+</script>
+</body>
+</html>

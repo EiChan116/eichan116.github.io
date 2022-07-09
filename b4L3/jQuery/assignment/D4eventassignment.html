@@ -58,19 +58,19 @@
     <script src="../jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#hobby").hide();
+    
             //start form submitting
            $("form").on("submit", function(e) {
             e.preventDefault();
-            var name = $("input[name = 'name']").val();
             
-            // data assign
+            // data collecting
+            var name = $("input[name = 'name']").val();
             var hobby = $("input[name = 'hobby']:checked").val();
             var hobby1 = $("input[name = 'hobby1']:checked").val();
             var hobby2 = $("input[name = 'hobby2']:checked").val();
            //console.log(`${name}, ${hobby},${hobby1},${hobby2}`);
         
-            var sentence = "";
+            //checking condition for output result
             if(hobby && hobby1 && hobby2) {
                 alert(`User name is ${name} and hobbies are ${hobby}, ${hobby1} and ${hobby2}.`);
             }
@@ -81,7 +81,7 @@
                 alert(`User name is ${name} and hobbies are ${hobby} and ${hobby1}.`);
             }
             else if(hobby1 && hobby2) {
-                alert(`User name is ${name} and hobbies are ${hobby1} and ${hobby2}`);
+                alert(`User name is ${name} and hobbies are ${hobby1} and ${hobby2}.`);
             }
             else if(hobby) {
                 var h = $("input[name = 'hobby']").val();
@@ -94,6 +94,8 @@
             else if(hobby2) {
                 var h2 = $("input[name = 'hobby2']").val();
                 alert(`User name is $${name} and hobby is ${h2}.`);
+            }else {
+                alert(`Please check for hobby checkbox, thank you.`);
             }
            })
         });

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Enter name: </label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="item">Choose items:</label>
+        <select name="item" id="item">
+            <optgroup label="choose items">
+                <option value="1">Stationaries</option>
+                <option value="2">Kitchen stuffs</option>
+                <option value="3">Electronic</option>
+                <option value="4">Costmatic</option>
+                <option value="5">Foods</option>
+            </optgroup>
+        </select><br>
+
+        <label for="dis">Discount % :</label>
+        <input type="number" id="dis" name="dis" value="15" readonly><br>
+        <input type="submit" value="submit">
+    </form>
+
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("select[name = 'item']").on("change", function() {
+                // alert("ok")
+                var selected = $(this).val();
+                // alert(`${selected}`);
+                var dis = 15;
+                if(selected == 1) {
+                    dis = 15;
+                }
+                else if(selected == 2) {
+                    dis = 45;
+                }
+                else if(selected == 3) {
+                    dis = 25;
+                }
+                else if(selected == 4) {
+                    dis = 5;
+                }
+                else if(selected = 5) {
+                    dis = 55;
+                }
+                $("input[name = 'dis']").val(dis);
+            })
+            $("form").on("submit", function(e) {
+                e.preventDefault();
+                var name = $("input[name = 'name']").val();
+                var item = $("select[name = 'item']").val();
+                console.log(`${name}, ${item}`);
+            })
+        })
+    </script>
+</body>
+</html>

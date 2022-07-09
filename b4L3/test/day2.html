@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var p = $("p");//element selector
+            console.log(p);
+
+            //class selector
+            var c = $(".name");
+            console.log(c);
+
+            //id selector
+            var btn = $("#btn");
+            console.log(btn);
+            if("btn"){
+                console.log("Have btn!");
+            }
+
+            //
+            var ec = $("h2.name");
+            console.log(ec);
+            //first li of first ul
+            var result = $("ul li:last")
+            console.log(result);
+        })
+        var form1 = $(".name");
+        console.log(form1)
+        
+    </script>
+</head>
+<body>
+    <h2 class="name">Toyoda</h2>
+    <p class="name">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam molestias praesentium officia repellendus ducimus ab eos hic, quibusdam, dignissimos eaque dolor aut repudiandae omnis suscipit perspiciatis nostrum quod consequuntur fugit!</p>
+    <p class="name">This is the second p tag</p>
+
+    <ul>
+        <li>First</li>
+        <li>Second </li>
+        <li>Third</li>
+    </ul>
+    <section id="contents">
+        <ul class="fruits">
+            <li>Apple</li>
+            <li>Orange</li>
+            <li>Kiwi</li>
+        </ul>
+    </section>
+
+    <form action="">
+        <input type="text" name="" id="name">
+    </form>
+
+    <button id="btn">Ok</button>
+</body>
+</html>

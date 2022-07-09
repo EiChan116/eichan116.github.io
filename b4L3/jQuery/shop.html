@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            align-content: space-between;
+            text-align: center;
+        }
+        img{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Popular Items</h2>
+        <div class="products">
+            <div class="item">
+                <img src="../jQuery/image/winet.jpg" alt="item one" srcset="">
+                <h4>Item One</h4>
+                <p>1500 Ks</p>
+                <button class="addtocart">Add to cart</button>
+            </div>
+            <div class="item">
+                <img src="../jQuery/image/winet.jpg" alt="item two" srcset="">
+                <h4>Item One</h4>
+                <p>1500 Ks</p>
+                <button class="addtocart">Add to cart</button>
+            </div>
+            <div class="item">
+                <img src="../jQuery/image/winet.jpg" alt="item three" srcset="">
+                <h4>Item One</h4>
+                <p>1500 Ks</p>
+                <button class="addtocart">Add to cart</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src="jquery.min.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        $(function() {
+            // //when click add to cart btn
+            // [
+            //     {id:1, name: 'item one', price: 100, qty: 1}
+            // ]
+
+        })
+    </script>
+</body>
+</html>

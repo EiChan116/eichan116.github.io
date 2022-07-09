@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Enter name: </label>
+        <input type="text" name="name" id="name"><br>
+
+        <label for="age">Choose category: </label>
+        <select name="category" id="category"><!--drop down-->
+            <optgroup label="choose category"> 
+                <option value="1">Fashion</option>
+                <option value="2">Costmic</option>
+                <option value="3">Funiture</option>
+                <option value="4">Books</option>
+            </optgroup><br>
+        </select><br>
+        <label for="dis">Discount: </label>
+        <input type="text" name="dis" id="dis" value="15" readonly><br>
+        <input type="submit" name="" id="" value="Save">
+
+        <!-- <select name="item" id="item">
+            <optgroup>
+                <option value="1">Lipstick</option>
+                <option value="2">Serum</option>
+                <option value="3">Torner</option>
+                <option value="4">Fundation</option>
+            </optgroup>
+        </select> -->
+        
+    </form>
+    <script src="../jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("select[name = 'category']").on("change",function () {//2nd
+                //alert('ok');
+                var selected = $(this).val();
+                //alert(selected);testing whether working or not
+                var dis;
+                if(selected == 1) {
+                    dis = 15;
+                }
+                else if(selected == 2) {
+                    dis = 20;
+                } 
+                else if(selected == 3) {
+                    dis = 25;
+                }
+                else if(selected == 4) {
+                    dis = 5;
+                }
+                $("input[name = 'dis']").val(dis);
+
+            })
+            $("form").on("submit", function(event) {//1st
+                event.preventDefault();
+                var name = $("input[name = 'name']").val();
+                var category = $("select[name = 'category']").val();
+                console.log(`${name}, ${category}`);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.link-wrapper { /*link-wraper class in ul*/
+            list-style: none; /*sambol remove*/
+            text-align: center;/*center*/
+        }
+        ul.link-wrapper li {
+            display: inline-block;/*inline-block ka margin padding on loh ya*/
+            padding: 10px;
+        }
+        ul.link-wrapper li a {
+            text-decoration: none;/*remove underline of link*/
+            color: black;
+            padding: 10px;
+        }
+        ul.link-wrapper li a.active {
+            color: #0037ff;
+            border-bottom: 1px solid red;
+        }
+        .content {
+            max-width: 800px;
+            background-color: antiquewhite;
+            padding: 20px;
+            margin: 0 auto;
+            display: none;/*hide all content class(paragraph)*/
+        }
+        .products {
+            display: flex;
+            align-content: space-between;
+            text-align: center;
+            gap: 20px;
+        }
+        .item {
+            max-width: 240px;
+        }
+        .item img {
+            width: 50%;
+        }
+        .content h2 {
+            text-align: center;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        $(function() {
+            $('.content').first().slideDown();/*အကုန်လုံးကို ဖျောက်ထားပေမယ့်slidedown နဲ့ပြန်ဖော်တယ်*/
+
+            $('ul.link-wrapper li a').on("click", function(e) {
+                var current_tab = $(this);//လက်ရှိ၀င်နေတဲ့နှိပ်ထားတဲ့ a tapကို current_tab ဆိုတဲ့ varထဲ့ထည့်
+                $('ul.link-wrapper li a').removeClass('active');//ရှိသမျှactiveအားလုံးကိုဖြုတ်
+                current_tab.addClass('active');//userနှိပ်ထားတဲ့ a tag ကို ဖြစ်အောင်ဒီဖန်ရှင်ကိုလှမ်းခေါ် *.addclass()
+
+                $('.content').slideUp();//hide all
+                current_tab_href = current_tab.attr('href');//လက်ရှိ a ရဲ့attribute ကိုလိုချင်တာဖြစ်လို့attrဆိုတာသုံး
+                $(current_tab_href).slideDown();//ပြန်ဖော်တယ်
+
+                e.preventDefault();
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- nav -->
+    <div class="tab">
+        <ul class="link-wrapper">
+            <li>
+                <a href="#home" class="active">Home</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#shop">Shop</a>
+            </li>
+            <li>
+                <a href="#cart">Cart</a>
+            </li>
+        </ul>
+    
+    <!-- content -->
+    <div class="content" id="home">
+        <h2>Home Tab</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates labore, eius natus repudiandae commodi illo, quod quaerat laboriosam totam facilis eveniet alias. Asperiores adipisci nostrum ex vitae fuga alias in!</p>
+    </div>
+    <div class="content" id="about">
+        <h2>About Tab</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates labore, eius natus repudiandae commodi illo, quod quaerat laboriosam totam facilis eveniet alias. Asperiores adipisci nostrum ex vitae fuga alias in!</p>
+    </div>
+    <div class="content" id="contact">
+        <h2>About Tab</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates labore, eius natus repudiandae commodi illo, quod quaerat laboriosam totam facilis eveniet alias. Asperiores adipisci nostrum ex vitae fuga alias in!</p>
+    </div>
+    <div class="content" id="shop">
+        <h2>Shop Tab</h2>
+        <div class="products">
+                <div class="item">
+                    <img src="../jQuery/image/winet.jpg" alt="item one" srcset="">
+                    <h4>Item One</h4>
+                    <p>1500 Ks</p>
+                    <button class="addtocart" data-id="1" data-name="Item One" data-price="1500">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="../jQuery/image/chandon.jpg" alt="item two" srcset="">
+                    <h4>Item Two</h4>
+                    <p>1340 Ks</p>
+                    <button class="addtocart" data-id="2" data-name="Item Two" data-price="1340">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="../jQuery/image/pereg-vino.jpg" alt="item three" srcset="">
+                    <h4>Item Three</h4>
+                    <p>4400 Ks</p>
+                    <button class="addtocart" data-id="3" data-name="Item Three" data-price="4400">Add to cart</button>
+                </div>
+    
+            </div>
+        </div>
+           
+        <div class="content" id="cart">
+        <h2>Card Tab</h2>
+        <div id="cartitems"></div>
+        <table border="1" cellpsacing="" cellpadding="">
+            <thead>
+                
+                    <tr>
+                        <th>No</th>
+                        <th>No</th>
+                        <th>No</th>
+                        <th>No</th>
+                        <th>No</th>
+                    </tr>
+                
+            </thead>
+            <tbody class="cartitems">
+
+            </tbody>
+        </table>
+        
+    </div>
+    </div>
+
+</div>
+<script src="jquery.min.js"></script>
+<script>
+    $(function() {
+        $("button.atcbtn").on("click", function() {
+
+        });
+        function getData() {
+            var cartStr = localStorage.getItem('cart');
+            var data= "";
+
+            if(!cartStr) {
+                data += `Your cart is empty!`;
+            }
+            else {
+                var cartArr = JSON.parse(cartStr);
+                $.each(cartArr, function() {
+                    data += `<tr>
+                        <td>${i}</td>
+                        <td>${v.name}<td/>
+                            <td>${v.price}<td/>
+                                <td>${v.qty}<td/>
+                                    <td>${v.qty*v.price}</td>
+                                    </tr>`
+                })
+                data += `<tr></tr>`
+            }
+        }
+    });
+            
+</script>
+</body>
+</html>

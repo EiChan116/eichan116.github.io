@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btncreate">Create</button>
+    <div id="memes">
+
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            //get
+            $.get("https://api.imgflip.com/get_memes", function(response) {
+               // console.log(response);
+                if(response.success) {
+                    console.log(response.data.memes)
+                    var memes = response.data.memes;
+                    var data = "";
+                    for (const row of memes) {
+                        data += `<img src = "${row.url}" alt = "${row.name}" width = "100"/>`;
+                    }
+                    $("#memes").html(data)
+                }
+            });
+            //post
+            $(".btncreate").on("click", function() {
+                $.post("https://api.imgflip.com/caption_image", {
+                    template_id: "181913649",
+                    username: "eichen",
+                    password: "Osakajapan",
+                    text0: "Hi",
+                    text1: "Hello"
+                }, function (resp) {
+                    //console.log(resp);
+                    if(resp.success) {
+                        var image = `<img src = "${resp.data.url}" width = "500"/>`;
+                        $("#memes").html(image);
+                    }
+                })
+                
+            })
+        })
+    </script>
+</body>
+<script>
+    $(".btncreate").on("click", function() {
+        Swal.fire({
+            title: 'Sweet!',
+            text: 'Modal with a custom image.',
+            imageUrl: 'https://i.imgflip.com/30b1gx.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
+    })
+</script>
+</html>

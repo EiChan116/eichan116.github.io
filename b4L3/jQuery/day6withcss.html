@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .active { /*for duplicate code*/
+        color: blueviolet;
+        font-size: 20px;
+    }
+</style>
+<body>
+  
+    <p class="p">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto sint voluptatem, sequi inventore soluta ratione possimus ipsum obcaecati quisquam, id in consequatur provident sed facere, repudiandae eum itaque illum nemo?
+    </p>
+    <button class="addbtn">Add</button>
+    <button class="removebtn">Remove</button>
+
+    <a href="http://google.com" class="mya">Google</a>
+    <button class="change">Change</button><br><br>
+
+    <form action="">
+        <input type="number" name="total" id="total"><br>
+        <input type="number" name="pay" id="pay"><br>
+        <input type="number" name="change" id="change"><br>
+        <input type="submit" value="Ok">
+    </form>    
+
+    <script src="jquery.min.js"></script>
+
+ 
+    <script>
+        $(function() {
+            //array
+            var color = new Array();
+            color.push("Yellow");
+
+            var student = {
+                name: 'Toyoda',
+                age: 54,
+            }
+            color.push(student);
+            console.log(color);
+
+            $(".addbtn").on("click", function() {
+                var paragraph = $(".p");
+                paragraph.addClass("active");
+            })
+            $(".removebtn").on("click", function() {
+                var paragraph = $(".p");
+                paragraph.removeClass("active");
+            })
+            $(".change").on("click", function() {
+                var mya = $(".mya");
+                var href = mya.attr('href');//a ထဲက href တန်ဘိုးကိုယူတာ တကယ်လို့ img ဆိုရင် src ကိုယူရ
+                console.log(href);
+                mya.attr('href', 'http://facebook.com')//change value into from href
+                // mya.text('Facebook');
+                mya.html('<i>Facebook</i>')
+            })
+
+            $("input[name = change]").on("focus", function() {//ဒီinput မှာ cursur သွားချတာ
+                // alert('ok');
+                var tot = $("input[name = total").val();
+                var pay = $("input[name = pay]").val();
+                var change = pay - tot;
+                $(this).val(change);//current select နေတဲ့ input  ထဲကို နှုတ်လို့ရလာတဲ့တန်ဘိုးထည့်
+
+            })
+        })
+    </script>
+</body>
+</html>

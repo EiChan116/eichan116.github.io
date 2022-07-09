@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    
+
+    <p class="myp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, placeat quas, quisquam accusamus voluptate veritatis, quia exercitationem rerum neque pariatur cum consequatur totam aspernatur provident suscipit assumenda minus temporibus! Dolore.</p>
+
+    <button class="addbtn">Click</button>
+    <button class="removebtn">Remove</button>
+
+    <a class="mya" href="http://google.com">Google</a>
+    <button class="change">Change</button>
+
+    <form action="">
+        Total<input type="number" name="total" id="total"><br>
+        Pay<input type="number" name="pay" id="pay"><br>
+        Change<input type="number" name="change" id="change"><br>
+        <input type="submit" value="Ok">
+    </form>
+
+
+    <!-- script -->
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".addbtn").on("click", function() {
+                var myp = $(".myp");
+                // myp.css({
+                //     color: "red",
+                //     fontSize: 20px
+                // });
+                myp.addClass("active");//create css file in advance and reuse
+            })
+            $(".removebtn").on("click", function() {
+                var myp = $(".myp");
+                myp.removeClass("active");
+            })
+            $(".change").on("click", function() {
+                var mya = $(".mya")
+                var href = mya.attr('href')//taking data from a href value
+                console.log(href);//checking 
+                mya.attr('href', 'http://facebook.com')
+                //mya.text('Facebook')
+                mya.html('<i>Facebook</i> ')
+            })
+
+            $("input[name = 'change']").on("focus", function() {
+                var total = $("input[name = total]").val();
+                var pay = $("input[name = pay]").val();
+                var change = pay - total;
+                $(this).val(change);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btncreate">Create</button><!--post-->
+    <div id="memes"> <!--get-->
+
+    </div>
+    <button class="mybtn" data-url = "" data-box="" data-name="">My btn</button>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            $.get("https://api.imgflip.com/get_memes", function(resp) {
+                // console.log(resp);//server response
+                if(resp.success) {// if true
+                    // console.log(resp.data.memes)
+                    
+                    var memes = resp.data.memes;
+                    var data = "";
+                    for (const row of memes) {//lootping
+                        data += `<img src = "${row.url}" alt = "${row.name}"" width = "100">`;
+                    }
+                    $("#memes").html(data)
+                }
+            });
+            $(".btncreate").on("click", function() {
+                $.post("https://api.imgflip.com/caption_image", {
+                    template_id: "181913649",
+                    username: "ThetPaingHtut",
+                    password: "Apple!@#",
+                    text0: "hi",
+                    text1: "hihi"
+                }, function(resp) {
+                    //console.log(resp);
+                    if(resp.success) {
+                        var img = `<img src = "${resp.data.url}" width = "500">`
+                        $("#memes").html(img)
+                    }
+                })
+            })
+            
+        })
+    </script>
+</body>
+</html>
