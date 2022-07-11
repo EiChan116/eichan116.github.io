@@ -45,10 +45,7 @@
                     
                 }
             });
-    });
-
-
-$(".generate").on("click", function() {
+            $(".generate").on("click", function() {
         var id = $(this).data("url");
                 var name = $(this).data("name");
                 var count = $(this).data("box");
@@ -62,6 +59,7 @@ $(".generate").on("click", function() {
                     imageHeight: 400,
                     imageAlt: 'Custom image',
                     })
+    });
     });
 </script>
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="http://google.com">Google</a><br>
+    <button class="change">Change</button>
+    <button class="remo">Remove</button>
+
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(".change").on("click", function() {
+            var mya = $("a");
+            var href = mya.attr("href");
+            console.log(href)
+            mya.attr('href', 'http://facebook.com')
+            // mya.text('facebook')
+            mya.html('<i>facebook</i>')
+        })
+    </script>
+</body>
+</html>

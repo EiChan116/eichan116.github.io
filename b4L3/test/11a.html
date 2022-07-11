@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><button class="btn">Post</button>
+    <div class="" id="memes"></div>
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $.get("https://api.imgflip.com/get_memes", function(response) {
+                // console.log(response)
+                if(response.success) {
+                    // console.log(response.data.memes)
+                    var memes = response.data.memes;
+                    var data = ""; 
+                    for (const row of memes) {
+                        data += `<img src = "${row.url}" alt = "${row.name}" width = "100">`;
+                    }
+                    $("#memes").html(data)
+                }
+            });
+            $(".btn").on("click", function() {
+                $.post("https://api.imgflip.com/caption_image", {
+                    template_id: "181913649",
+                    username: "eichen",
+                    password: "Osakajapan",
+                    text0: "Dont",
+                    text1: "I know everything!"
+                }, function(response) {
+                    // console.log(response);
+                    if(response.success) {
+                        var img = `<img src ="${response.data.url}" width = "500">`
+                        $("#memes").html(img);
+                    }
+                });
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            
+        }
+        #main {
+            
+            width: 70%;
+            height: 500px;
+            background-color: rgb(251, 187, 198);
+            border: 10px;
+            margin: auto;
+        }
+        .img_scroll {
+            display: grid;
+            grid-auto-flow: column;
+            overflow-x: auto;
+            grid-auto-columns: auto;
+        }
+        .scroll {
+
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div class="img_scroll"></div>
+    </div>
+    
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        $(function () {
+            $.get("https://api.imgflip.com/get_memes", function(response) {
+                if(response.success) {
+                    var memes = response.data.memes;
+                    var data = "";
+                //    console.log(response)
+                    if(response.success) {
+                        // console.log(response.data.memes)
+                        for (const row of memes) {
+                        var memes = response.data.memes;
+                        var data = "";
+                        data = `<img class = "meme_img" data-id = "${row.id}" data-name = "${row.name}" data-url = "${row.url}" data-box = "${row.box_count}" src = "${row.url}" alt = "${row.name}">`;
+                        }
+
+                    }
+                    $(".img_scroll").html(data);
+                }
+            });
+            $("#main").on("click", ".meme_img", function() {
+                var id = $(this).data("id");
+                var url = $(this).data("url");
+                var name = $(this).data("name");
+            })
+        });
+    </script>
+</body>
+</html>

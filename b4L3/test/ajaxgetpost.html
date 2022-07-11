@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn" data-url = "google" data-name = "social" data-box = "3">btnclick</button>
+    <button class="btn">Post</button>
+    <div id = "memes"></div>
+
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $.get(" https://api.imgflip.com/get_memes ", function(resp) {
+                // console.log(resp);
+                if(resp.success) {
+                     console.log(resp.data.memes);
+                    
+                    var memes = resp.data.memes;
+                    var data = "";
+                    for (const row of memes) {
+                        data += `<img src = "${row.url}" alt = "${row.name}" width = "100">`;
+                    }
+                    $("#memes").html(data);
+                }
+                
+            });
+            $(".btn").on("click", function() {
+                $.post("https://api.imgflip.com/caption_image", {
+                    template_id: "181913649",
+                    username: "eichen",
+                    password: "Osakajapan",
+                    text0: "Dont tell me anything",
+                    text1: "Because i know everything",
+                }, function(response) {
+                    // console.log(response);
+                    if(response.success) {
+                        var img = `<img src = "${response.data.url}" width = "500px">`;
+                        $("#memes").html(img);
+                    }
+                })
+            });
+            $(".btn").on("click", function() {
+                var url = $(this).data("url");
+                var name = $(this).data("name");
+                var count = $(this).data("box");
+
+                console.log(`${url},${name},${count}`);
+            })
+        })
+    </script>
+</body>
+</html>

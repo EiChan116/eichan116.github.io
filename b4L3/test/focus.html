@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <form action="">
+        <label for="tot">Total</label>
+        <input type="number" name="tot" id="tot"><br>
+        <label for="pay">Pay</label>
+        <input type="number" name="pay" id="pay"><br>
+        <label for="change">Change</label>
+        <input type="number" name="change" id="change"><br>
+        <input type="submit" value="Ok">
+    </form>
+
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script>
+        $(function() {
+            $("input[name = 'change']").on("focus", function() {
+                var tot = $("input[name = 'tot']").val();
+                var pay = $("input[name = 'pay']").val();
+                var change = pay - tot;
+                $(this).val(change);
+            })
+        })
+    </script>
+</body>
+</html>

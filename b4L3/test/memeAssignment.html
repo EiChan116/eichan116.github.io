@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    #main {
+            background-color: rgb(252, 210, 222);
+            width: 900px;
+            height: 900px;
+            margin: auto;
+        }
+    .imgs {
+        display: grid;
+        overflow-x: auto;
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+        overscroll-behavior-inline: contain;
+        grid-gap: 0ex;
+    }
+    .memescrolls {
+        width: auto;
+        height: 110px;
+        border: 7px solid rgb(184, 180, 180);
+        padding: 5px;
+        
+    }
+    .memescrolls:hover {
+        border-radius: 9px;
+        border: 7px solid rgb(108, 109, 109);
+        
+    }
+    body {
+        background: #fcf9f9;
+    }
+    .selected {
+        width: 450px;
+        border: 11px solid rgb(168, 166, 166);
+        float: left;
+        padding: 2px;
+        margin-top: 25px;
+        margin-right: 25px;
+        /* text-align: center; */
+    }
+    .selectedmeme {
+        max-height: 100%;
+        max-width: 100%;
+        border-radius: 7px;
+        padding: 3px;
+        border: 2px solid rgb(195, 192, 192);/*.currentmeme*/
+    }
+    .inputmeme {
+        margin: 11px 20px;
+        outline: none;
+        height: 34px;
+        border-radius: 7px;
+        width: 100%;
+        margin-bottom: 45px;
+        
+    }
+    .nameofmeme {
+        font-size: 21px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+    button {
+        padding: 7px;
+        width: 100px;
+        border-radius: 7px;
+        border: 2px solid gray;
+        cursor: pointer;
+        background-color: transparent;
+        margin-top: 250px;
+
+    }
+    button:hover {
+        background-color: gray;
+        color: pink;
+        
+    }
+</style>
+<body>
+    <div id="main">
+        <div class="imgs"></div>
+        <div class="selected">
+            
+        </div>
+        <p>
+            <abbr title="memename">Name of meme</abbr>
+            <label for="" class="nameofmeme"></label>
+        </p>
+        <div class="inputmeme"></div>
+        <button class="generate">Generate</button>
+        <button class="downloadimg">Download</button>
+        <!-- <button class="" data-url = "" data-name = "" data-box = ""></button> -->
+    </div>
+    
+    
+
+    <script src="/jQuery/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $(function () {
+            
+            $.get("https://api.imgflip.com/get_memes", function(response) {
+                // console.log(response);
+                if(response.success) {
+                    //  console.log(response.data.memes);
+                    var memes = response.data.memes;
+                    var data = "";
+                    for (const row of memes) {
+                        data += `<img class = "memescrolls" src = "${row.url}" alt = "${row.name}" data-id ="${row.id}" data-name = "${row.name}" data-url = "${row.url}" data-box = "${row.box_count}" >`;
+                    }
+                    $(".imgs").html(data);
+                    
+                }
+            });
+            // $(".memescrolls")
+            //selected img
+            $("#main").on("click", ".memescrolls", function() {
+                var id = $(this).data("id");
+                var name = $(this).data("name");
+                var url = $(this).data("url");
+
+                 //scrollထဲကပုံကို click ရင် ပုံပေါ်အောင်လုပ်          
+                data = `<img class = "selectedmeme" data-id = "${id}" data-url = "${url}" data-name = "${name}" src = "${url}">`;
+               
+                $(".selected").html(data);
+                //input box 
+                var inputbox = "";
+                var box = $(this).data("box");
+                for(var m = 0; m < box; m ++) {
+                    inputbox += `<input type = "text" " class = "caption"/><br>`;
+                }
+                //input boxထဲ အရေအတွက်loop ပတ်ထည့်
+                $(".inputmeme").html(inputbox);
+                inputbox = `${name}`;
+                $(".nameofmeme").html(inputbox);
+                
+            });
+            
+            //button event
+            $(".generate").on("click", function() {
+                var id = $(".selectedmeme").data("id");
+                var texts= $(".caption");
+                
+                var captopns = $.map(texts, function(response) {
+                    return {
+                        text: response.value,
+                    }
+                });
+                console.log(captopns)//ဒီအထိ ရိုက်ထဲ့တဲ့ caption အကုန်သယ်လာနိုင်တယ်
+                $.post("https://api.imgflip.com/caption_image", {
+                    template_id: `${id}`,
+                    username: "eichen",
+                    password: "Osakajapan",
+                    boxes: captopns,
+                }, function(response) {
+                    console.log(response)//ဒီမှာ id က undefined ဖြစ်နေ။
+                    if(response.success) {
+                        var nameofmeme = $(".nameofmeme").text();
+                        var img = `<img class = "selectedmeme" data-url = "${response.data.url}" data-name = ${response.data.name} src = "${response.data.url}" alt = "" width = "500" >`;
+                        $(".selected").html(img);
+                    }
+                })
+            });
+
+            $(".downloadimg").on("click", function() {
+                var imglink = $(".selectedmeme").data("url");
+                var imgname = $(".selectedmeme").data("name");
+                console.log(imglink, imgname);
+
+                Swal.fire({
+                    title: `${imgname}`,
+                    imageUrl: `${imglink}`,
+                    text: 'Wanna download?',
+                    imageWidth: "auto",
+                    imageHeight: "auto", 
+                })
+                
+            })
+        });
+        
+    </script>
+</body>
+    <!-- <script>
+        Swal.fire({
+        title: 'Sweet!',
+        text: 'Modal with a custom image.',
+        imageUrl: 'https://unsplash.it/400/200',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+    })
+    </script> -->
+</html>
