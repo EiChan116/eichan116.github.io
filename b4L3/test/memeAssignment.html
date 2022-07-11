@@ -107,8 +107,9 @@
     
 
     <script src="/jQuery/jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><!--sweetalert-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script> -->
+    <script src = "https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
     <script>
         $(function () {
             
@@ -166,10 +167,11 @@
                     password: "Osakajapan",
                     boxes: captopns,
                 }, function(response) {
-                    console.log(response)//ဒီမှာ id က undefined ဖြစ်နေ။
+                    console.log(response)//ဒီမှာ id က ရပြီ။
                     if(response.success) {
+                        // console.log(response.data)
                         var nameofmeme = $(".nameofmeme").text();
-                        var img = `<img class = "selectedmeme" data-url = "${response.data.url}" data-name = ${response.data.name} src = "${response.data.url}" alt = "" width = "500" >`;
+                        var img = `<img class = "selectedmeme" data-url = "${response.data.url}" data-name = "${nameofmeme}" src = "${response.data.url}" alt = "${nameofmeme}" width = "500" >`; // alt and data-name ရသွားပြီ
                         $(".selected").html(img);
                     }
                 })
@@ -177,18 +179,29 @@
 
             $(".downloadimg").on("click", function() {
                 var imglink = $(".selectedmeme").data("url");
-                var imgname = $(".selectedmeme").data("name");
-                console.log(imglink, imgname);
+                var imgcaption = $(".selectedmeme").data("name");
+                
+                console.log(imglink, imgcaption);//ဒီအထိအဆင်ပြေ
 
                 Swal.fire({
-                    title: `${imgname}`,
+                    title: `${imgcaption}`,
                     imageUrl: `${imglink}`,
                     text: 'Wanna download?',
                     imageWidth: "auto",
                     imageHeight: "auto", 
-                })
+                    showCancelButton: true,
+                    confirmButtonText: "download",
+                }).then((result)=> {
+                    if(result.isConfirmed) {
+                        var dlImg = `${imgcaption}.jpg`;
+                        saveAs(imglink, dlImg);
+                    }
+                    else if (result.isDismissed) {
+                        return;
+                    }
+                });
                 
-            })
+            });
         });
         
     </script>
