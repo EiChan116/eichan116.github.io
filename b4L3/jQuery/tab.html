@@ -133,10 +133,10 @@
                 
                     <tr>
                         <th>No</th>
-                        <th>No</th>
-                        <th>No</th>
-                        <th>No</th>
-                        <th>No</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
                     </tr>
                 
             </thead>
@@ -168,13 +168,20 @@
                     data += `<tr>
                         <td>${i}</td>
                         <td>${v.name}<td/>
-                            <td>${v.price}<td/>
-                                <td>${v.qty}<td/>
-                                    <td>${v.qty*v.price}</td>
-                                    </tr>`
+                        <td>${v.price}<td/>
+                        <td>${v.qty}<td/>
+                        <td>${v.qty*v.price}</td>
+                        </tr>`
                 })
-                data += `<tr></tr>`
+                body += `<tr>
+                            <td colspan = "4">Total</td>
+                            <td>${total}</td>
+                        </tr>`
+                        $(".mycart").hide();
+                        $("#cartitems").html(body);
+                        $(".mytable").show();
             }
+            $(".mycart").html(data);
         }
     });
             
