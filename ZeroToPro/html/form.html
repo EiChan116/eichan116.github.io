@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h3>Student infomation form</h3>
+    <form action="save.php" method="GET"> <!--get method carries data fro url bar, not secured-->
+        <label for="name">Name</label> <!--post mehod carries data from behind, doesnt show at url-->
+        <input type="text" name="stdName" id="name" placeholder="enter your name"><br><br>
+        <label for="email">Email</label><!--for attribute only can use in label-->
+        <input type="email" name="stdEmail" id="email" placeholder="enter email"><br><br>
+        <label for="pw">Password</label>
+        <input type="password" name="stdPassword" id="pw" placeholder="enter pw"><br><br>
+        <label for="ph">Contact number</label>
+        <input type="number" name="stdph" id="ph" placeholder="enter ph number"><br><br>
+        <label for="passport">Passport</label>
+        <input type="file" name stdPp accept="image/*" id="passport"> <br><br>
+        <label for="">Year</label>
+        <select name="year" id="year">
+            <option value="">Choose year</option>
+            <option value="1st">First year</option>
+            <option value="2nd">Second year</option>
+            <option value="3rd">Thirth year</option>
+        </select>
+        <br><br>
+        <label for="dob">DOB</label>
+        <input type="date" name="stddob" id="dob">
+        <br><br>
+        <label for="gender">Gender</label><br><br>
+        <input type="radio" name="stdmale" id="male">
+            <label for="">Male</label>
+        <input type="radio" name="stdfemale" id="female">
+            <label for="">Female</label>
+        <input type="radio" name="stdother" id="Other">
+            <label for="">Other</label><br><br>
+        <label for="hobby">Hobby</label><br><br>
+            <input type="checkbox" name="travelling" id="travel" value="Travelling"> 
+                <label for="travel">Travelling</label>
+            <input type="checkbox" name="swimming" id="swim" value="Swimming">
+                <label for="swim">Swimming</label> 
+            <input type="checkbox" name="reading" id="read" value="Reading">
+                <label for="read">Reading</label><br><br>
+        <label for="add">Address</label>
+            <textarea name="stdAddress" id="add" cols="30" rows="10"></textarea><br><br>
+        <input type="time" name="" id="">
+        <input type="datetime-local" name>
+        <input type="color" name="" id="">
+        <input type="range" name="" id="">
+        <br><br>
+        <button>Save</button>
+    </form>
+</body>
+</html>
