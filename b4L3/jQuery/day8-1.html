@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ls</title>
+</head>
+<body>
+    <script src="jquery.min.js"></script>
+    <script>
+        // $(function() {
+        //     var name = 'Toyoda';
+        //     var age = 54;
+        //     localStorage.setItem('name', name)//(key, var)
+        //     localStorage.setItem('age', age)
+
+        //     var name = localStorage.getItem('name');//ဆွဲထုတ်မ
+        //     console.log(name);
+        // });
+        $(function() {
+            var teachers = new Array();
+            var puu = {
+                name: 'Toyoda',
+                age: 54,
+            }
+            teachers.push(puu);
+           // localStorage.setItem('user', puu);//obj ပဲပေါ်နေမယ် ဒါကြောင့် Json နဲ့ string ပြောင်းရေးရမယ်
+            localStorage.setItem('user', JSON.stringify(teachers));
+
+            //ပြန်ထုတ်တဲ့အခါ
+            var user = localStorage.getItem('user');//string only output
+            var userArr = JSON.parse(user);//change from string to array with JSON 
+            console.log(userArr)
+
+        });
+    </script>
+</body>
+</html>

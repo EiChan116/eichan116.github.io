@@ -30,6 +30,7 @@
             margin: 0 auto;
             display: none;/*hide all content class(paragraph)*/
         }
+        /*for shop*/
         .products {
             display: flex;
             align-content: space-between;
@@ -126,32 +127,31 @@
         </div>
            
         <div class="content" id="cart">
-        <h2>Card Tab</h2>
-        <div id="cartitems"></div>
-        <table border="1" cellpsacing="" cellpadding="">
-            <thead>
-                
-                    <tr>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Qty</th>
-                        <th>Total</th>
-                    </tr>
-                
-            </thead>
-            <tbody class="cartitems">
-
-            </tbody>
-        </table>
         
+            <div class="mycart"><!--for "mycart is empty now"-->
+            </div>
+                <table width="100%" class="mytable" border="1" cellspacing="0" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "cartitems">
+    
+                    </tbody>
+                </table>
+        </div>
     </div>
-    </div>
-
 </div>
-<script src="jquery.min.js"></script>
+<!-- <script src="jquery.min.js"></script>
 <script>
     $(function() {
+        getData();
+
         $("button.atcbtn").on("click", function() {
 
         });
@@ -185,6 +185,6 @@
         }
     });
             
-</script>
+</script> -->
 </body>
 </html>

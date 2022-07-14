@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="color">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+
+    </ul>
+    <script src="jquery.min.js"></script>
+    <script>
+        
+        $(function() {
+            var color = ["red", 'green', 'blue'];
+            console.log(color)
+            color.push("white");
+            console.log(color)
+            var last_color = color.pop();
+            console.log(last_color)
+            //for
+
+            //while, do while
+            for (const iterator of color) {
+                console.log(iterator);
+            }
+            $.each(color, function(i, v) {//i == index and array,v == value
+                console.log(v);
+            });
+            $("#color").on("click", function(e) {
+                $('li').each(function(index) {
+                    $(this).css('background-color', 'orange')
+                        .delay(index * 200)
+                        .fadeOut(1500);
+                });
+                e.preventDefault();
+            });
+
+            // var std = [
+            //     {name:"mymy",
+            //      age:25,
+            //      parents:[
+            //         {
+            //             father:'U mya',
+            //             mother:'Daw hla'
+            //         }
+            //      ]
+            //     },
+            //     {name:"mymy", age:25},
+            //     {name:"mymy", age:25}
+            // ]
+
+        });
+    </script>
+</body>
+</html>

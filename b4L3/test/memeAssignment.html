@@ -58,14 +58,21 @@
         padding: 3px;
         border: 2px solid rgb(195, 192, 192);/*.currentmeme*/
     }
-    .inputmeme {
+    /* .inputmeme {
         margin: 11px 20px;
         outline: none;
         height: 34px;
         border-radius: 7px;
         width: 100%;
         margin-bottom: 45px;
-        
+    } */
+    .caption {
+        margin: 10px 0px;
+        height: 35px;
+        border-radius: 9px;
+        width: 340px;
+        outline: none;
+        text-indent: 10px;
     }
     .nameofmeme {
         font-size: 21px;
@@ -74,12 +81,12 @@
     }
     button {
         padding: 7px;
-        width: 100px;
+        width: 170px;
         border-radius: 7px;
         border: 2px solid gray;
         cursor: pointer;
         background-color: transparent;
-        margin-top: 250px;
+       margin-top: 25px;
 
     }
     button:hover {
@@ -106,7 +113,7 @@
     
     
 
-    <script src="/jQuery/jquery.min.js"></script>
+    <script src="../jQuery/jquery.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script><!--sweetalert-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script> -->
     <script src = "https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
@@ -155,7 +162,7 @@
                 var id = $(".selectedmeme").data("id");
                 var texts= $(".caption");
                 
-                var captopns = $.map(texts, function(response) {
+                var captopns = $.map(texts, function(response) {//array boxes
                     return {
                         text: response.value,
                     }

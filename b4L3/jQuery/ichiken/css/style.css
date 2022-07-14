@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    src: url(../Lobster/LobsterTwo-Regular.ttf);
+    font-family: lobster;
+}
+.logo {
+    width: 160px;
+    height: 90px;
+    padding-left: 45px;
+    margin-top: 10px;
+}
+.brand-name {
+    position: absolute;
+    left: 140px;
+    top:70px;
+    /* font-family: lobster; */
+    font-weight: lighter;
+}
+.brand {
+position: absolute;
+top: 5px;
+left: 50px;
+}
+.nav-bar ul{
+    float: right;/*ညာဘက်ပို့*/
+}
+.nav-brand {
+    display: inline-block;
+}
+.nav-bar ul li {
+    display: inline-block;
+    margin-right: 45px;
+    margin-top: 34px;
+}
+.nav-bar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.nav-bar ul li a:hover {
+    color: #3c9ac3;
+    letter-spacing: 4px;
+    transition-duration: .5s;
+}
+.nav-bar {
+    background-color: rgb(249, 251, 254);
+}

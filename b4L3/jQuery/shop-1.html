@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .products {
+            display: flex;
+            gap: 20px;
+            align-content: space-between;
+            text-align: center;
+        }
+        img {
+            width: 50%;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="text-align: center;">Popular Products</h2>
+        <div class="products">
+            <div class="items">
+                <img src="../jQuery/image/winet.jpg" alt="item one">
+                <h4>Item One</h4>
+                <p>1500 ks</p>
+                <button class="atcbtn" data-id="1" data-name="Item one" data-price="1500">Add to cart</button>
+            </div>
+            <div>
+                <img src="../jQuery/image/winet.jpg" alt="item two">
+                <h4>Item Two</h4>
+                <p>2700 ks</p>
+                <button class="atcbtn" data-id="2" data-name="Item one" data-price="2700">Add to cart</button>
+            </div>
+            <div>
+                <img src="../jQuery/image/winet.jpg" alt="item three">
+                <h4>Item Three</h4>
+                <p>3200 ks</p>
+                <button class="atcbtn" data-id="3" data-name="Item one" data-price="3200">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="jquery.min.js"></script>
+    <script src="cart-1.js"></script> <!--externam js-->
+    <script>
+        $(function() {
+            //if click add to cart btn, how to store is..
+            // [
+            //     {id:1, name: 'item one', price: 1500, qty: 1}
+            // ]
+
+        })
+    </script>
+</body>
+</html>
