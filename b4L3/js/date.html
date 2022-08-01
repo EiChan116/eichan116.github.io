@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="clocl"></h1>
+    <script>
+        let now = new Date();
+        let monthName = ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'jul', 'aug', 'sept', 'oct', 'nov', 'dec'];//array
+        let dayName = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun'];
+        console.log(dayName[now.getUTCDay()]);
+        console.log(monthName[now.getMonth()]);
+
+        function timer() {
+            let time = new Date();
+            let hour = time.getHours();
+            let min = time.getMinutes();
+            let sec = time.getSeconds();
+
+            document.getElementById('clocl').innerHTML = `${hour} : ${min} : ${sec}`;
+        }
+        setInterval('timer()', 1000)
+    </script>
+</body>
+</html>

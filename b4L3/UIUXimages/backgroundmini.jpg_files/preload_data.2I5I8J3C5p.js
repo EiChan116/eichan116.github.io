@@ -1,0 +1,1 @@
+window.Searchanise.preloadedSuggestions=['digital watch','plant pot','leather anchor','wooden lamp','contact page','balustrade coffee table','product layout classic','bangle watch','ballet-inspired silhouette','product la','7 shakra bracelet','ceramic cat','tri-blend t-shirt','cat mugs'];

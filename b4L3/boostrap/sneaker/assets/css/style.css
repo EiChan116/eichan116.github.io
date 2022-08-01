@@ -1,0 +1,35 @@
+.customnav-color {
+    background-color: #2f333a;
+}
+
+.mainColor {
+    color: #eb3e32;
+}
+
+.mainbgColor {
+    background-color: #eb3e32;
+}
+
+* {
+    font-family: QuattrocentoSans-regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: oswald;
+}
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+}
+
+.btn-custom {
+    background-color: #eb3e32 !important;
+    color: antiquewhite !important;
+}
+.btn-custom:hover {
+    background-color: #eb3e32 !important;
+    color: antiquewhite !important;
+    border: #bc3228 in !important;
+}
+

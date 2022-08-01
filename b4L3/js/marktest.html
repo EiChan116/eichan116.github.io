@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            max-width: 250px;
+            background-color: rgb(249, 128, 128);
+            max-height: 250px;
+            margin: 0 auto;
+            padding: 01px 0px 16px 34px;
+        }
+        button {
+            width: 100%;
+            background-color: rgb(129, 128, 128);
+            border: none;
+            border-radius: 2px;
+            height: 25px;
+            color: white;
+            margin-top: 10px;
+            
+        }
+        h1 {
+            text-align: center;
+        }
+        button:hover {
+            color: lightcoral;
+            background-color: lightblue;
+            cursor: progress;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Exam mark checking</h2>
+        <form name="myForm" action="">
+            <table>
+                <tr>
+                    <td>Torbo C:</td>
+                    <td><input type="text" name="c" id="c" placeholder="Enter turbo mark" required></td>
+                </tr>
+                <tr>
+                    <td>Java:</td>
+                    <td><input type="text" name="java" id="java" placeholder="Enter java mark" required></td>
+                </tr>
+                <tr>
+                    <td>ASP.net:</td>
+                    <td><input type="text" name="asp" id="asp" placeholder="Enter Asp.Net mark" required></td>
+                </tr>
+                <tr class="btn">
+                    <td colspan="2"><button type="button" onclick="result()">Result</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        function result() {
+            // alert("hello")
+            let c = document.myForm.c.value;
+            console.log(c);
+            let java = document.myForm.java.value;
+            console.log(java);
+            let asp = document.myForm.asp.value;
+            console.log(asp);
+
+            if((c >= 0 && c <= 100) && (java >= 0 && java <= 100) && (asp >= 0 && asp <= 100)){
+                   if(c >= 50 && java >= 50 && asp >= 50) {
+                        if(c >= 80 || java >= 80 || asp >= 80) {
+                        document.write('<h1>This student is distinction</>')
+                        }
+                        else if(c >= 65 && c <=79 || java >=    65 && c <=79 || asp >= 65 && c <=79) {
+                            document.write('<h1>This student is credit</h1>')
+                        }
+                        else if(c >= 50 && c <= 64  && java >= 50 && java <= 64 && asp >= 50 && asp <= 64) {
+                            document.write('<h1>This student is pass.</h1>')
+                        } 
+                
+                    }
+                    else if ((c < 50)|| java < 50 || asp <50){
+                        document.write('<h1>Fail</h1>');
+                    }
+            }
+            else {
+                document.write("Invalid mark!");
+            }
+        }
+    </script>
+</body>
+</html>

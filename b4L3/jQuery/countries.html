@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clicked-country"></div>
+
+    <div class="countriesgrid"></div>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function() {
+            $(".clicked-country").hide();
+            $(".back").hide();
+
+            wholeCountries("https://restcountries.com/v3.1/all");
+
+            $(".select").on("change", function() {
+                var state = $(this).val();
+
+                if(state == "africa") {
+                    wholeCountries("https://restcountries.com/v3.1/region/africa");
+                }
+                else if (state == "ame") {
+                    wholeCountries("https://restcountries.com/v3.1/region/africa");
+                }
+                else if(state == "asia") {
+                    wholeCountries("https://restcountries.com/v3.1/region/africa");
+                }
+                else if (state == "europe") {
+                    wholeCountries("https://restcountries.com/v3.1/region/africa");
+                }
+                else if (state == "oceania") {
+                    wholeCountries("https://restcountries.com/v3.1/region/africa");
+                }
+                else {
+                    wholeCountries("https://restcountries.com/v3.1/region/africa");
+                }
+            });
+            //
+            $("#userInput").on("keyup", function() {
+                var serach = $(this).val();
+
+                if(serach == "") {
+                    showItem("https://restcountries.com/v3.1/region/africa");
+                }
+                else {
+                    showItem("https://restcountries.com/v3.1/region/africa");
+                }
+            })
+
+            function wholeCountries(sources) {
+                $.get(sources, function(response) {
+                    //
+                    var countries = response;
+                    var card = ``;
+
+                    $(countries).each(function(index, value) {
+                        card += `<div class = "item"><a href = "#" data-index = "${index}">
+                                    <div class = "card"><img src = "${value.flags.svg}" alt = "${value.altSpelling[1]}">
+                                        <h3>${value.name.common}</h3>
+                                        <span>Population:</span><small>${value.population}</small><br><br>
+                                        <span>Reigon:</span><small>${value.region}</small><br><br>
+                                        <span>Capital:</span><small>${value.capital}</small><br><br>
+                                        </div></a></div>`;
+                                        
+                    });
+                    $(".countriesgrid").html(card);
+
+                    $(".item a").on("click", function(e) {
+                        e.preventDefault();
+                        $(".clicked-country").show();
+                        $(".back").show();
+                        $(".countriesgrid").hide();
+                        $("form").hide();
+
+                        var index = $(this).data("index");
+                        var data = countries[index];
+                        var currencies;
+                        var currencies_values;
+                        var currenciesobj;
+
+                        //curriences
+                        if(data.currencies) {
+                            currenciesobj = data.currencies;
+                            currencies_values = Object.values(currenciesobj);
+                            currencies = [];
+
+                            $(currencies_values).each(function(index, value) {
+                                currencies = value.name;
+                            });
+                        } 
+                        else {
+                            currencies = 0;
+                        }
+
+                        //languages
+                        var languagesobj = data.languages;
+                        var language_values = Object.values(languagesobj);
+
+                        var showData = `<div class = "leftside"><img src = "${data.flags.svg}" alt = "">
+                                        </div>
+                                        <div class = "rightside"><h3>${data.name.common}</h3>
+
+                                            <div class = "stat_container">
+                                                <div class = "stat_item">
+                                                    <span>Native Name:</span><small>${data.name.official}</small><br><br>
+                                                    <span>Population:</span><small>${data.population}</small><br><br>
+                                                    <span>Region:</span><small>${data.region}</small><br><br>
+                                                    <span>Sub Region:</span><small>${data.subregion}</small>
+                                                    <span>Capital:</span><small>${data.capital}</small>
+                                                </div>
+                                                <div class = "stat_item">
+                                                    <span>Top level domain:</span><small>${data.tld}</small><br><br>
+                                                    <span>Currencies:</span><small>${currencies}</small><br><br>
+                                                    <span>Language:</span><small>${language_values}</small>
+                                                </div>
+                                            </div>
+                                        </div>`;
+                                        $(".clicked-country").html(showData);
+                    })
+
+                })
+            }
+
+
+
+        });
+    </script>
+</body>
+</html>

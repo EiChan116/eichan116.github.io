@@ -41,7 +41,7 @@ $(function() {
     });
 
     function getData() {
-        var cartStr = localStorage.getItem('cart');s
+        var cartStr = localStorage.getItem('cart');
         
 
         if(!cartStr) {

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let secretNo = 5;
+        let guessNo = prompt('Enter guess number between 1 to 10');
+        while(secretNo != guessNo) {
+            if(guessNo < secretNo) {
+                alert('Less than secret number!');
+            }
+            else {
+                alert('Greater than secret number!');
+            }
+        }alert('Correct, 5 is secret number!');
+    </script>
+</body>
+</html>
+
+
+<!--<script>
+        let guessNo;
+        let secretNo = 5;
+        guessNo = prompt("Guess secret number between 1 to 10!");
+        while(secretNo != guessNo) {
+            if(guessNo > secretNo){
+                alert('It greatere than secret number! pls try pick another number.');
+            }
+            else {
+                alert('It smaller than secret number! pls try pick one.');
+            }guessNo = prompt("Guess another one again!")
+        }alert("Corret number!");
+    </script>-->

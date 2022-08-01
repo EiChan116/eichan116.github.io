@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function funName() {
+            document.write('<h3>Hello function</h3>');
+        }
+        funName();
+        function result(num1, num2) {
+            let res = num1 + num2;
+            document.write(`<h2>${res}</h2>`);
+        }result(10, 8)
+        function resultsub(num1 = 100, num2 = 90) {
+            let sub = num1 - num2;
+            document.write(`<h2>${sub}</h2>`)
+        }resultsub(100, 79);
+
+        //obj
+        let laptop = {
+            name: 'Apple',
+            type: 'M1',
+            price: 3500000
+        }
+        console.log(laptop);
+        console.log(laptop.price);// obj ပုံစံ
+        console.log(laptop["type"]);//array ပုံစံ
+
+    </script>
+</body>
+</html>
