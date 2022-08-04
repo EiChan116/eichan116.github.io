@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create html elements</h1>
+    <button type="button" onclick="create()">Click</button><br><br>
+    <input type="text" name="name" id="name"><br><br>
+    <button type="button" onclick="add()">Add</button>
+    <ul id="ul">
+        <li>Puu Chan</li>
+    </ul>
+    <script>
+        function create() {
+            let para = document.createElement('p');
+            // alert('It created');
+            console.log(para);
+            para.innerHTML = 'This is a paragraph';
+            document.body.appendChild(para)
+        }
+        function add() {
+            let name = document.querySelector('#name').value;
+            console.log(name);
+            let ul = document.querySelector('#ul');
+            console.log(ul)
+            let li = document.createElement('li');
+            li.innerHTML = name;
+            ul.appendChild(li)
+        }
+    </script>
+</body>
+</html>
+
+<!--let name = document.querySelector('#name').value;
+console.log(name);
+let unorderlist = document.querySelector('#ul')
+console.log(unorderlist);
+let list = document.createElement('li');
+list.innerHTML=name;
+unorderlist.appendChild(list);

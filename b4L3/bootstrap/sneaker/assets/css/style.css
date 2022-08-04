@@ -1,0 +1,81 @@
+.customnav-color {
+    background-color: #2f333a;
+}
+
+.mainColor {
+    color: #eb3e32;
+}
+
+.mainbgColor {
+    background-color: #eb3e32;
+}
+
+* {
+    font-family: QuattrocentoSans-regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: oswald;
+}
+
+.carousel-item img{
+    height: 70vh;
+    object-fit: cover;
+}
+
+.btn-custom {
+    background-color: #eb3e32 !important;
+    color: #fff !important;
+}
+
+.btn-custom:hover {
+    background-color: #a4332d !important;
+    color: #fff !important;
+    border-color: #bc3228 !important;
+}
+
+.instagram {
+    letter-spacing: 0.4em;
+    text-align: center;
+    margin-bottom: 45px;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: roboto-regular;
+}
+
+#newsletter {
+    background: url(../images/slide3.jpg) no-repeat center center fixed; /*top btn and left right center*/
+    background-size: cover;
+}
+
+.graycolor {
+    color:#999
+}
+
+.facebook {
+    color: #3c5b9b;
+}
+
+.twitter {
+    color: #40c1df;
+}
+
+.instagramm {
+    color: #c619b8;
+}
+
+.googleplus {
+    color: #ed3c32;
+}
+
+.dribbble {
+    color: #c72982;
+}
+
+.pinterest {
+    color: #e60023
+}
+.tiktok {
+    color: #000;
+}

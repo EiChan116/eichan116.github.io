@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script><!--connecting vue to use DOM-->
+    <script src="bmi.js"></script>
+</head>
+<body>
+     <div id="app">
+        <span v-html="message"></span>
+        <p>My name is {{ name }} and {{ age * age1 }} years old.</p>
+        <!--attribute binding-->
+        <img v-bind:src="photo" alt="">
+
+        <!--if else-->
+        <h1 v-if="seen" style="color:rgb(9, 121, 165)">Now you can see me!</h1>
+           <!--array list rendering-->
+        <div v-if = "colors.length > 0"> <!--div ထဲ looping ရှိမရှိ condition စစ်တာ -->
+            <ul>
+                <li v-for = "item in colors">{{ item }}</li>
+            </ul>
+        </div>
+        <div v-else>
+            <p>No other color array</p>
+        </div>
+        <ol>
+            <li v-for = "(item, index) in students">
+                <strong>{{ index }}.</strong>{{ item.name }}-{{ item.age }}-{{ item.gender }}
+            </li>
+        </ol>
+        <!--event-->
+        <p>Count is: {{ count }}</p>
+        <button @click="count++">Add 1</button>
+
+        <button @click = "openalert('Yasuhiro Toyoda')">Alert</button>
+        <br>
+        <!--user input-->
+        <input type="text" name="username" v-model = "myusername">
+        <h2>User name is : {{ myusername }}</h2><br>
+        <!--multiplication-->
+        <input v-model.number = "age1">
+
+     </div>
+
+  
+     <script>
+        const mountedApp = msg.mount('#app');
+     </script>
+</body>
+</html>

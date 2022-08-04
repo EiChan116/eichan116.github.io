@@ -1,0 +1,24 @@
+.customnav-color {
+    background-color: #9cabba;
+}
+
+.mainColor {
+    color: #eb3e32;
+}
+
+.mainbgColor {
+    background-color: #eb3e32;
+}
+
+* {
+    font-family: quatt;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: roboto-bold;
+}
+
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+}

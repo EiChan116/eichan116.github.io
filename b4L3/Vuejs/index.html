@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script><!--connecting vue to use DOM-->
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="app"><!--raw html and text interpolation-->
+    <span v-html = "message"></span><p> My name is {{ name }}. I'm {{ age }} year old.</p>
+    <!--Attribute bind-->
+    <img v-bind:src="photo" alt=""><!--v-bind ကထည့်လည်းရ မထည့်လည်းရ-->
+    <!--if else condition-->
+    <p v-if = "seen">Now you see me</p><!--hide/show မှာသုံးတာများတယ်-->
+    <!--list rendering array-->
+    <div v-if="colors.length > 0"></div>
+        <ul>
+            <li v-for = "item in colors">{{item}}</li>
+        </ul>
+    </div>
+    <div v-else>
+        <p>No other color array</p>
+    </div>
+    <ol>
+        <li v-for = "(item, index) in students">
+            <strong>{{index}}.</strong>{{item.name}}-{{item.age}}-{{item-gender}}
+        </li>
+    </ol>
+    <!--count-->
+    <p>Count is: {{ count }}</p>
+    <button @click = "count++">Add 1</button>
+
+    <button @click = "openalert(ha ha)">alert</button>
+</div>
+    <script>
+        const mountedApp = msg.mount("#app");
+    </script>
+</body>
+</html>
+
+<!--output-->
+<!--Hello, Good morning. My name is Toyoda. I'm 27 year old.-->

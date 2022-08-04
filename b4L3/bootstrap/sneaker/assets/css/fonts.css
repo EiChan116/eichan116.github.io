@@ -1,0 +1,24 @@
+@font-face {
+    font-family: edu;
+    src: url(../fonts/Edu_VIC_WA_NT_Beginner/EduVICWANTBeginner-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf);
+}
+
+@font-face {
+    font-family: roboto-regular;
+    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: QuattrocentoSans-regular;
+    src: url(../fonts/Quattrocento_Sans/QuattrocentoSans-Regular.ttf);
+}
