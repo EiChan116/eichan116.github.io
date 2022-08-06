@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="main.js"></script>
+    <style>
+        .container {
+            text-align: center;
+            width: 100%;
+            
+            
+        }
+        table {
+            width: 100%;
+        }
+
+        th {
+            height: 70px;
+        }
+        table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+            color: rgb(102, 103, 104);
+        }
+        th, td {
+            background-color: #96D4D4;
+            padding: 16px 25px;
+        }
+        button {
+            padding: 7px 54px;
+            border: 0ch;
+            border-radius: 7px;
+            color:aqua;
+            background-color: grey;
+        }
+        h2 {
+            color: black;
+            -webkit-text-fill-color:aqua; /* Will override color (regardless of order) */
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: grey;
+        }
+        h1 {
+            -webkit-text-stroke: 1px rgb(98, 98, 98);
+            color: aqua;
+            text-shadow:
+            3px 3px 0 #000,
+            -1px -1px 0 #000,  
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center py-5">
+            <div id="app" class="col-xl-6 col-lg-6 md-8 col-sm-12 col-12">
+                <div v-if="students.length > 1">
+                    <h1>Day3 Assignment</h1><hr><br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(student, index) in students">
+                                <td>{{++index}}</td>
+                                <td>{{student.name}}</td>
+                                <td>{{student.age}}</td>
+                                <td>{{student.gender}}</td>
+                                <td>
+                                    <button @click="stdinfo(index-1)">Detail</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const mountedApp = disableApp.mount("#app");
+    </script>
+</body>
+</html>

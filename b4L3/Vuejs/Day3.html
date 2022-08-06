@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="main.js"></script>
+    <style>
+        .text-danger {
+            color: red;
+        }
+        .aa {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2> {{ title }}</h2><hr>
+<!--true false boolean attribute -->
+        <button :disabled = "isButtonDisabled">Button</button>
+
+  
+        <input type="number" name="num" id="num" v-model="num">
+        <button @click="mybtn">mybtn</button>
+        <input type="text" :disabled = "isInputDisabled">
+
+        <!--condition rendering-->
+        <p v-if="mark >=40 && mark <=79">Pass</p>
+        <p v-else-if="mark<40">Fail</p>
+        <p v-else>D</p>
+
+        <!--event modifier-->
+        <form action="" method="post" @submit.prevent="validate"><!--when click submit, go to validate method-->
+            <input type="text" name="username" id="username"><br>
+            <input type="email" name="email" id="email"><br>
+            <input type="submit" value="Save">
+        </form>
+
+        <!--Binding obj-->
+        <p :class="{ active: isActive, 'text-danger': hasError }">Hello Vue</p><!-- activeနဲ့text-dangerက class nameဖြစ်ပြီး isActiveနဲ့ hasError  သည် var ဖြစ်သည် (text-danger သည်စကားလုံး ၂ လုံးဖြစ်နေလို့ single code ထဲထည့်ထားရ)-->
+
+        <!--list rendering-->
+        <!-- <ul v-if="students.length > 1">
+            <li v-for="student in students">
+                {{student.name}}
+            </li>
+        </ul> -->
+
+        <div v-if="students.length > 1">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(student, index) in students">
+                        <td>{{++index}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.age}}</td>
+                        <td>{{student.gender}}</td>
+                        <td>
+                            <button @click="stdinfo(index-1)">Detail</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+    </div>
+
+    <script>
+        const mountedApp = disableApp.mount("#app");
+    </script>
+</body>
+</html>

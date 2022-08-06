@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    
+
+<div id="app">
+    <!--raw html-->
+    <div v-html="message"></div><!--{{message}}ကို v-html ထဲမှာ properties အနေနဲ့ တန်းထုတ်လိုက်တာ-->
+    <p>My name is {{ name }} and I am {{ age * 2 }} year</p>
+
+    <!-- binding img attribute with v-bind keyword-->
+    <img v-bind:src="photo" alt="">
+
+    <!--if-else condition-->
+    <p v-if = "seen">Now you can see</p>
+
+    <!--for loop(liste rendering)-->
+    <div v-if = "color.length > 0">
+        <ul>
+            <li v-for = "item in color">{{item}}</li>
+        </ul>
+    </div>
+    <div v-else>
+        <p>There is no array!</p>
+    </div>
+    <!--obj-->
+    <ol>
+        <li v-for = "item in student">
+            {{ item.name }}-{{ item.age }}
+        </li>
+    </ol>
+
+        <!--obj with index-->
+        <ol>
+            <li v-for = "(item, index) in student">
+                <strong>{{ index }}</strong>. {{ item.name }}, {{ age }}
+            </li>
+        </ol>
+
+        <!--Event-->
+        <p>Count is: {{ count }}</p>
+        <button @click = "count++">Increase Count</button>
+        <button @click = "openalert('Yasuhiro')">Alert</button>
+        
+        <!--input-->
+        <input type="name" name="username" v-model = "username"><!--v-modal နဲ့ usernameကိုလက်ခံထးတယ်-->
+        <h3>Your message is: {{ m }}</h3>
+        <input type="text" name="messages" placeholder="messages" v-model = "m">
+
+        <!--number input-->
+        <input type="number" name="n" v-model.number="age">
+
+
+</div>
+    
+<script>
+    const mountedApp = result.mount("#app")
+</script>
+
+</body>
+</html>

@@ -7,7 +7,7 @@
     <title>BMI Calculator</title>
     <script src="https://unpkg.com/vue@3"></script><!--connecting vue to use DOM-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="bmi.js"></script>
+    <script src="vue.js"></script>
     <style>
         h2 {
             text-align: center;
@@ -55,13 +55,18 @@
     <div id="bmi" >
         
         
-            <div class="container mt-5">
+            <div class="container my-5">
                 <div class="row justify-content-center">
 
                     <div class="backgroundimg col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                         <h2 style="color:rgb(77, 95, 121)">{{ title }}</h2>
                         <hr>
                         <table cellpadding="10px">
+                            <tr>
+                                <td><h5>Weight is: </h5></td>
+                                <td><h5>feet: {{ f }}</h5></td>
+                                <td><h5>Inches: {{ i }}</h5></td>
+                            </tr>
                             <tr>
                                 <td><h5 style="color:rgb(251, 79, 157)">Enter height:</h5></td>
                                 <td style="color:rgb(251, 79, 157)"><input type="number" name="feet" v-model.number = "f" placeholder="Enter in feet...">&nbsp;ft</td>
@@ -74,8 +79,28 @@
 
                         </table>
                         <br><br>
-                        <button class="block" @click = "compute">Compute</button>
+                        <button class="block" @click = "compute">Compute</button><!--fun calling-->
                         <br><br>
+                        <!--modal-->
+                        <!-- <div class="modal" tabindex="-1">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">Modal title</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <p>Modal body text goes here.</p>
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div> -->
+                          <!--end modal-->
+                          <p>{{ result }}</p>
                         <div class="description">
                             
                             <p style="color:blue">Underweight = 18.5</p>
@@ -83,6 +108,7 @@
                             <p style="color: orange;">Overweight = between 25 to 29.9</p>
                             <p style="color:red">Obesity = bmi of 30 or greater</p>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -111,7 +137,7 @@
     </div>
     <!--script-->
     <script>
-        const mountedApp = app2.mount("#bmi")
+        const mountedApp = app2.mount("#bmi");
     </script>
 </body>
 </html>
