@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        img {
+        width: 100px;
+        height: auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="app1">
+        <span v-html="name"></span>
+        <img v-bind:src="image" alt="">
+        <a :href="google">Google</a>
+        <p v-if = "data">Can see now</p>
+        <ul>
+            <li v-for="item in color">{{item}}</li>
+        </ul>
+        <div v-if="std_name.length > 0">
+            <ul>
+                <li v-for = "name in std_name">{{name}}</li>
+            </ul>
+        </div>
+        <div v-else>
+            <p>There is no arry</p>
+        </div>
+
+        <div v-if="users.length > 0">
+            <ul>
+                <li v-for="user in users">{{user}}</li>
+            </ul>
+        </div>
+        <div v-else>
+            <p>There is no user!</p>
+        </div>
+
+        <ol>
+            <li v-for="(item, index) in list">
+                <span>{{index}}</span>{{item.type}}: {{item.color}}
+            </li>
+        </ol>
+        <button @click="alert">Test</button>
+        <button @click="parameter('here is parameter')">parameterpst</button>
+        <br>
+        <p>{{data*3}}</p>
+        <input type="number" v-model.number="data">
+        <br><p>{{data1}}</p>
+        <input type="text" v-model="data1">
+    </div>
+    <script>
+        const app1 = Vue.createApp({
+            data() {
+                return {
+                    name : '<h3 style="color:darkgreen">Toyoda</h3>',
+                    image : 'ichikenlogo1.png',
+                    data : true,
+                    color : ['red', 'green', 'blue'],
+                    std_name : ['Yasu', 'Toyoda', 'Sakumi'],
+                    list : [
+                        {type:'A', color:'green'},
+                        {type:'B', color:'Blue'},
+                    ],
+                    users : ['popo', 'susu'],
+                    data :1,
+                    data1 :''
+                }
+            },
+            methods: {
+                alert() {
+                    alert("Hello")
+                },
+                parameter(msg) {
+                    alert(msg);
+                }
+            }
+        }).mount('#app1');
+    </script>
+</body>
+</html>
