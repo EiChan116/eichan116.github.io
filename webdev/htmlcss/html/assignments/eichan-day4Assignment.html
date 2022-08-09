@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day4 Assignment</title>
+</head>
+<body bgcolor="aqua">
+    <table border="7px" cellspacing="0" width="450px" cellpadding="">
+        <thead>
+            <tr align="center">
+                <th>
+                   <h1>Student Registration Form</h1> 
+                </th>
+            </tr>
+        </thead>
+    </table>
+    
+    <form action="../list.html" method="post">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" placeholder="Enter full name"></td>
+            </tr>
+            <tr>
+                <td>Father's Name:</td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td>Mother's Name:</td>
+                <td><input type="text" name="mname" id=""></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="number" name="ph" placeholder="097xxxxxx"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" placeholder="username@email.com"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="status" checked>Male 
+                    <input type="radio" name="status">Female
+                    <input type="radio" name="status">Other
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td colspan="3"><input name="dd" type="number" width="45px"> - <input type="number" name="mm"> - 
+                <input type="number" name="yyyy"> <label for=""><i>(dd-mm-yyyy)</i></label></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input width="100px" type="text" placeholder="Street- House- Road-" name="address"></td>
+            </tr>
+            <tr>
+                <td>Blood Group:</td>
+                <td><select name="bloodtype" id="">
+                    <option value="1">A</option>
+                    <option value="2">O</option>
+                    <option value="3">B</option>
+                    <option value="4">AB</option>
+                    <option value="" selected>Select</option>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td>Department:</td>
+                <td><input type="radio" name="dept" id="" checked>CSE
+                <input type="radio" name="dept">EEE
+                <input type="radio" name="dept">BBA</td>
+            </tr>
+            <tr>
+                <td>Course:</td>
+                <td>
+                    <input type="checkbox" value="1">C
+                    <input type="checkbox" value="2">C++
+                    <input type="checkbox" value="3">CC#
+                    <input type="checkbox">Java
+                    <input type="checkbox" value="4">Machine Learining
+                    <input type="checkbox">Robotics
+                </td>
+            </tr>
+            <tr>
+                <td>Photo:</td>
+                <td><input type="file" name="imagefile"></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <a href="../list.html">Post</a>
+                    <input type="submit" value="Submit" id="">
+                    <input type="reset" value="cancel">
+                    <input type="button" value="Post">
+                </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
+
+        

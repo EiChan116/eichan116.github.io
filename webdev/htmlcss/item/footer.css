@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    flex-flow: row wrap; /**/
+    padding: 50px;
+    
+}
+
+.footer > * {
+    flex: 1 100%;
+}
+
+

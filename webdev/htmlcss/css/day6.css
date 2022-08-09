@@ -1,0 +1,90 @@
+html {
+    background-color: #000;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    color: #606060;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    margin: 10px 0 0 0;
+}
+h4 {
+    margin: 0 0 20px 0;
+}
+#content-form {
+    background-color: rgba(72,72,72,0.9);
+    padding: 30px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    width: 40%;
+    margin: 30px auto 0px;
+    box-shadow: 3px 3px 8px white;
+}
+#content-form input,
+#content-form select, 
+#content-form textarea, 
+#contrnt-form label {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#content-form input, 
+#content-form select, 
+#content-form textarea {
+    width: 100%;
+    background: #fff;
+    border: 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+#content-form input:focus, 
+#content-form select:focus, 
+#content-form textarea:focus {
+    background-color: #E5E6E7;
+    outline: 0;
+    border: 2px solid pink;
+}
+
+#content-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+#content-form button[type = "submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: lightcoral;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#content-form button[type = "submit"]:hover {
+    background-color: rgb(183, 181, 181);
+    color:rgb(249, 92, 35);
+}
+#content-form button[type = "submit"]:active {
+    box-shadow: 2px 2px 10px blue;
+}
+
+@media screen and(max-width: 950px) and (min-width:699px) {
+    #content-form {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    #content-form {
+        width: 100%;
+    }
+}

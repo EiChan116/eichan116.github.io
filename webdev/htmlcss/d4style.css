@@ -1,0 +1,8 @@
+h1 {
+    text-align: center;
+}
+hr {
+    width: 100px;
+    border: 1px solid #52e4fb;
+    margin-top: -10px;
+}
