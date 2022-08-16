@@ -99,3 +99,64 @@ const disableApp = Vue.createApp ({
         }
     }
 });
+
+const day4 = Vue.createApp ({
+    data() {
+        return {
+            status: true,
+            name: 'Yasuhiro',
+            items: Array(), //ဘာမှန်းမသိသေးရင် null ထည့်ထားလို့ရတယ်
+
+        }
+    },
+    mounted() {
+        this.name = this.name.split('').reverse().join('');//js ရဲ့ method ၃ ခု
+        // console.log(`the component is now mounted!`);
+
+        axios.get("https://api.imgflip.com/get_memes")
+            .then (response => {//it has value in response,ဒါကြောင့်မလို့ condition ပြန်စစ်ပြီး console.logနဲ့အရင်ထုတ်
+                console.log(response.data);
+                if(response.data.success == true) {
+                    this.items = response.data.data.memes
+                }
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+    },
+    methods: {
+        getData() {
+            
+        }
+    }
+});
+
+const day4computed = Vue.createApp ({
+    data() {
+        return {
+            students : [
+                {name: 'Chloe', age: 17, gender: 'F'},
+                {name: 'Jennifer', age: 21, gender: 'F'},
+                {name: 'Marko', age: 19, gender: 'M'}
+            ],
+        }
+    },
+    mounted() {
+
+    },
+    methods: {
+        function() {
+
+        },
+
+    }, 
+    computed: {
+        boys () {
+            return this.students.filter(row => row.gender == 'M') 
+        },
+        adult () {
+            return this.students.filter(row => row.age >= 18)
+        }
+    }
+});

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed properties</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!--external script အနေနဲ့ ချိတ်-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul v-if="students.length > 0">
+            <li v-for="student in adult">
+                {{student.name}} || {{student.age}} || {{ student.gender}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const mounted = day4computed.mount('#app');
+    </script>
+</body>
+</html>

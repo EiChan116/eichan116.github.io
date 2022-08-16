@@ -1,0 +1,117 @@
+* {
+    font-family: quatt-regular;
+    /* font-family: barlow-medium; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: oswald;
+}
+.customnav-color {
+    background-color: #2f333a;
+}
+
+.main-color {
+    color: #eb3e32;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: roboto-bold;
+}
+
+.mainbgColor {
+    background-color: #eb3e32;
+}
+/* logo */
+.logo-responsive {
+    height: auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 250px;
+}
+
+
+/* start for language menu */
+.sticky-top a{
+    text-decoration: none; 
+    color: #fff;
+}
+.sticky-top a:hover {
+    color: #c0c0c0;
+}
+/* end for language menu */
+
+/* start logo and menu adjustment */
+.navbar-brand .logo-responsive {
+    margin-left: 25px;
+}
+
+.collapse ul li .nav-link {
+    text-transform: uppercase;
+}
+/* end logo and menu adjustment */
+
+/*start slide img adjust */
+.carousel-item img {
+    height: 70vh;
+    object-fit: cover;
+}
+/* end slide img */
+
+/*start yasu intro img and description */
+.introImg {
+    border-radius: 7px;
+    -moz-box-shadow: 10px 10px 50px #ccc;
+    -webkit-box-shadow: 10px 10px 50px #ccc;
+    box-shadow: 10px 10px 50px #ccc
+}
+
+.description {
+    border-radius: 7px;
+    border: 1px solid #dddedf;
+    background-color: #e4e5e6;
+    -moz-box-shadow: 10px 10px 50px #ccc;
+    -webkit-box-shadow: 10px 10px 50px #ccc;
+    box-shadow: 10px 10px 50px #ccc
+}
+/*end yasu intro img and description */
+
+/* start table */
+/* .description table {
+    width: 100%;
+    text-align: center;
+    
+
+}
+
+.description table tr td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: rgb(102, 103, 104);
+    background-color: #96D4D4;
+            padding: 16px 25px;
+} */
+/* end table */
+/* img description */
+
+.description .desc {
+    
+    justify-content: center;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
+
+.contactNo {
+    width: 100%;
+    background-color: rgb(241, 241, 241);
+    text-align: right;
+    border-radius: 25px;
+    padding-right:  34px;
+    
+}
+
+/*  */
+#newsletter {
+    background: url(../../pages/image/ichiken\ \(2\).JPG) no-repeat center center fixed;
+    background-size: cover;
+}
+
