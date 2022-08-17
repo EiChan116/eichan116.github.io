@@ -1,11 +1,10 @@
 * {
     font-family: quatt-regular;
+    
     /* font-family: barlow-medium; */
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: oswald;
-}
+
 .customnav-color {
     background-color: #2f333a;
 }
@@ -92,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
-/*  */
+/* index.html က နောက်ခံပုံအကြည်ထည့်တာ */
 #newsletter {
     background: url(../../pages/image/ichiken\ \(2\).JPG) no-repeat center center fixed;
     background-size: cover;
@@ -101,6 +100,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 25px;
 }
 
+/* start recruit  */
 section .recruitForm {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -155,6 +155,9 @@ button:hover {
     color: #254051;
     box-shadow: #254051 7px 7px 7px;
 }
+/* end recruit */
+
+/* for footer start */
 .graycolor {
     color: #999;
 }
@@ -177,3 +180,75 @@ button:hover {
 .instagram {
     color: #fba95c;
 }
+
+/* end footer */
+
+/*start recruitment.html */
+.recruitForm textarea {
+    resize: none;
+}
+
+.recruitImg h5 {
+    font-family: barlow-bold;
+    font-weight: bolder;
+    text-shadow: #254051 11px 11px 11px;
+    font-size: 63px;
+}
+.recruitImg h4 {
+    color: #999;
+    text-shadow:
+     -1px -1px 0 rgb(174, 185, 194),  
+      1px -1px 0 rgb(174, 185, 194),
+      -1px 1px 0 rgb(32, 116, 189),
+       1px 2px 0 rgb(32, 116, 189);
+}
+.recruitImg {
+    margin-top: 100px;
+}
+
+
+@media (min-width: 320px) and (max-width: 375px) {  
+    .recruitImg {
+        padding-top: 55px;
+    }
+}
+.recruitImg img {
+    height: 70vh;
+    object-fit: cover;
+}
+.recruitImg .recruitmentLine {
+    width: 90px;
+    position: relative;
+        /* top: 20px; */
+        border: none;
+        height: 12px;
+        background: black;
+        margin-bottom: 50px;
+    margin: auto;
+}
+.recruitAR p{
+    margin-top: -20px;
+    /* margin-bottom: 50px; */
+}
+.recruitcontent {
+    letter-spacing: 3px;
+    color: #3c5b9b;
+}
+
+.tableRecruit table {
+    max-width: 70%;
+    margin: auto;
+}
+.tableRecruit tr {
+    height: 70px;
+    color: rgb(155, 157, 157);
+}
+.tableRecruit tr .descTD {
+    letter-spacing: 3px;
+    color: rgb(155, 157, 157);
+}
+.tableRecruit tr td {
+    border: 1px solid rgb(83, 84, 84);
+    border-collapse: collapse;
+}
+/* end recruitment.html */
