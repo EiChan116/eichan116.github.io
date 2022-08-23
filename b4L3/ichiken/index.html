@@ -26,9 +26,31 @@
     <!--fontawesome-->
     <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     <style>
+      .browse {
+        float: right;
+        margin-top: -40px;
+        position:relative;
+      }
+      .browseLetter {
+        text-decoration: none;
+        color: rgb(212, 3, 13);
+        
+      }
+      .browseLetter:hover {
+        color: white;
+      }
+      .introImg {
+        text-align: center;
+        font-family: oswald;
+        font: weight 100px;;
+      }
+      .i1{
+        position: relative;
+      }
 
     </style>
 </head>
+
 <body>
     <!--start nav bar-->
     
@@ -59,7 +81,7 @@
                   Services
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Service 1</a></li>
+                  <li><a class="dropdown-item" href="service.html">Service 1</a></li>
                   <li><a class="dropdown-item" href="#">Service 2</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Others</a></li>
@@ -72,7 +94,7 @@
                 <a class="nav-link" href="recruitment.html">Recruit</a>
               </li>
               <li class="nav-item px-2">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
     
@@ -87,7 +109,8 @@
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -97,56 +120,129 @@
             <img src="en/pages/image/slideichiken1.JPG" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
+            <img src="en/pages/landscape/landscape3.JPG" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="en/pages/image/img2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
             <img src="en/pages/image/img1.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button> -->
-      </div>    
+        
+      </div>  
     <!--end slider-->
 
-    <!---->
-
-
-      <!--start intro-->
-      <div class="container my-3">
-        <div class="row g-0 bg-light position-relative description">
-          <div class="col-md-6 mb-md-0 p-md-4">
-            <img src="en/pages/image/pilot1.jpg" class="w-100 ing-fluid" alt="...">
+          <!--start intro-->
+          <div class="container my-3">
+            <div class="row g-0 bg-light position-relative description">
+              <div class="col-md-6 mb-md-0 p-md-4">
+                <img src="en/pages/image/pilot1.jpg" class="w-100 ing-fluid" alt="...">
+              </div>
+              <div class="col-md-6 p-4 ps-md-0 ">
+                <h2 class="name">TOYODA YASUHIRO</h2>
+                <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis officia nemo molestiae omnis Eum inventore sit id beatae. Expedita debitis officiis incidunt, magnam magni qui.</p>
+                <p class="contactNo">(06)6441-3321</p>
+                <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
+              </div>
+            </div>
           </div>
-          <div class="col-md-6 p-4 ps-md-0 ">
-            <h2 class="name">Yasuhiro Toyoda</h2>
-            <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis officia nemo molestiae omnis Eum inventore sit id beatae. Expedita debitis officiis incidunt, magnam magni qui.</p>
-            <p class="contactNo">(06)6441-3321</p>
-            <!-- <a href="#" class="stretched-link">Go somewhere</a> -->
+          <!--end intro-->
+
+    <!--start grid pic-->
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
+            <img src="en/pages/landscape/i1.jpg" class="img-fluid" alt="">
+            <div class="position-absolute top-50 start-50 translate-middle text-white">
+              <h1> SR神戸本社</h1>
+              <h3>正面</h3>
+            </div>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
+            <img src="en/pages/landscape/i2.jpg" class="img-fluid" alt="">
+            <div class="position-absolute top-50 start-50 translate-middle text-white" >
+              <h1>SR神戸本社</h1>
+              <h3>海側</h3>
+            </div>
           </div>
         </div>
       </div>
-      <!--end intro-->
+    <!--end grid pic-->
+
+    <!--start description grid pic-->
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+          <div class="card">
+            <img src="en/pages/5x5/5x5-10.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Title One</h5>
+              <p class="card-text">Description</p>
+              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+          <div class="card">
+            <img src="en/pages/5x5/5x5-9.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Title Two</h5>
+              <p class="card-text">Description</p>
+              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+          <div class="card">
+            <img src="en/pages/5x5/5x5-11-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Title three</h5>
+              <p class="card-text">Description</p>
+              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+          <div class="card">
+            <img src="en/pages/5x5/5x5-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Tittle Four</h5>
+              <p class="card-text">Description</p>
+              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end description grid pic-->
+
+
+      
+
 
     <!--start before footer-->
     <section class="my-5" id="newsletter">
       <div class="container my-5">
         <div class="row justify-content-center py-5">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-success p-2 text-white fs-4 bg-opacity-50">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-dark p-2 text-white fs-4 bg-opacity-50">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem incidunt vel ritatis ni distinctio accusamus minus, veniam necessitatibus. Voluptatum magnam distinctio pariatur, voluptatem sequi fuga nulla aut ipsam atque dolorum sit, ad aspernatur accusantium sed similique vitae molestias nesciunt. Dicta nobis ad tempore, quae natus unde, praesentium itaque, nisi nam optio iste molestias quas iure expedita consectetur delectus. Nisi odio blanditiis non aut dem?</p>
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-success p-2 text-white fs-4 bg-opacity-50">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-dark p-2 text-white fs-4 bg-opacity-50">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni exercitationem corrupti necessitatibus rerum quis. Ullam sint voluptatum ipsa necessitatibus! Quo temporibus optio excepturi, dignissimos deserunt voluptates rem sit odit inventore?</p>
           </div>
         </div>
       </div>
     </section>
-
+          <!--animation bar-->
+    <div style="margin-bottom: -18px;">
+      <p class="placeholder-glow">
+          <span class="placeholder col-12"></span>
+      </p>
+  </div>
         <!--start footer-->
         <footer class="customnav-color graycolor">
-          <div class="container py-5">
+          <div class="container py-3">
             <div class="row gy-5">
               <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
                 <div class="">
@@ -198,8 +294,8 @@
                 <p class="text-uppercase h5 text-white mb-3">Information</p>
                 
                 <p class="infoFooter mb-0"><a class="text-white-50" href="index.html">Home</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="#">Service</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="#">Contact</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">Service</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="recruitment.html">Recurit</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="about.html">About</a></p>
     
@@ -207,7 +303,7 @@
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
       
                 <p class="text-uppercase h5 text-white mb-3">Get In Touch</p>
-                <p class="mb-0 text-white">Address:</p><span> This is address <br>hodsnfksfnoisdhfos </span>
+                <p class="mb-0 text-white">Address:</p><span> 2-11-23, <br>Kyoumachibori nishiku Osaka city, Osaka Japan. </span>
                 <p class="mb-0 text-white">Telephone inquiry:</p><span>(06) 6441 - 3321</span>
                 <p class="mb-0 text-white">Email: </p><span>daiichikenzai.jp@gmail.com</span> 
     
@@ -227,7 +323,7 @@
             <div class="container px-3">
               <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-14 col-md-16 col-sm-12 col-12">
-                  <p class="graycolor">Copyright © 第一建材株式会社, 2022. All Rights Reserved</p>
+                  <p class="graycolor">Copyright © 第一建材株式会社, since 1954.</p>
                 </div>
               </div>
     

@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*start slide img adjust */
 .carousel-item img {
-    height: 70vh;
+    height: 72vh; /*view heigh*/
     object-fit: cover;
 }
 /* end slide img */
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* index.html က နောက်ခံပုံအကြည်ထည့်တာ */
 #newsletter {
-    background: url(../../pages/image/ichiken\ \(2\).JPG) no-repeat center center fixed;
+    background: url(../../pages/landscape/landscape12.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 .title {
