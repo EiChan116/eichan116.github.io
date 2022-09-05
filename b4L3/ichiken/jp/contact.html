@@ -17,6 +17,8 @@
 
     <!--custome css-->
     <link rel="stylesheet" href="../en/assets/css/font.css">
+    
+    <link rel="stylesheet" href="../en/formIchiken/style.css">
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="stylesheet" href="../en/assets/css/en.css">
 
@@ -26,7 +28,73 @@
     <!--fontawesome-->
     <link rel="stylesheet" href="../en/assets/fontawesome/css/all.min.css">
     <style>
+        .input-group i{
+            margin-left: 20px;
+        }
+        .banner-img img{
+            width: 100%;
+            height: 70vh;
+            object-fit: cover;
+        }
+        .bg-img {
+            margin-top: 85px;
+            /* The image used */
+            background-image: url("../en/pages/image/contactUs.jpg");
 
+            min-height: 380px;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /* Needed to position the navbar */
+            position: relative;
+        }
+        .topbanner {
+            overflow: hidden;
+            /* background-color: #333; */
+        }
+        .topbanner h1 {
+            margin-top: 16px;
+        }
+        .topbanner p {
+            text-align: center;
+            color: aliceblue;
+            word-spacing: 2px;
+            font-size: 27px;
+        }
+        .topbanner hr {
+            margin: auto;
+            margin-bottom: 16px;
+            height: 7px; 
+            border: none; 
+            background-color: aliceblue; 
+        }
+        @media (min-width: 320px) and (max-width: 375px) {  
+        .bg-img {
+            padding-top: 55px;
+        }
+        }
+        @media (min-width: 425px) and (max-width: 768px) {  
+            .bg-img {
+                padding-top: 55px;
+            }
+        }   
+        .bg-light {
+          width: 100%;
+        }
+        .map {
+          width: 100%;
+        }
+        .contact {
+          border: 1rem;
+          border-radius: 7px;
+          border-color: black solid 5px;
+        }
+        #icon i {
+          margin-left: 34px;
+        }
     </style>
 </head>
 <body>
@@ -81,56 +149,125 @@
     </nav>
     <!--end nav bar-->
 
-    <!--start slider-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="../en/pages/image/slideIchiken.JPG" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../en/pages/image/slideichiken1.JPG" class="d-block w-100" alt="...">
-          </div>
-        </div>
+            <!--start contact banner form-->
+            <div class="bg-img">
+                <div class="container">
+                  <div class="topbanner">
+                    <h1 class="fs-1">Contact Us</h1> <hr>
+                    <p>
+                        For more information, <br>
+                        please fill in our contact Form below.
+                        We will be pleased to answer your queries.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-      </div>    
-    <!--end slider-->
+ <!--end contact banner form-->
+<!--start ph no-->
 
-    <!--intro with 2 grid-->
-    <div class="container my-3">
-      <div class="row">
-        <div class = "col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 img">
-          <img src="../en/pages/image/pilot1.jpg" class="img-fluid introImg" alt="">
-        </div>
-        <div class = "col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 description">
-          <div class="toyoda">
+<div class="container-fluit py-5" style="background-color: rgb(255, 250, 242);">
+  <div class="row">
+    <div class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12" style="border-right:rgb(27, 80, 133) solid 1px; text-align: right;">
+      <h5 style="color: rgb(27, 80, 133); font-size:25px; text-align: center;">If you are in a hurry, please contact us by phone.</h5>
+    </div>
+    <div id="icon" class="col-lg-6 col-xl-6 col-md-6 col-sm-12 col-12">
+      <i class="fa-solid fa-2x fa-phone" style="color: rgb(27, 80, 133);">&nbsp;&nbsp; 06 - 6441 - 3321</i>
+    </div>
+  </div>
+</div>
+
+<!--end ph no-->
+
+            <!--contact form-->
+            <section class="container">
+                
+                <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        
+                    <div class="hero">
+                        <form id="my-form" action="https://formspree.io/f/mdojoady" method="POST">
+                            <h1>Contact Us</h1><hr>
+                            <div class="row">
+                                <div class="input-group">
+                                    <input type="text" name="name" id="name" required><br>
+                                    <label for="name"><i class="fas fa-user"></i>&nbsp;Name:</label>
+                                </div>
+                                <div class="input-group">
+                                    <input type="number" name="contact" required><br>
+                                    <label for="number"><i class="fas fa-phone-square"></i>&nbsp;Ph Number:</label>
+                                </div>
+                            </div>
+                                <div class="input-group">
+                                    <input type="email" name="email" required><br>
+                                    <label for="email"><i class="fa-solid fa-envelope"></i>&nbsp;Email:</label>
+                                </div>
+                                <!-- <div class="input-group">
+                                    <input name="message" type="text" required></input><br>
+                                    <label for="message"><i class="fas fa-comments"></i>Message:</label>
+                                </div> -->
+                                <div class="input-group">
+                                    <textarea name="message" id="" cols="30" rows="10" required></textarea>
+                                    <label><i class="fas fa-comments"></i>&nbsp;Your message:</label>
+                                </div>
+                            <button id="my-form-button">Submit</button>
+                            <p id="my-form-status"></p>
+                        </form>
+                    </div>
+        <!-- Place this script at the end of the body tag -->
+                    <script>
+                    var form = document.getElementById("my-form");
+                    
+                    async function handleSubmit(event) {
+                    event.preventDefault();
+                    var status = document.getElementById("my-form-status");
+                    var data = new FormData(event.target);
+                    fetch(event.target.action, {
+                        method: form.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                        status.innerHTML = "Thanks for your submission!";
+                        form.reset()
+                        } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                            } else {
+                            status.innerHTML = "Oops! There was a problem submitting your form"
+                            }
+                        })
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Oops! There was a problem submitting your form"
+                    });
+                    }
+                    form.addEventListener("submit", handleSubmit)
+                    </script>
+                        <!---->
+                    </div>
+                </div>
+            </section>
+            <!--end recruit form-->
+
+                <!--start google map-->
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2024.0613462448293!2d135.48776513881808!3d34.6856417876167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6f85bc0614b%3A0xdd898148e6f567af!2s2-ch%C5%8Dme-11-23%20Ky%C5%8Dmachibori%2C%20Nishi%20Ward%2C%20Osaka%2C%20550-0003%2C%20Japan!5e0!3m2!1sen!2smy!4v1661372059506!5m2!1sen!2smy" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 map">
   
-            <h2 class="name">豊田泰弘</h2>
-            <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis officia nemo molestiae omnis Eum inventore sit id beatae. Expedita debitis officiis incidunt, magnam magni qui.</p>
-            <p class="contactNo">(06)6441-3321</p>
           </div>
         </div>
       </div>
-    </div> 
-    <!-- end intro woth 2 grid-->
+      <!--end google map-->
 
-    <!--start before footer-->
-    <section class="my-5" id="newsletter">
-      <div class="container my-5">
-        <div class="row justify-content-center py-5">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-success p-2 text-white fs-4 bg-opacity-50">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem incidunt vel ritatis ni distinctio accusamus minus, veniam necessitatibus. Voluptatum magnam distinctio pariatur, voluptatem sequi fuga nulla aut ipsam atque dolorum sit, ad aspernatur accusantium sed similique vitae molestias nesciunt. Dicta nobis ad tempore, quae natus unde, praesentium itaque, nisi nam optio iste molestias quas iure expedita consectetur delectus. Nisi odio blanditiis non aut dem?</p>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-success p-2 text-white fs-4 bg-opacity-50">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni exercitationem corrupti necessitatibus rerum quis. Ullam sint voluptatum ipsa necessitatibus! Quo temporibus optio excepturi, dignissimos deserunt voluptates rem sit odit inventore?</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    
             <!--animation bar-->
         <div style="margin-bottom: -18px;">
           <p class="placeholder-glow">
@@ -190,9 +327,9 @@
               <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
                 <p class="text-uppercase h5 text-white mb-3">Let's Browse!</p>
                 
-                <p class="infoFooter mb-0"><a class="text-white-50" href="../index.html">Home</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="index.html">Home</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="../service.html">Service</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="../contact.html">Contact</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="../recruitjp.html">Recurit</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="../about.html">About</a></p>
     
