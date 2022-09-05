@@ -26,28 +26,38 @@
     <!--fontawesome-->
     <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     <style>
-      .browse {
-        float: right;
-        margin-top: -40px;
-        position:relative;
-      }
-      .browseLetter {
-        text-decoration: none;
-        color: rgb(212, 3, 13);
-        
-      }
-      .browseLetter:hover {
-        color: white;
-      }
-      .introImg {
-        text-align: center;
-        font-family: oswald;
-        font: weight 100px;;
-      }
-      .i1{
-        position: relative;
-      }
 
+      .fullImg {
+        margin-top: 86px;
+      }
+      
+      .fullImg img {
+        object-fit: cover;
+        width: 100%;
+        height: 35rem;
+        /* object-position: top; */
+        filter: brightness(0.5);
+      }
+      .fullImg h1 {
+        font-size: 4rem;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: nato-regular;
+      }
+      .fullImg h2 {
+        position: absolute;
+        top: 60%;
+        left: 35%;
+        transform: -50%, -50%;
+        color: #fff;
+        font-size: 2rem;
+      }
+      .emp .row {
+        margin-left: 11px;
+      }
     </style>
 </head>
 
@@ -60,14 +70,10 @@
             <a href="index.html">EN |</a>
             <a href="jp/index.html">JP</a>
           </div>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="en/pages/image/weblogowhiteeng.png" class="logo-responsive w-75" alt="">
           </a>
 
-            
-          <!-- <a class="navbar-brand" href="#">
-            <img class="logo" src="assets/images/logo/" class="w-75" alt="">
-          </a> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -82,7 +88,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="service.html">Service 1</a></li>
-                  <li><a class="dropdown-item" href="#">Service 2</a></li>
+                  <li><a class="dropdown-item" href="services.html">Service 2</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Others</a></li>
                 </ul>
@@ -93,22 +99,82 @@
               <li class="nav-item px-2"><!--left/right padding-->
                 <a class="nav-link" href="recruitment.html">Recruit</a>
               </li>
+              <li class="nav-item px-2"><!--left/right padding-->
+                <a class="nav-link" href="employee.html">Employee</a>
+              </li>
               <li class="nav-item px-2">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
             </ul>
     
           </div>
-        </div>
+
       </nav>
     </nav>
     <!--end nav bar-->
 
+    <!--start welcome img-->
+    <header>
+        <div class="container fullImg">
+            <img src="en/pages/landscape/i1.jpg"  alt="">
+            <h1>第一建材株式会社</h1>
+            <!-- <h2>Ready to open you with open arms</h2> -->
+        </div>
+    </header>
+    <!--end welcome img-->
 
+
+        <!--start description grid staff pic-->
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+              <div class="card">
+                <!-- <img src="../en/pages/5x5/5x5-10.jpg" class="card-img-top" alt="..."> -->
+                <img src="en/pages/emp/emp.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <!-- <h5 class="card-title fw-bold">Title One</h5> -->
+                  <p class="card-text">To provide better service...</p>
+                  <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+              <div class="card">
+                <img src="en/pages/emp/emp6.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <!-- <h5 class="card-title fw-bold">Title Two</h5> -->
+                  <p class="card-text">Our talented engineers...</p>
+                  <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+              <div class="card">
+                <img src="en/pages/emp/emp2.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <!-- <h5 class="card-title fw-bold">Title three</h5> -->
+                  <p class="card-text">Interior ceiling and wall installation...</p>
+                  <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+              <div class="card">
+                <img src="en/pages/emp/emp4.jpg" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                  <!-- <h5 class="card-title fw-bold">Tittle Four</h5> -->
+                  <p class="card-text">Interior wall decoration...</p>
+                  <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end description grid staff pic-->
 
 
           <!--animation bar-->
-    <div style="margin-bottom: -18px;">
+<div style="margin-bottom: -18px;">
       <p class="placeholder-glow">
           <span class="placeholder col-12"></span>
       </p>
@@ -170,6 +236,7 @@
                 <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">Service</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="recruitment.html">Recurit</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="employee.html">Employee</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="about.html">About</a></p>
     
               </div>
@@ -178,15 +245,15 @@
                 <p class="text-uppercase h5 text-white mb-3">Get In Touch</p>
                 <p class="mb-0 text-white">Address:</p><span> 2-11-23, <br>Kyoumachibori nishiku Osaka city, Osaka Japan. </span>
                 <p class="mb-0 text-white">Telephone inquiry:</p><span>(06) 6441 - 3321</span>
-                <p class="mb-0 text-white">Email: </p><span>daiichikenzai.jp@gmail.com</span> 
+                <p class="mb-0 text-white">Email: </p><span>group14@daiichi-kenzai.co.jp</span> 
     
               </div>
               
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
                 <p class="text-uppercase h5 text-white">Working hour</p>
-                <p class="mb-0">From <span class="text-white"> 8:00 AM - 18:00 PM </span> </p>
-                <p class="mb-0">Saturday: half-day</p>
-                <p class="mb-0">Sunday: Close</p>
+                <p class="mb-0">From <span class="text-white"> 9:00 AM - 18:00 PM </span> </p>
+                <p class="mb-0">Saturday: Closed</p>
+                <p class="mb-0">Sunday: Closed</p>
                 <br>
                 <img src="en/pages/image/logoFooterWhite.png" class="img-fluid w-25" alt=""><br>
                 第一建材株式会社
