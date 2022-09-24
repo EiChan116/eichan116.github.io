@@ -82,6 +82,27 @@
                 padding-top: 55px;
             }
         }   
+        /* @media (max-height: 300px) {
+          .formInput {
+            margin-top: 250px;
+          }
+        } */
+        @media (max-height: 300px) {
+          .contactForm {
+            width: 100%;
+            height:auto;
+          }
+          #my-form-status {
+            font-size: 16px;
+            columns: white;
+            text-align: center;
+          }
+        }
+        #my-form-status {
+          font-size: 34px;
+          color: white;
+          text-align: center;
+        }
         .bg-light {
           width: 100%;
         }
@@ -97,6 +118,7 @@
           margin-left: 34px;
         }
     </style>
+    
 </head>
 <body>
     <!--start nav bar-->
@@ -193,17 +215,17 @@
                 <div class="row justify-content-center">
                     <div class="col-12">
                         
-                    <div class="hero">
+                    <div class="contactForm">
                         <form id="my-form" action="https://formspree.io/f/mdojoady" method="POST">
                             <h1>Contact Us</h1><hr>
-                            <div class="row">
+                            <div class="row formInput">
                                 <div class="input-group">
                                     <input type="text" name="name" id="name" required><br>
                                     <label for="name"><i class="fas fa-user"></i>&nbsp;Name:</label>
                                 </div>
                                 <div class="input-group">
                                     <input type="number" name="contact" required><br>
-                                    <label for="number"><i class="fas fa-phone-square"></i>&nbsp;Ph Number:</label>
+                                    <label for="number"><i class="fas fa-phone-square"></i>&nbsp;Phone:</label>
                                 </div>
                             </div>
                                 <div class="input-group">
