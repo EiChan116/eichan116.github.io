@@ -30,6 +30,26 @@
         font-family: nato-regular;
         vertical-align: middle;
       }
+      .formMsg {
+       
+       color: rgb(103, 104, 102);
+       border-radius: 7px;
+       width: 450px;
+       height: 100px;
+       text-align: center;
+       font-size: 21px;
+     }
+     .recurimentContent {
+       font-size: 21px;
+       color: rgb(183, 23, 2);
+       text-align: center;
+     }
+     @media (max-width: 425px) {
+       .recurimentContent {
+         font-size: 16px;
+         text-align: center;
+       }
+     }
     </style>
 </head>
 <body>
@@ -99,11 +119,11 @@
                     <div class="card-img-overlay">
                       <h5 class="card-title text-uppercase fw-bold">recruit</h5>
                       <p class="card-text text-info"></p>
-                      <p class="card-text"><h4 class="text-white">Warmly welcome to 第一建材株式会社!</h4></p>
+                      <p class="card-text"><h4 class="text-white">第一建材株式会社で一緒に成長しませんか</h4></p>
                     </div>
                   </div>
                   <div>
-                    <h1 class="mt-4" style="text-align: center;">RECRUITENT INFORMATION</h1>
+                    <h1 class="mt-4" style="text-align: center;">採用情報</h1>
                     <hr class="recruitmentLine">
                     <br>
                     <div class="recruitAR">
@@ -111,7 +131,7 @@
                     </div>
                     <div>
                         <p class="recruitcontent" style="text-align: center;">
-                          Beyond 68 years of history. We are looking for people to make new history.
+                          68年の歴史を超えて。新しい歴史を作る人材を求めています。
                         </p>
                     </div>
                     <div class="tableRecruit">
@@ -179,22 +199,22 @@
         <div class="container recruitForm py-5">
           <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-6 col-md-12 col-sm-12 col-12">
-              <h2>Recruitment</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere veniam, hic recusandae nemo tenetur, obcaecati consectetur culpa sint expedita quasi distinctio quibusdam at magnam molestiae quidem natus, tempore repellendus! Id!</p>
+              <h2 style="text-align: center;">採用情報</h2>
+              <p class="recurimentContent">※注意事項：履歴書、資格、お礼状をご持参の上、ご応募ください。</p>
                 <!---->
                 <!-- modify this form HTML and place wherever you want your form -->
                 <form id="my-form" action="https://formspree.io/f/mrgdgaor" method="POST">
                   <div class="row">
                     <div class="div1">
-                      <label for="fullname">Full Name</label>
+                      <label for="fullname">名前</label>
                     </div>
                     <div class="div2">
-                      <input type="text" name="fullname" placeholder="Name....">
+                      <input type="text" name="fullname" placeholder="名前....">
                     </div>
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="birth-date">Date Of Birth</label>
+                      <label for="birth-date">生年月日</label>
                     </div>
                     <div class="div2">
                       <input type="date" name="birth-date" style="color: rgb(114, 113, 113);">
@@ -202,7 +222,7 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="contactNo">Contact number</label>
+                      <label for="contactNo">連絡先番号</label>
                     </div>
                     <div class="div2">
                       <input type="number" name="contactNo" placeholder="Ph:">
@@ -210,7 +230,7 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="email">Email</label>
+                      <label for="email">電子メールアドレス</label>
                     </div>
                     <div class="div2">
                       <input type="email" name="email" placeholder="something@mail.com"/>
@@ -218,12 +238,12 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="gender">Gender</label><br>
+                      <label for="gender">性別</label><br>
                     </div>
                     <div class="div2">
-                      <input type="radio" name="gender" value="male"><label for="male">&nbsp;Male</label>&nbsp;
-                      <input type="radio" name="gender" value="female"><label for="female">&nbsp;Female</label>&nbsp;
-                      <input type="radio" name="gender" value="other"><label for="other">&nbsp;Other</label>&nbsp;
+                      <input type="radio" name="gender" value="male"><label for="male">&nbsp;男性</label>&nbsp;
+                      <input type="radio" name="gender" value="female"><label for="female">&nbsp;女性</label>&nbsp;
+                      <!-- <input type="radio" name="gender" value="other"><label for="other">&nbsp;Other</label>&nbsp; -->
                     </div>
                   </div>
                   <!-- <div class="row">
@@ -242,7 +262,8 @@
                   </div> -->
                   <div class="row">
                     <div class="div1">
-                      <label>Working Experience:</label>
+                      <label>
+                        仕事の経験:</label>
                     </div>
                     <div class="div2">
                       <textarea name="message" id="" cols="30" rows="10"></textarea>
