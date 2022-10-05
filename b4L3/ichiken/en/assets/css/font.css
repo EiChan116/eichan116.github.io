@@ -58,3 +58,7 @@
     font-family: quatt-bold;
     src: url(../fonts/Quatt/QuattrocentoSans-Bold.ttf);
 }
+@font-face {
+    font-family: title;
+    src: url(../fonts/Passion_One/PassionOne-Regular.ttf);
+}
