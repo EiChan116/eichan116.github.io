@@ -23,7 +23,7 @@ section .container {
     width: 50%;
     height: 600px;
     /* background: url(/en/pages/4-45/headOffice.jpg) no-repeat center / cover; */
-    background: url(../../pages/landscape/office.jpg) no-repeat center / cover;
+    background: url(../../pages/4-45/headOffice.jpg) no-repeat center / cover;
 }
 .right {
     width: 50%;
@@ -34,7 +34,7 @@ section .container {
     align-items: center;
     padding: 25px;
     color: white;
-    margin-left: -150px;
+    margin-left: -90px;
     border-radius: 9px;
 }
 
