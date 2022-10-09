@@ -78,22 +78,31 @@
         color: black;
         font-family: nato-bold;;
       }
-      #scrollImg .ani-div {
-  
-  position: relative;
-  animation-name: example;
-  animation-duration: 7s;
-  /* animation-direction: reverse; */
-  animation-iteration-count: infinite;
+
+      #scrollImg1 .ani-div h1{ /*without class will be long line*/
+      position: relative;
+      animation-name: example;
+      font-weight: bolder;
+      /* animation-duration: 11s;
+      animation-iteration-count: infinite; */
+      transform: translateX(100%);
+      animation: ani 7s linear infinite;
 }
-@keyframes example {
-  0% { left: 0px; top: 0px;}
-  25% { left: -350px; top: 0;}
-  /* 50% { left: 350px; top: 250px;} */
-  75% { left: -200px; top: 250px;}
-  100% { left: 0px; top: 0px;}
-  
+      /* @keyframes example {
+      0% { left: 0px; top: 0px;}
+      25% { left: -350px; top: 0;}
+      75% { left: -200px; top: 250px;}
+      100% { left: 0px; top: 0px;}
+} */
+  @keyframes example {
+   
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
 }
+  }
     </style>
 </head>
 <body>
@@ -152,12 +161,11 @@
     <!--end nav bar-->
 
     <!--start scroll img-->
-    <section class="" id = "scrollImg">
-      <div class="container py-5">
-        <div class="row justify-content-center py-5">
+    <section class="" id = "scrollImg1">
+      <div class="container">
+        <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 text-white text-center ani-div">
-            <!-- <i class="fa-sharp fa-solid fa-compass display-3"></i> -->
-            <p class="h1">第一建材株式会社</p>
+            <h1>第一建材株式会社</h1>
           </div> 
           <form action="">
             <div class="row g-3 py-5">
@@ -175,6 +183,7 @@
         </div>
       </div>
     </section>
+
     <!-- end scroll img -->
 
 
@@ -251,7 +260,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
-          <img style="width: 50%;" class="mx-auto d-block" src="en/pages/image/aboutus.png" alt="">
+          <img style="width: 50%;" class="mx-auto d-block" src="en/pages/image/aboutusEn.png" alt="">
           <br>
           <p style="text-align: center;" class="center h4 text-bg-danger">お問い合わせについて</p><br>
           <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
@@ -282,6 +291,9 @@
   
 
     <!-- start director img -->
+
+    <!-- *** -->
+
     <div class="container-fluit div-container">
       <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">

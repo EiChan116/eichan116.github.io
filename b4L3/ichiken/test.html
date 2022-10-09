@@ -7,8 +7,45 @@
     <link rel="icon" href="en/pages/image/favicon.png">
     <link rel="apple-touch-icon" href="en/pages/image/favicon.png">
     <title>ichiken</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .scrolling {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            margin-top: 50px;  
+        }
+        .scrolling h2 {
+            position: absolute;
+            width: 100%;
+            height:100%;
+            margin: 0;
+            padding: 0;
+            font-size: 4em;
+            line-height: 50px;
+            text-align: center;
+            transform: translateX(100%);
+            animation: ani 15s linear infinite;
+            color: gray;
+        }
+        @keyframes ani {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+    </style>
 </head>
 <body>
-    
+    <div class="scrolling">
+        <h2>Lorem ipsum dolculpa illum enim.</h2>
+    </div>
 </body>
 </html>

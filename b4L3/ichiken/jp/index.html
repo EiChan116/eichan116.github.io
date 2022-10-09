@@ -26,7 +26,7 @@
     <!--fontawesome-->
     <link rel="stylesheet" href="../en/assets/fontawesome/css/all.min.css">
     <style>
-            .div-container {
+        .div-container {
         margin: 0;
         display: flex;
         align-items: center;
@@ -59,6 +59,16 @@
       .shachou-content small {
         color: black;
         font-family: nato-bold;;
+      }
+      .caption {
+        background-color: rgba(0, 0, 0, 0.4);
+        padding: 20px 40px;
+        text-align: center;
+      }
+      .phone {
+        background: url(../en/pages/landscape/landscape10.jpg) no-repeat center center fixed;
+        background-size: conver;
+        border-radius: 9px;
       }
     </style>
 </head>
@@ -118,7 +128,7 @@
     <!--end nav bar-->
 
     <!--start slider-->
-    <div id="carouselExampleIndicators" class="carousel slide py-3" data-bs-ride="true">
+    <!-- <div id="carouselExampleIndicators" class="carousel slide py-3" data-bs-ride="true">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -143,10 +153,107 @@
         </div>
       </div>
       
-    </div>    
+    </div>   -->
+    <!-- end slider -->
+
+
+    <!--start slider-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button><button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../en/pages/image/slideIchiken.JPG" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="h1 text-white">First slide label</p>
+                <p class="h4">Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../en/pages/image/slideichiken1.JPG" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="h1 text-white">Second slide label</p>
+                <p class="h4">Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../en/pages/landscape/landscape3.JPG" class="d-block w-100" alt="...">
+              <div class="carousel-caption text-info d-none d-md-block">
+                <p class="h1 text-white">Third slide label</p>
+                <p class="h4">Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../en/pages/landscape/SR神戸本社(正面).jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="h1 text-white">Fourth slide label</p>
+                <p class="h4">Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../en/pages/landscape/SR神戸本社(海側).jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="h1 text-white">Fifth slide label</p>
+                <p class="h4">Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          
+      </div>   
     <!--end slider-->
+
+        <!-- start title of renovation -->
+        <!-- <div class="container mt-5">
+          <div class="row text-center">
+            <div class="col-12">
+              <h1 class="h1">Our Work</h1>
+              <p class="p">Some projects we've worked on over the years</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+              <img style="width: 50%;" class="mx-auto d-block" src="../en/pages/image/ourWorkEN-01.png" alt="">
+              <p style="text-align: center;" class="center h4 text-bg-danger">LET'S BROWSE</p>
+              <p style="text-align: center; font-family: nato-bold;" class="p text-secondary"> 私たちが長年取り組んできたいくつかのプロジェクト.....</p> 
+            </div>
+          </div>
+        </div>
+        <!-- end title of renovation -->
+    
+        <!--start grid pic-->
+        <div class="container my-3">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
+                <img src="../en/pages/landscape/landscape5.jpg" class="img-fluid" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle text-white">
+                  <h1 class="caption">天井と床</h1>
+                  
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
+                <img src="../en/pages/landscape/landscape12.jpg" class="img-fluid" alt="">
+                <div class="position-absolute top-50 start-50 translate-middle text-white" >
+                  <h1 class="caption">天井</h1>
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--end grid pic-->
+        
+        
+        <!-- end title of renovation -->
+
+
         <!-- start director img -->
-        <div class="container-fluit div-container">
+        <!-- <div class="container-fluit div-container">
           <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
               <img class="img-fluid shachou-img" src="../en/pages/5x5/pgrey5x5.jpg" alt="">
@@ -159,90 +266,174 @@
                 第一建材株式会社に、どうぞご期待ください。
               </small></p>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- end director img -->
-        <!--start grid pic-->
+        <!--start interior building pic-->
         <div class="container my-3 py-3">
           <div class="row">
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
               <img src="../en/pages/landscape/i1.jpg" class="img-fluid" alt="">
               <div class="position-absolute top-50 start-50 translate-middle text-white">
-                <h1> SR神戸本社</h1>
-                <h3>正面</h3>
+                <!-- <h1> SR神戸本社</h1> -->
+                <h1 class="caption">Interior</h1>
+                <!-- <h3>正面</h3> -->
               </div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 position-relative">
               <img src="../en/pages/landscape/i2.jpg" class="img-fluid" alt="">
               <div class="position-absolute top-50 start-50 translate-middle text-white" >
-                <h1>SR神戸本社</h1>
-                <h3>海側</h3>
+                <!-- <h1>SR神戸本社</h1> -->
+                <h1 class="caption">Interior</h1>
+                <!-- <h3>海側</h3> -->
               </div>
             </div>
           </div>
         </div>
-      <!--end grid pic-->
+      <!--end interior building pic-->
 
-    <!--start description grid pic-->
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
-          <div class="card">
-            <img src="../en/pages/5x5/5x5-10.jpg" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Title One</h5>
-              <p class="card-text">Description</p>
-              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
+      <!-- start tap img -->
+        <div class="container my-5">
+          <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+              <ul class="nav nav-tabs nav-fill" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" style="font-family: nato-bold;" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">天井と床</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" style="font-family: nato-bold;" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    壁、金属フレームなど</button>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 mt-1">
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+
+                  <div class="row g-3">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 cpl-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5/5x5-11-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-info" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 cpl-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5service/celingfloor7.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-info" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 cpl-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5service/celingfloor.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-dark" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 cpl-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5service/celing2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-dark" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                  <div class="row g-3">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5service/wall.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-danger" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5/5x5x-8.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-info" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5service/wall1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-dark" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
+                      <div class="card">
+                        <img src="../en/pages/5x5/5x5-7.jpg" class="card-img-top" alt="...">
+                        <div class="card-body text-center">
+                          <!-- <h5 class="card-title" style="font-family: oswald;">Card title</h5> -->
+                          <p class="card-text">Lorem ipsum dolor, sit ameor facilis nesciunt aut?</p>
+                          <div class="d-grid gap-2 col-8 mx-auto">
+                            <a href="#" class="btn btn-outline-dark" style="">To see more...</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
-          <div class="card">
-            <img src="../en/pages/5x5/5x5-9.jpg" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Title Two</h5>
-              <p class="card-text">Description</p>
-              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
-          <div class="card">
-            <img src="../en/pages/5x5/5x5-11-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Title three</h5>
-              <p class="card-text">Description</p>
-              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 col-12">
-          <div class="card">
-            <img src="../en/pages/5x5/5x5-7.jpg" class="card-img-top" alt="...">
-            <div class="card-body text-center">
-              <h5 class="card-title fw-bold">Tittle Four</h5>
-              <p class="card-text">Description</p>
-              <a href="service.html" class="btn btn-outline-info">Go browse more..</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--end description grid pic-->
+
+      <!-- end tap img -->
 
 
     <!--start before footer-->
-    <section class="my-5" id="newsletter">
+    <section class="my-3" id="newsletter">
       <div class="container my-5">
         <div class="row justify-content-center py-5">
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  p-2 text-white fs-4 bg-opacity-50">
-            <img src="../en/pages//5x5/pwhite5x5.jpg" class="img-fluid" style="border-radius: 50%; width: 70%; margin-left: 45px;" alt="">
+            <img src="../en/pages//5x5/pwhite5x5.jpg" class="img-fluid" style="border-radius: 50%; width: 70%; margin-left: 45px; margin-top: 45px;" alt="">
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-secondary p-2 text-white fs-4 bg-opacity-50">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-secondary p-4 text-white fs-4 bg-opacity-50">
             <p style="text-align: center; margin-top:25px" class="h1">ご挨拶</p>
             <small class="text-white p-content" style="margin: 25px; text-align:justify;"><br>
               第一建材株式会社は、昭和29年の創立以来一貫して、誠実・信頼・感謝を経営のモットーとし、内装業の発展に尽力・寄与してまいりました。お陰様で令和6年に創立70周年を迎えるに至ります。これも偏に皆様方のご厚情とご支援の賜物と深く感謝申し上げております。
-              当社は、来る70周年に向け、そして、更に100周年に向け、内装業のプロフェッショナル集団として挑戦を続けてまいります。従来の経営のモットーに『プロフェッショナルの仕事』『挑戦し続ける集団』を新たに加え、挑戦を続けます。
+              当社は、来る70周年に向け、そして、更に100周年に向け、内装業のプロフェッショナル集団として挑戦を続けてまいります。従来の経営のモットーに『プロフェッショナルの仕事』『挑戦し続ける集団』を新たに加え、挑戦を続けます。<br><br>
               第一建材株式会社に、どうぞご期待ください。
             </small>
           </div>
@@ -250,6 +441,56 @@
       </div>
     </section>
     <!-- end before footer -->
+
+        <!-- start location -->
+        <div class="container mb-2">
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+              <div class="phone"  style="padding-top: 60px; width: auto; height: 160px;">
+                <p class="h1 text-center text-white"><i class="fa-sharp fa-solid fa-phone-volume"></i> &nbsp; <i class="fa-solid fa-arrow-right"></i> &nbsp;(06) 6441 - 3321</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="row">
+                <div class="col-12">
+                  <p class="h5 text-center bg-light text-primary">第一建材株式会社</p>
+                </div>
+              </div>
+              <div>
+                <img class="img-fluid img-thumbnail" style="height: 280px;" src="../en/pages/landscape/office1.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="row">
+                <div class="col-12">
+                  <p class="h5 text-center bg-warning text-primary">会社所在地</p>
+                </div>
+              </div>
+              <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.776740677963!2d135.4890413!3d34.685583799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6f85bc0614b%3A0xdd898148e6f567af!2z5pel5pys44CB44CSNTUwLTAwMDMg5aSn6Ziq5bqc5aSn6Ziq5biC6KW_5Yy65Lqs55S65aCA77yS5LiB55uu77yR77yR4oiS77yS77yT!5e0!3m2!1sja!2smy!4v1664870140491!5m2!1sja!2smy" width="100%"height="280px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="row">
+                <div class="col-12">
+                  <p class="h5 text-center bg-light text-primary">靭公園の近く</p>
+                </div>
+              </div>
+              <div>
+                <img class="img-fluid img-thumbnail" src="../en/pages/landscape/park.jpeg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end locations -->
+
+
+
             <!--animation bar-->
         <div style="margin-bottom: -18px;">
           <p class="placeholder-glow">

@@ -27,24 +27,42 @@
      <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     
     <style>
-      /* @media (min-width: 320px) and (max-width: 375px) {  
-        .service-img {
-            padding-top: 150px;
-        }
-      }
-       @media (min-width: 425px) and (max-width: 768px) {  
-        .service-img {
-            padding-top: 100px;
-        }
-      } 
-      @media (min-width: 1024px) and (max-width: 1440px) {  
-        .service-img {
-            padding-top: 100px;
-        }
-      } 
-      .section-area {
-        height: 540px;
-      } */
+      * {
+            padding: 0;
+            margin: 0;
+          }
+          #serviceImg {
+            width: 100%;
+            height: 81vh;
+            background: linear-gradient(rgba(0,0,0,0.5),#4b6780), url(en/pages/545emp/5x45emp6.jpg) no-repeat center center fixed;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          #serviceImg .ani-div {
+            position: absolute;
+            width: 100%;
+            height:100%;
+            margin: 0;
+            padding: 0;
+            font-size: 3em;
+            text-align: center;
+            transform: translateX(100%);
+            animation: ani 13s linear infinite;
+            color: #fff;
+          }
+          @keyframes ani {
+          0% {
+              transform: translateX(100%);
+          }
+          100% {
+              transform: translateX(-100%);
+          }
+}
+
+
       @media (min-width: 320px) and (max-width:375px) {
         .header {
           padding-top: 45px;
@@ -121,7 +139,32 @@
     </nav>
     <!--end nav bar-->
     
+      <!-- start ani banner -->
+      <section id="serviceImg">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 text-white text-center ani-div">
+              <p class="">第一建材株式会社のサービス</p>
+            </div> 
+          </div>
+        </div>
+      </section>
+    <!-- end ani banner  -->
+  
+    <!-- start logo -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+          <img style="width: 50%;" class="mx-auto d-block" src="en/pages/image/serviceEN-01.png" alt="">
+          <br>
+          <p style="text-align: center;" class="center h4 text-bg-danger">Various Services</p><br>
+          <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
+          <p style="text-align: center;" class="h5"> Discover how our services can support you. <br> Creativity service and always exceeding client expectations.</p> 
 
+        </div>
+      </div>
+    </div>
+    <!-- end aboutUs logo -->
 
     <!--start title-->
     <div class="container header">
