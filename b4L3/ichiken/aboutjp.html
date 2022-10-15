@@ -28,7 +28,9 @@
      <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     
     <style>
-
+      .h5 {
+        font-family: barlow-bold;
+      }
       #newsletter {
         height: 550px;
       }
@@ -49,29 +51,49 @@
         margin: 16px;
         border-radius: 9px;
       }
+      
+      .shachou-img {
+        width: 81%;
+        margin: 70px;
+        /* margin-left: 65px; */
+        border-radius: 9px;
+
+      }
+      .shachou-content .p-content {
+        margin: 45px;
+      }
+
+      @media (max-width:425px) and (min-width:320px) {
+        .shachou-img {
+          margin: 36px;
+        }
+      }
+
+      @media (max-width:1024px) and (min-width:769px) {
+        .shachou-img {
+          margin-top: 160px;
+          margin-left: 52px;
+        }
+      }
+      
       .shachou-content {
-        background-color: #dedfda;
+        /* background-color: #dedfda; */
+        /* background-color: #fff; */
         min-height: 450px;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 30px;
         
-        opacity: 70%;
+        /* opacity: 70%; */
       }
-      .shachou-content1 {
-        min-height: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-      }
+
       .shachou-content .span-h2 {
         color: black;
         
       }
       .shachou-content .p-content {
-        margin: 34px 0;
+        margin: 45px;
         line-height: 45px;
       }
       .shachou-content small {
@@ -102,6 +124,9 @@
     100% {
         transform: translateX(-100%);
 }
+  }
+  .cap {
+    font-family: oswald;
   }
     </style>
 </head>
@@ -169,15 +194,16 @@
           </div> 
           <form action="">
             <div class="row g-3 py-5">
-              <div class="col-sm-7">
-                <input type="text" class="form-control text-center" placeholder="大阪市西区京町堀2丁目11番23号" aria-label="City" disabled>
+              <div class="col-sm">
+                <input type="text" class="form-control text-center" placeholder="〒550-0003" aria-label="Zip" disabled>
               </div>
               <div class="col-sm">
                 <input type="text" class="form-control text-center" placeholder="大阪" aria-label="State" disabled>
               </div>
-              <div class="col-sm">
-                <input type="text" class="form-control text-center" placeholder="〒550-0003" aria-label="Zip" disabled>
+              <div class="col-sm-7">
+                <input type="text" class="form-control text-center" placeholder="大阪市西区京町堀2丁目11番23号" aria-label="City" disabled>
               </div>
+
             </div>
           </form>
         </div>
@@ -281,9 +307,8 @@
                   <div class="content">
                       <h1>第一建材</h1>
                       <p>
-                          第一建材は1970年創業。1970年の創業以来、インテリア・オフィス・マンション・店舗・天井・床・壁などの新築工事など、数多くのサービス事業を行ってきました。
+                        第一建材は1970年創業。1970年の創業以来、オフィス・マンション・店舗の天井・床・壁などの新築工事をメインに内装工事事業を数多く行ってきました。
                       </p>
-                      <!-- <P> Daiichikenzai has been established since 1970. Since our founding in 1970, we have been engaged in many service businesses, including new construction work for interiors, offices, condominiums, stores, ceilings, floors, walls, etc.</P> -->
                   </div>
               </div>
           </div>
@@ -297,13 +322,15 @@
 
     <div class="container-fluit div-container">
       <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-          <img class="img-fluid shachou-img" src="en/pages/5x5/pgrey5x5.jpg" alt="">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 shachouImg">
+          <!-- <img class="img-fluid shachou-img" src="en/pages/5x5/pgrey5x5.jpg" alt=""> -->
+          <img src="en/pages/5x5/hrNameallgray.jpg" class="img-fluid shachou-img" alt="">
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 shachou-content">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 bg-light bg-opacity-50 shachou-content">
          
-          <p class="text-secondary p-content"><span class="h2 span-h2 d-block">ご挨拶</span> <small class="text-body ">
-            第一建材株式会社は、昭和29年の創立以来一貫して、誠実・信頼・感謝を経営のモットーとし、内装業の発展に尽力・寄与してまいりました。お陰様で令和6年に創立70周年を迎えるに至ります。これも偏に皆様方のご厚情とご支援の賜物と深く感謝申し上げております。
+          <!-- <p class="text-secondary p-content"><span class="h2 span-h2 d-block">ご挨拶</span> <small class="text-body "> -->
+            <p class="p-content" style="text-align: justify;"><span class="h2 text-dark text-opacity-75 span-h2 d-block">ご挨拶</span> <small class="text-dark text-opacity-75" style="line-height: 25px;">
+            第一建材株式会社は、昭和29年の創立以来一貫して、誠実・信頼・感謝を経営のモットーとし、内装業の発展に尽力・寄与してまいりました。お陰様で令和6年に創立70周年を迎えるに至ります。これも偏に皆様方のご厚情とご支援の賜物と深く感謝申し上げております。<br>
             当社は、来る70周年に向け、そして、更に100周年に向け、内装業のプロフェッショナル集団として挑戦を続けてまいります。従来の経営のモットーに『プロフェッショナルの仕事』『挑戦し続ける集団』を新たに加え、挑戦を続けます。<br><br>
             第一建材株式会社に、どうぞご期待ください。
           </small></p>
@@ -314,7 +341,7 @@
     <!-- *** -->
    
     
-    <div class="row g-0 bg-light  position-relative">
+    <!-- <div class="row g-0 bg-light  position-relative">
       <div class="col-md-6 mb-md-0 p-md-4">
         <img src="en/pages/5x5/pwhitenoCap.jpg" class="img-fluid shachou-img" alt="...">
       </div>
@@ -325,11 +352,13 @@
           第一建材株式会社に、どうぞご期待ください。
         </small></p>
       </div>
-    </div>
+    </div> -->
     <!-- end director img -->
 
 
 
+
+    
 
     <!-- start emp img-->
     <div class="container p-4">
@@ -339,7 +368,7 @@
                   <!-- <img src="../en/pages/5x5/5x5-10.jpg" class="card-img-top" alt="..."> -->
                   <img src="en/pages/545emp/535aboutusemp2.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Yamaguchi (Director)</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Yamaguchi (Director)</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">当社に、入社して早40年が立ちました。楽しい事、苦しい事もたくさんありましたが、第一建材株式会社で、40年働けたことは、大変誇りに思っております。今後も50年、55年目指して頑張っていく所存です。今後とも宜しくお願いします。</p>
                     <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
                   </div>
@@ -349,7 +378,7 @@
                 <div class="card">
                   <img src="en/pages/545emp/535aboutusemp3.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Ueda (Chief)</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Ueda (Chief)</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">人生の半分が第一建材と共に過ぎました。長く勤められてきたのは、会社も私も共に健康だったからだと思います。会社は創立70周年に向けて新たな挑戦が始まりました。私も共に挑戦を続けようと思っています。</p>
                     <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
                   </div>
@@ -359,7 +388,7 @@
                 <div class="card">
                   <img src="en/pages/545emp/535aboutusemp.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Masutomi (Chief)</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Masutomi (Chief)</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">現職務が15年目になりました。様々な建築現場を経験しましたが、同じものがなく、都度考えながら現場の監督や職人さんと知恵を出し合いながら建物を造り上げています。人と人を繋ぐ仕事であり、完工した時の達成感は今もなお湧きあがります。当社は節目の70年が間近ですが、80年、90年と共に達成感を味わい続けたく思っています。</p>
                     <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
                   </div>
@@ -369,7 +398,7 @@
                 <div class="card">
                   <img src="en/pages/545emp/535aboutusemp1.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Kanemaru</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Kanemaru</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">入社して6年目となりました。仕事の中で、経験や知識不足なところもありますが、日々、上司や先輩に教えて貰いながら、業務に邁進しております。建築現場では現場監督や作業員との協議、交渉が大変ですが、建築物となった時の『達成感』や『やりがい』を感じることのできる仕事です。今後も夢のある空間づくりを楽しんでいきたいと思います。</p>
                     <!-- <a href="service.html" class="btn btn-outline-info">Go browse more..</a> -->
                   </div>
@@ -385,23 +414,25 @@
               <span class="placeholder col-12"></span>
           </p>
     </div>
-    <!--start footer-->
+    <!-- start footer -->
     <footer class="customnav-color graycolor">
           <div class="container py-3">
             <div class="row gy-5">
-              <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <p class="text-uppercase h5 text-white mb-3">Inquiry</p>
                 <div class="">
                   <i class="fa-solid fa-headphones-simple h3 main-color"></i>
-                  <span class="h3 text-white">(60) 6441 - 3321</span>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis architecto vitae temporibus dolores itaque rerum volupt.
-                </p>
-                <a href="" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <i class="fa-solid fa-location-dot me-1"></i>
-                  View on map
-                </a><br><br>
-                <div>
+                  <span class="h3">(06) 6441 - 3321</span>
+                </div> <br>
+
+                
+                <div class="mt-5">
+                  <div>
+                    <a href="" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <i class="fa-solid fa-location-dot me-1 fa-2x"></i>&nbsp;&nbsp;
+                      View on map
+                    </a><br><br>
+                  </div>
                   <a href="en/formIchiken/contactichiken.html" class="text-decoration-none mail">
                     <span class="fa-stack fa-1x">
                       <i class="fa-solid fa-circle fa-stack-2x"></i>
@@ -421,7 +452,7 @@
                       <i class=" fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
                     </span>
                   </a>
-                  <a href="#" class="text-decoration-none whatsapp">
+                  <a href="https://wa.me/817041136136" target="_blank" class="text-decoration-none whatsapp">
                     <span class="fa-stack fa-1x">
                       <i class="fa-solid fa-circle fa-stack-2x"></i>
                       <i class="fa-brands fa-whatsapp fa-stack-1x fa-inverse"></i>
@@ -435,49 +466,57 @@
                   </a>
                 </div>
               </div>
-              <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
-                <p class="text-uppercase h5 text-white mb-3">Let's Browse!</p>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                <p class="text-uppercase h5 text-white mb-3">Information</p>
                 
                 <p class="infoFooter mb-0"><a class="text-white-50" href="index.html">Home</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">Service</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">Services</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="recruitment.html">Recurit</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="employee.html">Employee</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="about.html">About</a></p>
     
               </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
       
                 <p class="text-uppercase h5 text-white mb-3">Get In Touch</p>
-                <p class="mb-0 text-white">Address:</p><span>住所<br>大阪市西区京町堀2丁目11番23号 </span>
-
+                <p class="mb-0 text-white">Address:</p><span> 2-11-23, <br>Kyoumachibori nishiku Osaka city, Osaka Japan. </span>
                 <p class="mb-0 text-white">Telephone inquiry:</p><span>(06) 6441 - 3321</span>
                 <p class="mb-0 text-white">Email: </p><span>group14@daiichi-kenzai.co.jp</span> 
     
               </div>
               
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                 <p class="text-uppercase h5 text-white">Working hour</p>
                 <p class="mb-0">From <span class="text-white"> 9:00 AM - 18:00 PM </span> </p>
                 <p class="mb-0">Saturday: Closed</p>
                 <p class="mb-0">Sunday: Closed</p>
-                <br>
-                <img src="en/pages/image/logoFooterWhite.png" class="img-fluid w-25" alt=""><br>
-                第一建材株式会社
+                <br><br><br>
+                <!-- <div class="ftImg">
+                  <img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 16%; height:auto;" alt="">
+                <p class="fs-4">第一建材株式会社</p>
+                </div> -->
+                <table>
+                  <tr>
+                    <td><img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 46px;" alt=""></td>
+                    <td><label for="" style="font-size: 25px;">第一建材株式会社</label></td>
+                  </tr>
+                </table>
               </div>
             </div>
             <hr class="bg-light">
             <div class="container px-3">
               <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-14 col-md-16 col-sm-12 col-12">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                   <p class="graycolor">Copyright © 第一建材株式会社, since 1954.</p>
                 </div>
               </div>
     
             </div>
           </div>
-     </footer>
-     <!--end footer-->
+    </footer>
+    <!--end footer-->
 
     <!-- Modal -->
     <div>

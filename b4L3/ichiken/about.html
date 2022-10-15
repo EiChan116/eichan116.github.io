@@ -33,6 +33,10 @@
         height: 550px;
       }
 
+      .h5{
+        font-family: barlow-bold;
+      }
+
       .div-container {
         margin: 0;
         display: flex;
@@ -40,27 +44,36 @@
         justify-content: center;
         background-image: url(en/pages/landscape/landscape5.jpg);
       }
+
       .shachou-img {
-        width: 90%;
-        margin: 16px;
+        width: 81%;
+        margin: 70px;
+        /* margin-left: 65px; */
         border-radius: 9px;
-      }
-      .shachou-content {
-        background-color: #dedfda;
-        min-height: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        opacity: 70%;
+
       }
 
-      .shachou-content1 {
+      @media (max-width:425px) and (min-width:320px) {
+        .shachou-img {
+          margin: 36px;
+        }
+      }
+
+      @media (max-width:1024px) and (min-width:769px) {
+        .shachou-img {
+          margin-top: 160px;
+          margin-left: 52px;
+        }
+      }
+
+      .shachou-content {
+        /* background-color: #dedfda; */
         min-height: 450px;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 30px;
+        /* opacity: 70%; */
       }
 
       .shachou-content .span-h2 {
@@ -68,8 +81,7 @@
         
       }
       .shachou-content .p-content {
-        margin: 34px 0;
-        line-height: 45px;
+        margin: 45px;
       }
       .shachou-content small {
         color: black;
@@ -183,53 +195,55 @@
           <h1 style="color: brown;">History</h1>
           <table class="table table-striped table-hover">
             <tr>
-              <td>1952</td>
-              <td>西区江戸堀にて河野正男が創業</td>
+              <td><h5>1952</h5></td>
+              <td><h5>Founded by Masao Kono in Edobori, Nishi Ward</h5></td>
             </tr>
             <tr>
-              <td>1954</td>
-              <td>資本金160万円で第一建材株式会社を設立</td>
+              <td><h5>1954</h5></td>
+              <td><h5>
+                Established Daiichi Kenzai Co., Ltd. with capital of 1.6 million yen</h5></td>
             </tr>
             <tr>
-              <td>1957</td>
-              <td>京町堀に店舗完成し移転</td>
+              <td><h5>1957</h5></td>
+              <td><h5>The store was completed and moved to Kyomachibori.</h5></td>
             </tr>
             <tr>
-              <td>1970</td>
-              <td>現、第一ビルディングを京町堀に設立し事務所移転 <br>
-                同年、資本金を640万円に増資</td>
+              <td><h5>1970</h5></td>
+              <td><h5>
+                Currently, the Daiichi Building is established in Kyomachibori and the office is relocated.
+                In the same year, the capital was increased to 6.4 million yen.</h5></td>
             </tr>
             <tr>
-              <td>1971</td>
-              <td>関西建材工事同業会を16社にて設立及び入会</td>
+              <td><h5>1971</h5></td>
+              <td><h5>16 companies established and joined the Kansai Construction Materials Association</h5></td>
             </tr>
             <tr>
-              <td>1973</td>
-              <td>資本金を1280万円に増資</td>
+              <td><h5>1973</h5></td>
+              <td><h5>Increased capital to 12.8 million yen</h5></td>
             </tr>
             <tr>
-              <td>1979</td>
-              <td>関西建材工事同業会から全国室内工事事業会へ移行</td>
+              <td><h5>1979</h5></td>
+              <td><h5>Transitioned from the Kansai Building Material Construction Industry Association to the National Interior Construction Business Association</h5></td>
             </tr>
             <tr>
-              <td>1973</td>
-              <td>代表取締に河野毅が就任</td>
+              <td><h5>1973</h5></td>
+              <td><h5>Takeshi Kono appointed as CEO</h5></td>
             </tr>
             <tr>
-              <td>1980</td>
-              <td>資本金を2000万円に増資</td>
+              <td><h5>1980</h5></td>
+              <td><h5>Increased capital to 20 million yen</h5></td>
             </tr>
             <tr>
-              <td>2002</td>
-              <td>河野毅が内閣総理大臣より黄綬勲章を授与</td>
+              <td><h5>2002</h5></td>
+              <td><h5>Tsuyoshi Kono awarded the Order of the Yellow Ribbon by the Prime Minister</h5></td>
             </tr>
             <tr>
-              <td>2010</td>
-              <td>代表取締役に原田雅史が就任</td>
+              <td><h5>2010</h5></td>
+              <td><h5>Masafumi Harada appointed as representative director</h5></td>
             </tr>
             <tr>
-              <td>2022</td>
-              <td>代表取締役に豊田泰弘が就任</td>
+              <td><h5>2022</h5></td>
+              <td><h5>Yasuhiro Toyoda appointed as Representative Director</h5></td>
             </tr>
           </table>
         </div>
@@ -270,7 +284,7 @@
                   <div class="content">
                       <h1>第一建材</h1>
                       <p>
-                          第一建材は1970年創業。1970年の創業以来、インテリア・オフィス・マンション・店舗・天井・床・壁などの新築工事など、数多くのサービス事業を行ってきました。
+                          第一建材は1954年創業。創業以来、インテリア・オフィス・マンション・店舗・天井・床・壁などの新築工事など、数多くのサービス事業を行ってきました。
                       </p>
                       <!-- <P> Daiichikenzai has been established since 1970. Since our founding in 1970, we have been engaged in many service businesses, including new construction work for interiors, offices, condominiums, stores, ceilings, floors, walls, etc.</P> -->
                   </div>
@@ -283,13 +297,14 @@
     <!-- start director img -->
     <div class="container-fluit div-container">
       <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-          <img class="img-fluid shachou-img" src="en/pages/5x5/pgrey5x5.jpg" alt="">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 shachouImg">
+          <img class="img-fluid shachou-img" src="en/pages/5x5/hrNameallgray.jpg" alt="">
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 shachou-content">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 bg-white bg-opacity-50 shachou-content">
          
-          <p class="text-secondary p-content"><span class="h2 span-h2">ご挨拶</span><br> <small class="text-body ">
-            Since its founding in 1954, Daiichi Kenzai Co., Ltd. has consistently made sincerity, trust and gratitude the motto of management, and has made efforts and contributed to the development of the interior decoration industry. Thanks to all of you, we will celebrate the 70th anniversary of our founding in 2026. I would like to express my deepest gratitude to all of you for your kindness and support. We will continue to take on challenges as a group of professionals in the interior industry as we approach our 70th and even 100th anniversary. We will continue to take on new challenges by adding “professional work” and “a group that continues to take on challenges” to our existing management motto. <br>
+          <!-- <p class="text-secondary p-content"><span class="h2 span-h2">Message</span><br> <small class="text-body "> -->
+            <p class="p-content" style="text-align: justify;"><span class="h2 text-dark text-opacity-75 span-h2 d-block">Message</span> <small class="text-dark text-opacity-75 h5" style="line-height: 25px; font-family: barlow-medium;">
+            Since its founding in 1954, Daiichi Kenzai Co., Ltd. has consistently made sincerity, trust and gratitude the motto of management, and has made efforts and contributed to the development of the interior decoration industry. Thanks to all of you, we will celebrate the 70th anniversary of our founding in 2026. I would like to express my deepest gratitude to all of you for your kindness and support. <br><br> We will continue to take on challenges as a group of professionals in the interior industry as we approach our 70th and even 100th anniversary. We will continue to take on new challenges by adding “professional work” and “a group that continues to take on challenges” to our existing management motto. <br><br>
             Please look forward to Daiichi Kenzai Co., Ltd.
           </small></p>
         </div>
@@ -297,20 +312,6 @@
     </div>
 
        <!-- *** -->
-   
-    
-       <div class="row g-0 bg-light  position-relative">
-        <div class="col-md-6 mb-md-0 p-md-4">
-          <img src="en/pages/5x5/pwhitenoCap.jpg" class="img-fluid shachou-img" alt="...">
-        </div>
-        <div class="col-md-6 p-4 ps-md-0 shachou-content1">
-          <p class="p-content" style="text-align: justify;"><span class="h2 text-dark span-h2 d-block">ご挨拶</span> <small class="text-body h5" style="line-height: 34px; font-family: barlow-medium;">
-            Since its founding in 1954, Daiichi Kenzai Co., Ltd. has consistently made sincerity, trust and gratitude the motto of management, and has made efforts and contributed to the development of the interior decoration industry. Thanks to all of you, we will celebrate the 70th anniversary of our founding in 2026. I would like to express my deepest gratitude to all of you for your kindness and support. We will continue to take on challenges as a group of professionals in the interior industry as we approach our 70th and even 100th anniversary. We will continue to take on new challenges by adding “professional work” and “a group that continues to take on challenges” to our existing management motto. <br><br>
-            Please look forward to Daiichi Kenzai Co., Ltd.
-          </small></p>
-        </div>
-      </div>
-
     <!-- end director img -->
 
     <!-- start emp img-->
@@ -321,7 +322,7 @@
                   <!-- <img src="../en/pages/5x5/5x5-10.jpg" class="card-img-top" alt="..."> -->
                   <img src="en/pages/545emp/535aboutusemp2.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Yamaguchi (Director)</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Yamaguchi (Director)</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">It has already been 40 years since I joined the company. There were many fun and difficult times, but I am very proud to have worked at Daiichi Kenzai Co., Ltd. for 40 years. We will continue to do our best to aim for the next 50 or 55 years. Thank you in the future.</p>
                     
                   </div>
@@ -331,7 +332,7 @@
                 <div class="card">
                   <img src="en/pages/545emp/535aboutusemp3.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Ueda (Chief)</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Ueda (Chief)</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">Half of my life has passed with Daiichi Kenzai. I believe that I was able to work for a long time because both the company and I were in good health. The company has started a new challenge towards the 70th anniversary of its founding. I will continue to challenge myself.</p>
                   </div>
                 </div>
@@ -340,7 +341,7 @@
                 <div class="card">
                   <img src="en/pages/545emp/535aboutusemp.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Masutomi (Chief)</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Masutomi (Chief)</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">This is my 15th year on the job. I have experienced various construction sites, but none of them are the same. It is a job that connects people, and the sense of accomplishment when the construction is completed still wells up. Our company is approaching its 70th anniversary, but I would like to continue to enjoy the sense of accomplishment for the 80th and 90th years.</p>
                   </div>
                 </div>
@@ -349,7 +350,7 @@
                 <div class="card">
                   <img src="en/pages/545emp/535aboutusemp1.jpg" class="card-img-top" alt="...">
                   <div class="card-body text-center">
-                    <h5 class="card-title fw-bold">Tittle Four</h5>
+                    <h5 class="card-title fw-bold text-dark text-opacity-75">Kanemaru</h5>
                     <p class="card-text text-secondary" style="text-align: justify;">It's been 6 years since I joined the company. In my work, there are areas where I lack experience and knowledge, but I am pushing forward with my work with the guidance of my superiors and seniors on a daily basis. At the construction site, it is difficult to discuss and negotiate with the site supervisor and workers, but it is a job where you can feel the "sense of accomplishment" and "rewarding" when the building is completed. I would like to continue to enjoy creating spaces with dreams.</p>
                   </div>
                 </div>
@@ -364,99 +365,110 @@
               <span class="placeholder col-12"></span>
           </p>
     </div>
-    <!--start footer-->
+
+    <!-- start footer -->
     <footer class="customnav-color graycolor">
-          <div class="container py-3">
-            <div class="row gy-5">
-              <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12">
-                <div class="">
-                  <i class="fa-solid fa-headphones-simple h3 main-color"></i>
-                  <span class="h3 text-white">(60) 6441 - 3321</span>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis architecto vitae temporibus dolores itaque rerum volupt.
-                </p>
+      <div class="container py-3">
+        <div class="row gy-5">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <p class="text-uppercase h5 text-white mb-3">Inquiry</p>
+            <div class="">
+              <i class="fa-solid fa-headphones-simple h3 main-color"></i>
+              <span class="h3">(06) 6441 - 3321</span>
+            </div> <br>
+
+            
+            <div class="mt-5">
+              <div>
                 <a href="" class="text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <i class="fa-solid fa-location-dot me-1"></i>
+                  <i class="fa-solid fa-location-dot me-1 fa-2x"></i>&nbsp;&nbsp;
                   View on map
                 </a><br><br>
-                <div>
-                  <a href="en/formIchiken/contactichiken.html" class="text-decoration-none mail">
-                    <span class="fa-stack fa-1x">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class="fa-solid fa-brands fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                  <a href="#" class="text-decoration-none twitter">
-                    <span class="fa-stack fa-1x">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
-                      
-                    </span>
-                  </a>
-                  <a href="#" class="text-decoration-none instagram">
-                    <span class="fa-stack fa-1x">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class=" fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                  <a href="#" class="text-decoration-none whatsapp">
-                    <span class="fa-stack fa-1x">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class="fa-brands fa-whatsapp fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                  <a href="#" class="text-decoration-none line">
-                    <span class="fa-stack fa-1x">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class="fa-brands fa-line fa-stack-1x fa-inverse"></i>
-                    </span>
-                  </a>
-                </div>
               </div>
-              <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 col-12">
-                <p class="text-uppercase h5 text-white mb-3">Let's Browse!</p>
-                
-                <p class="infoFooter mb-0"><a class="text-white-50" href="index.html">Home</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">Service</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="recruitment.html">Recurit</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="employee.html">Employee</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="about.html">About</a></p>
-    
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-      
-                <p class="text-uppercase h5 text-white mb-3">Get In Touch</p>
-                <p class="mb-0 text-white">Address:</p><span>住所<br>大阪市西区京町堀2丁目11番23号 </span>
-
-                <p class="mb-0 text-white">Telephone inquiry:</p><span>(06) 6441 - 3321</span>
-                <p class="mb-0 text-white">Email: </p><span>group14@daiichi-kenzai.co.jp</span> 
-    
-              </div>
-              
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
-                <p class="text-uppercase h5 text-white">Working hour</p>
-                <p class="mb-0">From <span class="text-white"> 9:00 AM - 18:00 PM </span> </p>
-                <p class="mb-0">Saturday: Closed</p>
-                <p class="mb-0">Sunday: Closed</p>
-                <br>
-                <img src="en/pages/image/logoFooterWhite.png" class="img-fluid w-25" alt=""><br>
-                第一建材株式会社
-              </div>
-            </div>
-            <hr class="bg-light">
-            <div class="container px-3">
-              <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-14 col-md-16 col-sm-12 col-12">
-                  <p class="graycolor">Copyright © 第一建材株式会社, since 1954.</p>
-                </div>
-              </div>
-    
+              <a href="en/formIchiken/contactichiken.html" class="text-decoration-none mail">
+                <span class="fa-stack fa-1x">
+                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                  <i class="fa-solid fa-brands fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#" class="text-decoration-none twitter">
+                <span class="fa-stack fa-1x">
+                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                  <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
+                  
+                </span>
+              </a>
+              <a href="#" class="text-decoration-none instagram">
+                <span class="fa-stack fa-1x">
+                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                  <i class=" fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="https://wa.me/817041136136" target="_blank" class="text-decoration-none whatsapp">
+                <span class="fa-stack fa-1x">
+                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                  <i class="fa-brands fa-whatsapp fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+              <a href="#" class="text-decoration-none line">
+                <span class="fa-stack fa-1x">
+                  <i class="fa-solid fa-circle fa-stack-2x"></i>
+                  <i class="fa-brands fa-line fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
             </div>
           </div>
-     </footer>
-     <!--end footer-->
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <p class="text-uppercase h5 text-white mb-3">Information</p>
+            
+            <p class="infoFooter mb-0"><a class="text-white-50" href="index.html">Home</a></p>
+            <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">Service</a></p>
+            <p class="infoFooter mb-0"><a class="text-white-50" href="services.html">Services</a></p>
+            <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
+            <p class="infoFooter mb-0"><a class="text-white-50" href="recruitment.html">Recurit</a></p>
+            <p class="infoFooter mb-0"><a class="text-white-50" href="employee.html">Employee</a></p>
+            <p class="infoFooter mb-0"><a class="text-white-50" href="about.html">About</a></p>
+
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+  
+            <p class="text-uppercase h5 text-white mb-3">Get In Touch</p>
+            <p class="mb-0 text-white">Address:</p><span> 2-11-23, <br>Kyoumachibori nishiku Osaka city, Osaka Japan. </span>
+            <p class="mb-0 text-white">Telephone inquiry:</p><span>(06) 6441 - 3321</span>
+            <p class="mb-0 text-white">Email: </p><span>group14@daiichi-kenzai.co.jp</span> 
+
+          </div>
+          
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+            <p class="text-uppercase h5 text-white">Working hour</p>
+            <p class="mb-0">From <span class="text-white"> 9:00 AM - 18:00 PM </span> </p>
+            <p class="mb-0">Saturday: Closed</p>
+            <p class="mb-0">Sunday: Closed</p>
+            <br><br><br>
+            <!-- <div class="ftImg">
+              <img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 16%; height:auto;" alt="">
+            <p class="fs-4">第一建材株式会社</p>
+            </div> -->
+            <table>
+              <tr>
+                <td><img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 46px;" alt=""></td>
+                <td><label for="" style="font-size: 25px;">第一建材株式会社</label></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <hr class="bg-light">
+        <div class="container px-3">
+          <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+              <p class="graycolor">Copyright © 第一建材株式会社, since 1954.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </footer>
+<!--end footer-->
 
     <!-- Modal -->
     <div>
