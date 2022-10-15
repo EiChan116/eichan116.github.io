@@ -63,6 +63,9 @@
           margin-top: 16px;
       }
       .topbanner p {
+          margin-top: 100px;
+          
+          padding: 16px;
           text-align: center;
           color: aliceblue;
           word-spacing: 2px;
@@ -105,6 +108,12 @@
           font-size: 16px;
           columns: white;
           text-align: center;
+        }
+      }
+      @media (min-width: 320) and (max-width: 425) {
+        .bannerContact {
+          font-size: 16px;
+          
         }
       }
       #my-form-status {
@@ -192,8 +201,9 @@
     <div class="bg-img">
       <div class="container">
         <div class="topbanner">
-          <h1 class="fs-1">お問い合わせ</h1> <hr>
-          <p>
+          <!-- <h1 class="fs-1">お問い合わせ</h1> <hr> -->
+          
+          <p class="bg-dark bg-text-white bg-opacity-50 bannerContact">
             詳細については、 <br>
             下記のお問い合わせフォームにご記入ください。ご質問にお答えいたします。
           </p>
@@ -207,7 +217,7 @@
           <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
               <!-- <img style="width: 50%;" class="mx-auto d-block" src="../en/pages/image/contactusJP-a.png" alt=""> -->
-              <img style="width: 50%;" class="mx-auto d-block" src="../en/pages/siteLogo/contactJP.png" alt="">
+              <img style="width: 60%;" class="mx-auto d-block" src="../en/pages/siteLogo/contactJP.png" alt="">
               <br>
               <p style="text-align: center;" class="center h4 text-bg-danger">お問い合わせについて</p><br>
               <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
@@ -450,7 +460,7 @@
                 <table>
                   <tr>
                     <td><img src="../en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 46px;" alt=""></td>
-                    <td><h1 class="text-white" style="font-size: 25px;">第一建材株式会社</h1></td>
+                    <td><h1 class="text-secondary" style="font-size: 25px;">第一建材株式会社</h1></td>
                   </tr>
                 </table>
               </div>
