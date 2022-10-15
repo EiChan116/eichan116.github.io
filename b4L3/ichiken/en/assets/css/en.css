@@ -94,8 +94,16 @@ h1, h2, h3, h4, h5, h6 {
 /* index.html က နောက်ခံပုံအကြည်ထည့်တာ */
 #newsletter {
     background: url(../../pages/landscape/landscape12.jpg) no-repeat center center fixed;
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 100%;
 }
+
+#newsletterSV {
+    background: url(../../pages/landscape/i1.jpg) no-repeat center center fixed;
+    /* background-size: cover; */
+    background-size: 100%;
+}
+
 .title {
     margin-top: 25px;
 }
