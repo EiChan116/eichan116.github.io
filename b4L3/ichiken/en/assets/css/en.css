@@ -245,8 +245,12 @@ button:hover {
     color: #3c5b9b;
 }
 
-.tableRecruit table {
+/* .tableRecruit table {
     max-width: 70%;
+    margin: auto;
+} */
+.tableRecruit table {
+    max-width: 100%;
     margin: auto;
 }
 .tableRecruit tr {

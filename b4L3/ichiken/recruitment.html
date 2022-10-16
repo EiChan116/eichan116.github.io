@@ -48,10 +48,23 @@
       }
       @media (max-width: 425px) {
         .recurimentContent {
-          font-size: 16px;
+          /* font-size: 16px; */
           text-align: center;
         }
       }
+      @media (max-width:768px) and (min-width:320px) {
+      table {
+        font-size: 14px;
+      }
+      .tableRecruit tr .descTD {
+        letter-spacing: normal;
+      }
+      .tableRecruit tr {
+      height: 50px;
+      color: rgb(155, 157, 157);
+    }
+    }
+
     </style>
 </head>
 <body>
@@ -123,18 +136,18 @@
                   </div>
                 </div>
                 <div>
-                  <h1 class="mt-4" style="text-align: center;">RECRUITENT INFORMATION</h1>
-                  <hr class="recruitmentLine">
+                  <h1 class="mt-4 text-danger border border-danger border-2 opacity-50" style="text-align: center;">RECRUITENT INFORMATION</h1>
+                  <hr class="recruitmentLine border border-danger border-2 opacity-50">
                   <br>
                   <div class="recruitAR">
-                      <p style="text-align: center;">Application Requirements</p>
+                      <p class="text-danger" style="text-align: center;">Application Requirements</p>
                   </div>
                   <div>
                       <p class="recruitcontent" style="text-align: center;">
                         Beyond 68 years of history. We are looking for people to make new history.
                       </p>
                   </div>
-                  <div class="tableRecruit">
+                  <!-- <div class="tableRecruit">
                     <table  class="table table-dark table-hover">
                         
                         <tr>
@@ -185,7 +198,7 @@
                         </tr>
                         
                       </table>
-                </div>
+                </div> -->
                 </div>
           </div>
       </div>
@@ -193,11 +206,123 @@
   <br><br>
     <!--end top img about recruit-->
 
+    <!-- start table -->
+    <!-- <div class="tableRecruit">
+      <table  class="table table-dark table-hover">
+          
+          <tr>
+              <td> Recruitment Type </td>
+              <td class="descTD"> Sales operations full-time employees </td>
+          </tr>
+          <tr>
+              <td> Number of Recruits  </td>
+              <td class="descTD"> 2－3 people </td>
+          </tr>
+          <tr>
+              <td> Qualification Requirements </td>
+              <td class="descTD">Vocational school students, university students, and mid-career hires who are expected to graduate in 2023 Preferential treatment for those with experience up to the age of 35</td>
+          </tr>
+          <tr>
+              <td> Work Location </td>
+              <td class="descTD">Osaka city</td>
+          </tr>
+          <tr>
+              <td> Salary </td>
+              <td class="descTD"> According to our regulations </td>
+          </tr>
+          <tr>
+              <td> Allowances </td>
+              <td class="descTD"> Full commuting allowance, qualification allowance, overtime allowance </td>
+          </tr>
+          <tr>
+              <td> Salary Increasement </td>
+              <td class="descTD"> Once a year (April)</td>
+          </tr>
+          <tr>
+              <td> 
+                Working Hours </td>
+              <td class="descTD"> 9:00-18:00 (including 1 hour lunch time) </td>
+          </tr>
+          <tr>
+              <td> Holiday </td>
+              <td class="descTD"> 
+                2 days off per week, national holidays, summer, year-end and new year holidays</td>
+          </tr>
+          <tr>
+              <td>Welfare</td>
+              <td class="descTD"> Full social insurance </td>
+          </tr>
+          <tr>
+              <td> Education System </td>
+              <td class="descTD"> Qualification acquisition support </td>
+          </tr>
+          
+        </table>
+    </div> -->
+    <div class="container tableRecruit">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+          <table  class="table table-dark table-hover">
+          
+            <tr>
+                <td> Recruitment Type </td>
+                <td class="descTD"> Sales operations full-time employees </td>
+            </tr>
+            <tr>
+                <td> Number of Recruits  </td>
+                <td class="descTD"> 2－3 people </td>
+            </tr>
+            <tr>
+                <td> Qualification Requirements </td>
+                <td class="descTD">Vocational school students, university students, and mid-career hires who are expected to graduate in 2023 Preferential treatment for those with experience up to the age of 35</td>
+            </tr>
+            <tr>
+                <td> Work Location </td>
+                <td class="descTD">Osaka city</td>
+            </tr>
+            <tr>
+                <td> Salary </td>
+                <td class="descTD"> According to our regulations </td>
+            </tr>
+            <tr>
+                <td> Allowances </td>
+                <td class="descTD"> Full commuting allowance, qualification allowance, overtime allowance </td>
+            </tr>
+            <tr>
+                <td> Salary Increasement </td>
+                <td class="descTD"> Once a year (April)</td>
+            </tr>
+            <tr>
+                <td> 
+                  Working Hours </td>
+                <td class="descTD"> 9:00-18:00 (including 1 hour lunch time) </td>
+            </tr>
+            <tr>
+                <td> Holiday </td>
+                <td class="descTD"> 
+                  2 days off per week, national holidays, summer, year-end and new year holidays</td>
+            </tr>
+            <tr>
+                <td>Welfare</td>
+                <td class="descTD"> Full social insurance </td>
+            </tr>
+            <tr>
+                <td> Education System </td>
+                <td class="descTD"> Qualification acquisition support </td>
+            </tr>
+            
+        </table>
+        </div>
+      </div>
+    </div>
+  
+    <!-- end table -->
+
     <!-- start logo -->
     <div class="container mt-5">
             <div class="row justify-content-center">
               <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-                <img style="width: 50%;" class="mx-auto d-block" src="en/pages/siteLogo/recruitEN.png" alt="">
+                <img style="width: 60%;" class="mx-auto d-block" src="en/pages/siteLogo/recruitEN.png" alt="">
                 <br>
                 <p style="text-align: center;" class="center h4 text-bg-danger">Inquiries by email</p><br>
                 <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
@@ -220,7 +345,7 @@
                 <form id="my-form" action="https://formspree.io/f/mrgdgaor" method="POST">
                   <div class="row">
                     <div class="div1">
-                      <label for="fullname">Full Name</label>
+                      <label class="label" for="fullname">Full Name</label>
                     </div>
                     <div class="div2">
                       <input type="text" name="fullname" placeholder="Name...." required>
@@ -228,7 +353,7 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="birth-date">Date Of Birth</label>
+                      <label class="label" for="birth-date" aria-placeholder="Date of birth">Date Of Birth</label>
                     </div>
                     <div class="div2">
                       <input type="date" name="birth-date" style="color: rgb(114, 113, 113);">
@@ -236,7 +361,7 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="contactNo">Contact number</label>
+                      <label class="label" for="contactNo">Contact number</label>
                     </div>
                     <div class="div2">
                       <input type="number" name="contactNo" placeholder="Ph:" required>
@@ -244,7 +369,7 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label for="email">Email</label>
+                      <label class="label" for="email">Email</label>
                     </div>
                     <div class="div2">
                       <input type="email" name="email" placeholder="something@mail.com"/>
@@ -262,10 +387,10 @@
                   </div>
                   <div class="row">
                     <div class="div1">
-                      <label>Working Experience:</label>
+                      <label class="label">Working Experience:</label>
                     </div>
                     <div class="div2">
-                      <textarea name="message" id="" cols="30" rows="10"></textarea>
+                      <textarea name="message" id="" cols="30" rows="10" placeholder="leave a message..."></textarea>
                     </div>
                   </div>
                   <div class="row">
@@ -415,7 +540,7 @@
             <div class="container px-3">
               <div class="row justify-content-center">
                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-                  <p class="graycolor">Copyright © 第一建材株式会社, since 1954.</p>
+                  <p class="graycolor">Copyright © 2022 第一建材株式会社. All Rights Reserved</p>
                 </div>
               </div>
     

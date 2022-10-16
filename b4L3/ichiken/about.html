@@ -28,14 +28,22 @@
      <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     
     <style>
-
-      #newsletter {
-        height: 550px;
-      }
-
       .h5{
         font-family: barlow-bold;
       }
+
+      #aboutImg {
+            width: 100%;
+            height: 71vh;
+            display: flex; 
+            align-items: center;
+            background-image: linear-gradient(rgba(0,0,0,0.1),#0f0f10), url(en/pages/landscape/1-main.jpg);
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
 
       .div-container {
         margin: 0;
@@ -56,6 +64,12 @@
       @media (max-width:425px) and (min-width:320px) {
         .shachou-img {
           margin: 36px;
+        }
+        .h1 { /*animation letter*/
+          display: none;
+        }
+        .form {
+          margin-top: 70px;
         }
       }
 
@@ -88,7 +102,7 @@
         font-family: nato-bold;;
       }
       /* ------ */
-      #scrollImg .ani-div {
+      #aboutImg .ani-div {
   
         position: relative;
         animation-name: example;
@@ -98,9 +112,9 @@
       }
       @keyframes example {
         0% { left: 0px; top: 0px;}
-        25% { left: -350px; top: 0;}
+        25% { left: -350px; top: 600;}
         /* 50% { left: 350px; top: 250px;} */
-        75% { left: -200px; top: 250px;}
+        75% { left: -100px; top: 200px;}
         100% { left: 0px; top: 0px;}
         
       }
@@ -162,14 +176,14 @@
     <!--end nav bar-->
 
     <!--start scroll img-->
-    <section class="" id = "scrollImg">
+    <section class="" id = "aboutImg"><!--scrollImg-->
       <div class="container py-5">
         <div class="row justify-content-center py-5">
           <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 text-white text-center ani-div">
             <!-- <i class="fa-sharp fa-solid fa-compass display-3"></i> -->
             <p class="h1">第一建材株式会社</p>
           </div> 
-          <form action="">
+          <form class="form" action="">
             <div class="row g-3 py-5">
               <div class="col-sm-7">
                 <input type="text" class="form-control text-center" placeholder="大阪市西区京町堀2丁目11番23号" aria-label="City" disabled>

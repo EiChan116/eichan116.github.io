@@ -32,19 +32,39 @@
           .h5 {
             font-family: barlow-bold;
           }
+
+
           #serviceImg {
             width: 100%;
-            height: 81vh;
-            background: linear-gradient(rgba(0,0,0,0.5),#4b6780), url(en/pages/545emp/5x45emp6.jpg) no-repeat center center fixed;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
-            display: flex;
+            height: 71vh;
+            /* background: linear-gradient(rgba(0,0,0,0.5),#4b6780), url(en/pages/545emp/5x45emp6.jpg) no-repeat center center fixed; */
+            /* background-position: center; */
+            /* background-size: cover; */
+
+            /* background-attachment: fixed;*/
+            display: flex; 
             align-items: center;
-            justify-content: center;
-            margin-top: 80px;
+            /* justify-content: center;
+            margin-top: 80px; */
+
             
+            /* The image used */
+            /* background-image: url("en/pages/landscape/landscape5.jpg"); */
+            background-image: linear-gradient(rgba(0,0,0,0.1),#356ab5), url(en/pages/landscape/landscape5.jpg);
+            min-height: 380px;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /* Needed to position the navbar */
+            /* position: relative; */
+
+
           }
+
+
           #serviceImg .ani-div {
             position: absolute;
             width: 50%;
@@ -64,7 +84,7 @@
           50% {
               transform: translateX(-50%);
           }
-}
+          }
 
 
       @media (min-width: 320px) and (max-width:375px) {
@@ -417,13 +437,6 @@
     <!--end description grid pic-->
     <!--start before footer-->
 
-    <section class="section-area" id="newsletterSV">
-      <div class="container my-3">
-        <div class="row justify-content-center py-5">
-          
-        </div>
-      </div>
-    </section>
 
     <!--animation bar-->
     <div style="margin-bottom: -18px;">
