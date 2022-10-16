@@ -110,10 +110,15 @@
           text-align: center;
         }
       }
-      @media (min-width: 320) and (max-width: 425) {
-        .bannerContact {
-          font-size: 16px;
-          
+      @media (min-width: 320px) and (max-width: 425px) {
+        .phNo{
+          font-size: 11px;
+        }
+        .topbanner .bannermsg{
+          font-size: 14px;
+        }
+        .logomsg {
+          font-size: 13px;
         }
       }
       #my-form-status {
@@ -203,7 +208,8 @@
         <div class="topbanner">
           <!-- <h1 class="fs-1">お問い合わせ</h1> <hr> -->
           
-          <p class="bg-dark bg-text-white bg-opacity-50 bannerContact">
+          <!-- <p class="bg-dark bg-text-white bg-opacity-50 bannerContact"> -->
+            <p class="bannermsg bg-dark bg-text-white bg-opacity-25">
             詳細については、 <br>
             下記のお問い合わせフォームにご記入ください。ご質問にお答えいたします。
           </p>
@@ -215,13 +221,13 @@
          <!--contact logo  -->
          <div class="container py-5">
           <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+            <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 logodiv">
               <!-- <img style="width: 50%;" class="mx-auto d-block" src="../en/pages/image/contactusJP-a.png" alt=""> -->
-              <img style="width: 60%;" class="mx-auto d-block" src="../en/pages/siteLogo/contactJP.png" alt="">
+              <img style="width: 60%;" class="mx-auto d-block logoweb" src="../en/pages/siteLogo/contactJP.png" alt="">
               <br>
               <p style="text-align: center;" class="center h4 text-bg-danger">お問い合わせについて</p><br>
               <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
-              <p style="text-align: center;" class=""> お問い合わせはお電話かメールにてお受けしております。<br>
+              <p style="text-align: center;" class="logomsg"> お問い合わせはお電話かメールにてお受けしております。<br>
                 お電話の方は下記のお電話番号にお掛けください。</p> 
                 <!-- <p style="text-align: center;" class="h5 h5p">If you would like to know more, please fill the info at the form below.。 <br>Please fill in the necessary information from the form below and send it.</p> -->
             </div>
@@ -323,14 +329,14 @@
     <div class="container-fluit mt-2">
       <div class="row bg-light border p-2">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-          <div class="p-2 bg-light "><p class="h5 text-secondary bg-light h3jp" style="text-align: center;">
+          <div class="p-2 bg-light "><p class="h5 text-secondary bg-light h3jp logomsg" style="text-align: center;">
             お急ぎの場合はお電話にてお問い合わせください。
            </p></div>
               
         </div>
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-3">
           <div class="p-2 bg-light">
-            <p class="bg-light " style="text-align: center;">
+            <p class="bg-light phNo" style="text-align: center;">
               <i class="fa-solid fa-2x fa-phone" style="color: rgb(27, 80, 133);">&nbsp;&nbsp; 06 - 6441 - 3321</i>
             </p>
           </div>

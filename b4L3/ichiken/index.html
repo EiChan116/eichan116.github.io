@@ -62,10 +62,34 @@
         text-align: center;
       }
       .phone {
-        background: url(en/pages/landscape/landscape3.JPG) no-repeat center center fixed;
-        background-size: conver; /*background-size: 100%;*/
+        background: url(en/pages/landscape/landscape3.JPG) repeat center center fixed;
+        /* background-size: cover; background-size: 100%; */
+        object-fit: cover;
         background-attachment: fixed;
         border-radius: 9px;
+      }
+      .phone1 {
+        width: 100%;
+        /* height: 100vh; */
+        height: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.5),#535353), url(en/pages/landscape/landscape3.JPG);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #newsletter1 {
+        width: 100%;
+        /* height: 100vh; */
+        height: auto;
+        background-image: linear-gradient(rgba(0,0,0,0.1),#356ab5), url(en/pages/landscape/landscape5.JPG);
+        background-position: center;
+        /* background-size: cover; */
+        /* background-attachment: fixed; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
       @media (max-width: 768px) {
         .tablet-s {
@@ -84,6 +108,7 @@
           margin-left: 70px;
         }
       }
+
       .ftImg {
         width: 78%;
         /* border: rgb(78, 170, 198) solid 1px; */
@@ -400,13 +425,13 @@
 
 
     <!--start before footer-->
-    <section class="my-" id="newsletter">
+    <section class="my-3" id="newsletter1">
       <div class="container my-5">
         <div class="row justify-content-center py-5">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12  p-2 text-white fs-4 bg-opacity-50">
-            <img src="en/pages/5x5/hrIndexwhite.jpg" class="img-fluid" style="border-radius: 50%; width: 70%; margin-left: 45px; margin-top: 45px;" alt="">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12  p-2 text-white fs-4 bg-opacity-50">
+            <img src="en/pages/5x5/hrIndexwhite.jpg" class="img-fluid hrIndexwhite" style="border-radius: 50%; width: 70%; margin-left: 45px; margin-top: 45px;" alt="">
           </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-secondary p-4 text-white fs-4 bg-opacity-50" style="line-height: 27px; font-family: oswald; text-align: justify;">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 bg-secondary p-4 text-white fs-4 bg-opacity-50" style="line-height: 27px; font-family: oswald; text-align: justify;">
             <p style="text-align: center; margin-top:25px" class="h2 text-white">Message</p>
             <small class="text-white p-content fw-bold"><br>
               Since its founding in 1954, Daiichi Kenzai Co., Ltd. has consistently made sincerity, trust and gratitude the motto of management, and has made efforts and contributed to the development of the interior decoration industry. Thanks to all of you, we will celebrate the 70th anniversary of our founding in 2026. I would like to express my deepest gratitude to all of you for your kindness and support. <br> We will continue to take on challenges as a group of professionals in the interior industry as we approach our 70th and even 100th anniversary. We will continue to take on new challenges by adding “professional work” and “a group that continues to take on challenges” to our existing management motto. <br> <br> Please look forward to Daiichi Kenzai Co., Ltd.
@@ -420,7 +445,8 @@
     <div class="container mb-2">
       <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-          <div class="phone"  style="padding-top: 60px; width: auto; height: 160px;">
+          <!-- <div class="phone"  style="padding-top: 60px; width: auto; height: 160px;"> -->
+          <div class="phone1"  style="padding-top: 10px; width: auto; height: 160px;">
             <p class="h1 text-center text-white"><i class="fa-sharp fa-solid fa-phone-volume"></i> &nbsp; <i class="fa-solid fa-arrow-right"></i> &nbsp;<small class="bg-dark p-2 text-light bg-opacity-50" style="border:3px solid #fff; text-shadow: 5px 2px 2px rgb(48, 55, 58); font-weight: bolder; border-radius: 25px; padding: 7px;"> (06) 6441 - 3321</small></p>
           </div>
         </div>
