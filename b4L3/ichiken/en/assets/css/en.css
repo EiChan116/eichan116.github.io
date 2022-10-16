@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #newsletterSV {
-    background: url(../../pages/landscape/i1.jpg) no-repeat center center fixed;
+    background: url(../../pages/landscape/i1.jpg) repeat center center fixed;
     /* background-size: cover; */
     background-size: 100%;
     height: fit-content;
