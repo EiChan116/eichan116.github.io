@@ -29,6 +29,17 @@
      <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     
     <style>
+      #scrollImg2 {
+            width: 100%;
+            height: 71vh;
+            display: flex; 
+            align-items: center;
+            background-image: linear-gradient(rgba(0,0,0,0.1),#0d2b4e), url(en/pages/landscape/landscape2.JPG);
+            min-height: 380px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+      }
       .h5 {
         font-family: barlow-bold;
       }
@@ -68,6 +79,12 @@
         .shachou-img {
           margin: 36px;
         }
+        .h1 {
+          display: none;
+        }
+        .form {
+          margin-top: 100px;
+        }
       }
 
       @media (max-width:1024px) and (min-width:769px) {
@@ -76,7 +93,11 @@
           margin-left: 52px;
         }
       }
-      
+      @media (max-width:768px) and (min-width:426px) {
+        .right {
+          margin-top: -45px;
+        }
+      }
       .shachou-content {
         /* background-color: #dedfda; */
         /* background-color: #fff; */
@@ -102,7 +123,7 @@
         font-family: nato-bold;;
       }
 
-      #scrollImg1 .ani-div h1{ /*without class will be long line*/
+      #scrollImg2 .ani-div .h1{ /*without class will be long line*/
       position: relative;
       animation-name: example;
       font-weight: bolder;
@@ -187,13 +208,13 @@
     <!--end nav bar-->
 
     <!--start scroll img-->
-    <section class="" id = "scrollImg1">
+    <section class="" id = "scrollImg2"><!--scrollImg1-->
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 text-white text-center ani-div">
-            <h1>第一建材株式会社</h1>
+            <p class="h1">第一建材株式会社</p>
           </div> 
-          <form action="">
+          <form action="" class="form">
             <div class="row g-3 py-5">
               <div class="col-sm">
                 <input type="text" class="form-control text-center" placeholder="〒550-0003" aria-label="Zip" disabled>
@@ -287,7 +308,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
-          <img style="width: 50%;" class="mx-auto d-block" src="en/pages/siteLogo/aboutusEN.png" alt="">
+          <img style="width: 50%;" class="mx-auto d-block" src="en/pages/siteLogo/abtlogo-01.png" alt="">
           <!-- <img style="width: 50%;" class="mx-auto d-block" src="en/pages/image/aboutusEn.png" alt=""> -->
           <br>
           <p style="text-align: center;" class="center h4 text-bg-danger">お問い合わせについて</p><br>

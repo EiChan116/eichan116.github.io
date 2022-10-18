@@ -38,7 +38,7 @@
             height: 71vh;
             display: flex; 
             align-items: center;
-            background-image: linear-gradient(rgba(0,0,0,0.1),#0f0f10), url(en/pages/landscape/1-main.jpg);
+            background-image: linear-gradient(rgba(0,0,0,0.1),#043f61), url(en/pages/landscape/1-main.jpg);
             min-height: 380px;
             background-position: center;
             background-repeat: no-repeat;
@@ -78,6 +78,11 @@
         .shachou-img {
           margin-top: 160px;
           margin-left: 52px;
+        }
+      }
+      @media (max-width:769px) and (min-width:426px) {
+        .right{
+          margin-top: -45px;
         }
       }
 
@@ -185,14 +190,14 @@
             <p class="h1">第一建材株式会社</p>
           </div> 
           <form class="form" action="">
-            <div class="row g-3 py-5">
-              <div class="col-sm-7">
-                <input type="text" class="form-control text-center" placeholder="大阪市西区京町堀2丁目11番23号" aria-label="City" disabled>
+            <div class="row g-3 py-5 input-container">
+              <div class="col-sm-7 input3">
+                <input type="text" class="form-control text-center " placeholder="大阪市西区京町堀2丁目11番23号" aria-label="City" disabled>
               </div>
-              <div class="col-sm">
-                <input type="text" class="form-control text-center" placeholder="大阪" aria-label="State" disabled>
+              <div class="col-sm input2">
+                <input type="text" class="form-control text-center " placeholder="大阪" aria-label="State" disabled>
               </div>
-              <div class="col-sm">
+              <div class="col-sm input1">
                 <input type="text" class="form-control text-center" placeholder="〒550-0003" aria-label="Zip" disabled>
               </div>
             </div>
@@ -297,9 +302,9 @@
               <div class="left"></div>
               <div class="right">
                   <div class="content">
-                      <h1>第一建材</h1>
+                      <h1 class="">Daiichikenzai</h1>
                       <p>
-                          第一建材は1954年創業。創業以来、インテリア・オフィス・マンション・店舗・天井・床・壁などの新築工事など、数多くのサービス事業を行ってきました。
+                        Daiichi Kenzai was founded in 1954. Since our founding, we have been engaged in a number of service businesses, including new construction work for interiors, offices, condominiums, stores, ceilings, floors, and walls.
                       </p>
                       <!-- <P> Daiichikenzai has been established since 1970. Since our founding in 1970, we have been engaged in many service businesses, including new construction work for interiors, offices, condominiums, stores, ceilings, floors, walls, etc.</P> -->
                   </div>

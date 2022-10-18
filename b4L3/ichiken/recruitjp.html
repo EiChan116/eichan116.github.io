@@ -54,7 +54,22 @@
          font-size: 16px;
          text-align: center;
        }
+       #my-form label{
+        font-size: 11px;
+       }
      }
+     @media (max-width:768px) and (min-width:320px) {
+      table {
+        font-size: 14px;
+      }
+      .tableRecruit tr .descTD {
+        letter-spacing: normal;
+      }
+      .tableRecruit tr {
+      height: 50px;
+      color: rgb(155, 157, 157);
+    }
+    }
     </style>
 </head>
 <body>
@@ -128,67 +143,18 @@
                     </div>
                   </div>
                   <div>
-                    <h1 class="mt-4" style="text-align: center;">採用情報</h1>
-                    <hr class="recruitmentLine">
+                    <h1 class="mt-4 text-danger border border-danger border-2 opacity-50" style="text-align: center;">採用情報</h1>
+                    <hr class="recruitmentLine border border-danger border-2 opacity-50">
                     <br>
                     <div class="recruitAR">
-                        <p style="text-align: center;">Application Requirements</p>
+                        <p style="text-align: center;" class="text-danger">Application Requirements</p>
                     </div>
                     <div>
                         <p class="recruitcontent" style="text-align: center;">
                           68年の歴史を超えて。新しい歴史を作る人材を求めています。
                         </p>
                     </div>
-                    <div class="tableRecruit">
-                      <table  class="table table-dark table-hover">
-                          
-                          <tr>
-                              <td> 募集職種 </td>
-                              <td class="descTD"> 営業業務 正社員 </td>
-                          </tr>
-                          <tr>
-                              <td> 募集人員  </td>
-                              <td class="descTD"> 2－3名 </td>
-                          </tr>
-                          <tr>
-                              <td> 応募資格 </td>
-                              <td class="descTD">2023年卒業見込の専門学校生、大学生 及び 中途採用 年齢35歳まで経験者優遇</td>
-                          </tr>
-                          <tr>
-                              <td> 勤務地 </td>
-                              <td class="descTD">大阪市</td>
-                          </tr>
-                          <tr>
-                              <td> 給料 </td>
-                              <td class="descTD"> 当社規定による </td>
-                          </tr>
-                          <tr>
-                              <td> 諸手当 </td>
-                              <td class="descTD"> 通勤手当全額・資格手当・時間外手当 </td>
-                          </tr>
-                          <tr>
-                              <td> 昇給 </td>
-                              <td class="descTD"> 年1回（4月）</td>
-                          </tr>
-                          <tr>
-                              <td> 勤務時間 </td>
-                              <td class="descTD"> 9：00～18：00（昼食時間1時間含む） </td>
-                          </tr>
-                          <tr>
-                              <td> 休日 </td>
-                              <td class="descTD"> 完全週休2日制、祝日、夏季、年末年始休暇 </td>
-                          </tr>
-                          <tr>
-                              <td>福利厚生</td>
-                              <td class="descTD"> 社会保険完備 </td>
-                          </tr>
-                          <tr>
-                              <td> 教育制度 </td>
-                              <td class="descTD"> 資格取得支援 </td>
-                          </tr>
-                          
-                        </table>
-                  </div>
+
                   </div>
             </div>
         </div>
@@ -196,8 +162,66 @@
     <br><br>
     <!--end top img about recruit-->
 
+    <!-- start table -->
+    <div class="container tableRecruit">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
+          <table  class="table table-dark table-hover">
+          
+            <tr>
+                <td> 募集職種 </td>
+                <td class="descTD"> 営業業務 正社員 </td>
+            </tr>
+            <tr>
+                <td> 募集人員  </td>
+                <td class="descTD"> 2－3名 </td>
+            </tr>
+            <tr>
+                <td> 応募資格 </td>
+                <td class="descTD">2023年卒業見込の専門学校生、大学生 及び 中途採用 年齢35歳まで経験者優遇</td>
+            </tr>
+            <tr>
+                <td> 勤務地 </td>
+                <td class="descTD">大阪市</td>
+            </tr>
+            <tr>
+                <td> 給料 </td>
+                <td class="descTD"> 当社規定による </td>
+            </tr>
+            <tr>
+                <td> 諸手当 </td>
+                <td class="descTD"> 通勤手当全額・資格手当・時間外手当 </td>
+            </tr>
+            <tr>
+                <td> 昇給 </td>
+                <td class="descTD"> 年1回（4月）</td>
+            </tr>
+            <tr>
+                <td> 勤務時間 </td>
+                <td class="descTD"> 9：00～18：00（昼食時間1時間含む） </td>
+            </tr>
+            <tr>
+                <td> 休日 </td>
+                <td class="descTD"> 完全週休2日制、祝日、夏季、年末年始休暇 </td>
+            </tr>
+            <tr>
+                <td>福利厚生</td>
+                <td class="descTD"> 社会保険完備 </td>
+            </tr>
+            <tr>
+                <td> 教育制度 </td>
+                <td class="descTD"> 資格取得支援 </td>
+            </tr>
+            
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- end table -->
+
         <!-- start logo -->
-        <div class="container">
+        <div class="container my-5">
           <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12">
               <!-- <img style="width: 50%;" class="mx-auto d-block" src="en/pages/image/recuritJP.png" alt=""> -->
