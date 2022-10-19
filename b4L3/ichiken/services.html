@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <meta name="description" content="第一建材は、内装工事を専門に行う建築会社です。">
     <meta name="keywords" content="内装工事, 軽天ボード, クロス貼り, 石膏ボード, インテリア, リノベーション, LGS, ichiken, construction, renovation, decoration, wall paper, ceiling, floor">
     <meta name="robots" content="index, nofollow">
@@ -28,12 +28,79 @@
      <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
     
     <style>
-      .h5 {
-        font-family: barlow-bold;
-      }
+
+
+          .h5 {
+            font-family: barlow-bold;
+          }
+
+
+          #serviceImg {
+            width: 100%;
+            height: 71vh;
+            /* background: linear-gradient(rgba(0,0,0,0.5),#4b6780), url(en/pages/545emp/5x45emp6.jpg) no-repeat center center fixed; */
+            /* background-position: center; */
+            /* background-size: cover; */
+
+            /* background-attachment: fixed;*/
+            display: flex; 
+            align-items: center;
+            /* justify-content: center;
+            margin-top: 80px; */
+
+            
+            /* The image used */
+            /* background-image: url("en/pages/landscape/landscape5.jpg"); */
+            background-image: linear-gradient(rgba(0,0,0,0.1),#022a3d), url(en/pages/landscape/landscape4.jpg);
+            min-height: 380px;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /* Needed to position the navbar */
+            /* position: relative; */
+
+
+          }
+
+
+          #serviceImg .ani-div {
+            position: absolute;
+            width: 50%;
+            height:50%;
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+            text-align: center;
+            transform: translateX(50%);
+            animation: ani 9s linear infinite;
+            color: #fff;
+          }
+          @keyframes ani {
+          0% {
+              transform: translateX(50%);
+          }
+          50% {
+              transform: translateX(-50%);
+          }
+          }
+
+
       @media (min-width: 320px) and (max-width:375px) {
         .header {
           padding-top: 45px;
+        }
+      }
+      @media (min-width:320px) and (max-width:425px) {
+        .aniLetter {
+          font-size: 12px;
+        }
+      }
+      @media (max-width:768px) and (min-width:426px) {
+        .aniLetter {
+          font-size: 21px;
         }
       }
       .header h1{
@@ -46,9 +113,10 @@
         font-family: quatt-bold;
         color: rgb(41, 67, 109);
       }
-      #newsletter {
+      #newsletterSV {
         height: 550px;
       }
+   
     </style>
 </head>
 <body>
@@ -81,9 +149,9 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="service.html">LGS</a></li>
-                  <li><a class="dropdown-item" href="services.html">Board & Cross</a></li>
+                  <li><a class="dropdown-item" href="services.html">Board/Wallpaper</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Coming soon</a></li>
+                  <li><a class="dropdown-item" href="#">Coming Soon</a></li>
                 </ul>
               </li>
               <li class="nav-item px-2">
@@ -105,20 +173,69 @@
       </nav>
     </nav>
     <!--end nav bar-->
+    
+      <!-- start ani banner -->
+      <section id="serviceImg">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 text-white text-center ani-div">
+              <p class="aniLetter">Daiichikenzai Co, Ltd <br>..... Board/Wallpaper Service..... </p>
+            </div> 
+          </div>
+        </div>
+      </section>
+    <!-- end ani banner  -->
+  
+    <!-- start logo -->
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+          <img style="width: 60%;" class="mx-auto d-block" src="en/pages/siteLogo/serviceEN.png" alt="">
+          <br>
+          <p style="text-align: center;" class="center h4 text-bg-danger">Various Services</p><br>
+          <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
+          <p style="text-align: center;" class="h5 text-secondary"> Discover how our services can sßupport you. <br> Creativity service and always exceeding client expectations.</p> 
+
+        </div>
+      </div>
+    </div>
+    <!-- end aboutUs logo -->
+
     <!--start title-->
     <div class="container header">
       <div class="row">
         <div-col>
-          <h1>SERVICE</h1>
-          <h5>Our Business</h5>
+          <h1 style="color:rgb(1, 78, 93);">SERVICE</h1>
+          <h5 style="color: rgb(90, 91, 92);">Our Business</h5>
         </div-col>
       </div>
     </div>
+
+
+
+
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-8 mx-auto" style="margin-top: 45px;">
+          <h4 class="h5 text-dark">For Board and Wallpaper</h4>
+          
+          <p style="text-align: justify; word-spacing: 3px; font-family:quatt-regular; font-size: 18px;" class="text-secondary">
+            Plasterboard is the most commonly used base material for walls, ceilings and floors. The interior is completed by pasting wallpaper on this base. Plasterboard board is a building material with low unit price, fire prevention, and sound insulation. On top of that, put a wallpaper that mainly plays the role of aesthetics. There are a wide variety of wallpapers, and you can choose the one that matches the purpose of the space. Our role is to carefully manage the installation of boards that have this function and wallpaper that creates a dream in the space.
+          </p>
+
+        </div>
+
+      </div>
+    </div>
     <!--end title-->
-        <!--start description grid pic-->
-        <div class="service-img my-3">
+
+
+
+    <!--start description grid pic-->
+    <div class="service-img my-3">
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row">
                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 py-3">
                     <div class="card">
                       <img src="en/pages/potrait/potrait.jpg" class="card-img-top" alt="...">
@@ -311,7 +428,7 @@
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 py-3">
                     <div class="card">
-                      <img src="en/pages/potrait/potrait21.jpg" class="card-img-top" alt="...">
+                      <img src="en/pages/potrait/potrait24.jpg" class="card-img-top" alt="...">
                       <div class="card-body text-center">
                         <h5 class="card-title fw-bold">Tittle Four</h5>
                         <p class="card-text">Description</p>
@@ -321,29 +438,19 @@
                   </div>
                 </div>
               </div>
-        </div>
-          <!--end description grid pic-->
+    </div>
+    <!--end description grid pic-->
     <!--start before footer-->
-    <section class="section-area" id="newsletter">
-      <div class="container my-5">
-        <div class="row justify-content-center py-5">
-          <!-- <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-success p-2 text-white fs-4 bg-opacity-50">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore rem incidunt vel ritatis ni distinctio accusamus minus, veniam necessitatibus. Voluptatum magnam distinctio pariatur, voluptatem sequi fuga nulla aut ipsam atque dolorum sit, ad aspernatur accusantium sed similique vitae molestias nesciunt. Dicta nobis ad tempore, quae natus unde, praesentium itaque, nisi nam optio iste molestias quas iure expedita consectetur delectus. Nisi odio blanditiis non aut dem?</p>
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 bg-success p-2 text-white fs-4 bg-opacity-50">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni exercitationem corrupti necessitatibus rerum quis. Ullam sint voluptatum ipsa necessitatibus! Quo temporibus optio excepturi, dignissimos deserunt voluptates rem sit odit inventore?</p>
-          </div> -->
-        </div>
-      </div>
-    </section>
-            <!--animation bar-->
-        <div style="margin-bottom: -18px;">
+
+
+    <!--animation bar-->
+    <div style="margin-bottom: -18px;">
           <p class="placeholder-glow">
               <span class="placeholder col-12"></span>
           </p>
-        </div>
-        <!--start footer-->
-        <footer class="customnav-color graycolor">
+    </div>
+    <!--start footer-->
+    <footer class="customnav-color graycolor">
           <div class="container py-3">
             <div class="row gy-5">
               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
@@ -361,23 +468,24 @@
                       View on map
                     </a><br><br>
                   </div>
-                  <a href="en/formIchiken/contactichiken.html" class="text-decoration-none mail">
+                  <a href="#" class="text-decoration-none twitter">
+                    <span class="fa-stack fa-1x">
+                      <i class="fa-solid fa-circle fa-stack-2x"></i>
+                      <!-- <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i> -->
+                      
+                    </span>
+                  </a>
+                  <a href="#" class="text-decoration-none mail">
                     <span class="fa-stack fa-1x">
                       <i class="fa-solid fa-circle fa-stack-2x"></i>
                       <i class="fa-solid fa-brands fa-envelope fa-stack-1x fa-inverse"></i>
                     </span>
                   </a>
-                  <a href="#" class="text-decoration-none twitter">
-                    <span class="fa-stack fa-1x">
-                      <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
-                      
-                    </span>
-                  </a>
+                  
                   <a href="#" class="text-decoration-none instagram">
                     <span class="fa-stack fa-1x">
                       <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class=" fa-brands fa-instagram fa-stack-1x fa-inverse"></i>
+                      <!-- <i class=" fa-brands fa-instagram fa-stack-1x fa-inverse"></i> -->
                     </span>
                   </a>
                   <a href="https://wa.me/817041136136" target="_blank" class="text-decoration-none whatsapp">
@@ -389,17 +497,17 @@
                   <a href="#" class="text-decoration-none line">
                     <span class="fa-stack fa-1x">
                       <i class="fa-solid fa-circle fa-stack-2x"></i>
-                      <i class="fa-brands fa-line fa-stack-1x fa-inverse"></i>
+                      <!-- <i class="fa-brands fa-line fa-stack-1x fa-inverse"></i> -->
                     </span>
                   </a>
                 </div>
               </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+              <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12">
                 <p class="text-uppercase h5 text-white mb-3">Let's Browse!</p>
                 
                 <p class="infoFooter mb-0"><a class="text-white-50" href="index.html">Home</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="service.html">LGS</a></p>
-                <p class="infoFooter mb-0"><a class="text-white-50" href="services.html">BoardNcrosss</a></p>
+                <p class="infoFooter mb-0"><a class="text-white-50" href="services.html">BoardNcross</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="contact.html">Contact</a></p>
                 <p class="infoFooter mb-0"><a class="text-white-50" href="recruitment.html">Recurit</a></p>
                 <!-- <p class="infoFooter mb-0"><a class="text-white-50" href="employee.html">Employee</a></p> -->
@@ -424,7 +532,7 @@
                 <table>
                   <tr>
                     <td><img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 46px;" alt=""></td>
-                    <td><h1 class="text-white" style="font-size: 25px;">第一建材株式会社</h1></td>
+                    <td><h1 class="" style="font-size: 25px;">第一建材株式会社</h1></td>
                   </tr>
                 </table>
               </div>
@@ -439,11 +547,11 @@
     
             </div>
           </div>
-        </footer>
-        <!--end footer-->
+    </footer>
+    <!--end footer-->
 
-        <!-- Modal -->
-        <div>
+    <!-- Modal -->
+    <div>
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
@@ -453,7 +561,7 @@
                 </div>
                 
                   <div class="modal-body">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2024.0613462448293!2d135.48776513881808!3d34.6856417876167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6f85bc0614b%3A0xdd898148e6f567af!2s2-ch%C5%8Dme-11-23%20Ky%C5%8Dmachibori%2C%20Nishi%20Ward%2C%20Osaka%2C%20550-0003%2C%20Japan!5e0!3m2!1sen!2smy!4v1661372059506!5m2!1sen!2smy" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.776740677963!2d135.4890413!3d34.685583799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6f85bc0614b%3A0xdd898148e6f567af!2z5pel5pys44CB44CSNTUwLTAwMDMg5aSn6Ziq5bqc5aSn6Ziq5biC6KW_5Yy65Lqs55S65aCA77yS5LiB55uu77yR77yR4oiS77yS77yT!5e0!3m2!1sja!2smy!4v1664870140491!5m2!1sja!2smy" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                 
                 <div class="modal-footer">
@@ -463,7 +571,7 @@
               </div>
             </div>
           </div>
-        </div>
+    </div>
     <!--endModal-->
 
     <!--bootstrap js-->
