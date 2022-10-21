@@ -4,10 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+    <meta name="description" content="第一建材は、内装工事を専門に行う建築会社です。">
+    <meta name="keywords" content="内装工事, 軽天ボード, クロス貼り, 石膏ボード, インテリア, リノベーション, LGS, ichiken, construction, renovation, decoration, wall paper, ceiling, floor">
+    <meta name="robots" content="index, nofollow">
+    <meta name="copyright" content="Allright reserve">
+    <meta name="language" content="EN">
+    <meta name="generator" content="FreeMetaTagGenerator.com">
+    <title>第一建材株式会社</title>
+
+    
+    <!-- fav icon -->
+    <link rel="icon" href="../pages/image/favicon.png">
+    <link rel="apple-touch-icon" href="../pages/image/favicon.png">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="contactform.css">
+
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="en/assets/bootstrap/css/bootstrap.min.css">
+
+    <!--fontawesome-->
+    <link rel="stylesheet" href="en/assets/fontawesome/css/all.min.css">
+
+    <!--  -->
+
+
+
     <script src="https://kit.fontawesome.com/80a8460996.js" crossorigin="anonymous"></script>
+
+    <style>
+
+@media (max-height: 600px) {
+          .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5),#356ab5), url(../pages/landscape/1-main.jpg);
+            width: 100%;
+            height:auto;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          #my-form-status {
+            font-size: 16px;
+            columns: white;
+            text-align: center;
+          }
+        }
+
+      #my-form-status {
+          font-size: 34px;
+          color: white;
+          text-align: center;
+        }
+    </style>
 </head>
 <body>
   
@@ -18,16 +69,16 @@
             <div class="row">
                 <div class="input-group">
                     <input type="text" name="name" id="name" required><br>
-                    <label for="name"><i class="fas fa-user"></i>Name:</label>
+                    <label for="name"><i class="fas fa-user"></i> &nbsp; Name:</label>
                 </div>
                 <div class="input-group">
                     <input type="number" name="contact" required><br>
-                    <label for="number"><i class="fas fa-phone-square"></i>Ph Number:</label>
+                    <label for="number"><i class="fas fa-phone-square"></i> &nbsp; Ph:</label>
                 </div>
             </div>
                 <div class="input-group">
                     <input type="email" name="email" required><br>
-                    <label for="email"><i class="fa-solid fa-envelope"></i>Email:</label>
+                    <label for="email"><i class="fa-solid fa-envelope"></i>&nbsp; Email:</label>
                 </div>
                 <!-- <div class="input-group">
                     <input name="message" type="text" required></input><br>
@@ -35,7 +86,7 @@
                 </div> -->
                 <div class="input-group">
                     <textarea name="message" id="" cols="30" rows="10" required></textarea>
-                    <label><i class="fas fa-comments"></i>Your message:</label>
+                    <label><i class="fas fa-comments"></i>&nbsp; Your message:</label>
                 </div>
             <button id="my-form-button">Submit</button>
             <p id="my-form-status"></p>
@@ -74,5 +125,9 @@
     }
     form.addEventListener("submit", handleSubmit)
 </script>
+
+
+<!--bootstrap js-->
+<script type="text/javascript" src="en/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
