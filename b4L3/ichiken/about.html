@@ -44,8 +44,6 @@
             background-repeat: no-repeat;
             background-size: cover;
           }
-
-
       .div-container {
         margin: 0;
         display: flex;
@@ -54,18 +52,8 @@
         background-image: url(en/pages/landscape/landscape5.jpg);
       }
 
-      .shachou-img {
-        width: 81%;
-        margin: 70px;
-        /* margin-left: 65px; */
-        border-radius: 9px;
-
-      }
-
       @media (max-width:425px) and (min-width:320px) {
-        .shachou-img {
-          margin: 36px;
-        }
+
         .h1 { /*animation letter*/
           display: none;
         }
@@ -88,28 +76,96 @@
           margin-top: -45px;
         }
       }
+      /* shachou div */
 
-      .shachou-content {
-        /* background-color: #dedfda; */
-        min-height: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-        /* opacity: 70%; */
-      }
+      .shachouImg1 {
+            background-image: url(en/pages/landscape/landscape5.jpg);
+            width: 100%;
+            display: flex;
+           
+        }
+        .profile {
+            width: 90%;
+            margin: 20px;
+            border-radius: 7px;
+            align-items: center;
+        }
+        .right_content {
+            margin: 2px;
+        }
 
-      .shachou-content .span-h2 {
-        color: black;
-        
-      }
-      .shachou-content .p-content {
-        margin: 45px;
-      }
-      .shachou-content small {
-        color: black;
-        font-family: nato-bold;;
-      }
+        @media (max-width:1440px) and (min-width:1025px) {
+            .right_content .h5 {
+                font-size: 45px;
+                padding-left: 25px;
+            }
+            .message {
+                line-height: 27px;
+                padding: 25px;
+                text-align: justify;
+                font-size: 21px;
+            }
+            .profile {
+              margin-left: 34px;
+            }
+        }
+        @media (max-width:1024px) and (min-width:769px) {
+            .h5 {
+                font-size: 27px;
+            }
+            .message {
+                line-height: 21px;
+            }
+            .profile {
+              margin-left: 23px;
+            }
+        }
+        @media (max-width:768px) and (min-width:426px) {
+            .profile {
+                margin-left: 34px;
+            }
+            .h5 {
+                font-size: 45px;
+                padding-left: 34px;
+            }
+            .message {
+                padding: 34px;
+                font-size: 21px;
+                text-align: justify;
+                
+            }
+        }
+        @media (max-width: 990px) and (min-width:769px) {
+            .profile {
+                margin-left: 34px;
+            }
+            .h5 {
+                font-size: 45px;
+                padding-left: 34px;
+            }
+            .message {
+                padding-left: 34px;
+                padding-right: 34px;
+                font-size: 21px;
+                text-align: justify;
+                line-height: 25px;
+            }
+        }
+        @media (max-width:425px) and (min-width:320px) {
+            .h5 {
+                font-size: 25px;
+                padding-left: 21px;
+            }
+            .message {
+                font-size: 14px;
+                line-height: 21px;
+                text-align: justify;
+                padding-left: 21px;
+                padding-right: 21px;
+            }
+        }
+      /* end shachou div */
+
       /* ------ */
       #aboutImg .ani-div {
   
@@ -140,11 +196,6 @@
           <a class="navbar-brand" href="index.html">
             <img src="en/pages/image/ichikenLogoeg2.png" class="logo-responsive w-75" alt="">
           </a>
-
-            
-          <!-- <a class="navbar-brand" href="#">
-            <img class="logo" src="assets/images/logo/" class="w-75" alt="">
-          </a> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -161,7 +212,7 @@
                   <li><a class="dropdown-item" href="service.html">LGS</a></li>
                   <li><a class="dropdown-item" href="services.html">Board/Wallpaper</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Coming soon</a></li>
+                  <li><a class="dropdown-item" href="servicenew.html">Coming soon</a></li>
                 </ul>
               </li>
               <li class="nav-item px-2">
@@ -293,8 +344,6 @@
           <p style="text-align: center;" class="center h4 text-bg-danger">For Daiichikenzai...</p><br>
           <!-- <p style="text-align: center;" class="center h3 text-bg-danger h3p">About Inquiry</p><br> -->
           <p style="text-align: center;" class="h5 text-danger">We aim to create a space where people can live a happier and more creative life.<br>
-            <!-- If you would like to call us, please call us at the number below.</p>  -->
-            <!-- <p style="text-align: center;" class="h5 h5p">If you would like to know more, please fill the info at the form below.。 <br>Please fill in the necessary information from the form below and send it.</p> -->
         </div>
       </div>
     </div>
@@ -316,27 +365,23 @@
           </div>
     </section>
     <!-- end float img -->
-  
-
-    <!-- start director img -->
-    <div class="container-fluit div-container">
+    
+    <!-- start shachou img -->
+    <div class="container shachouImg1">
       <div class="row justify-content-center">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 shachouImg">
-          <img class="img-fluid shachou-img" src="en/pages/5x5/hrNameallgray.jpg" alt="">
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 bg-white bg-opacity-50 shachou-content">
-         
-          <!-- <p class="text-secondary p-content"><span class="h2 span-h2">Message</span><br> <small class="text-body "> -->
-            <p class="p-content" style="text-align: justify;"><span class="h2 text-dark text-opacity-75 span-h2 d-block">Message</span> <small class="text-dark text-opacity-75 h5" style="line-height: 25px; font-family: barlow-medium;">
-            Since its founding in 1954, Daiichi Kenzai Co., Ltd. has consistently made sincerity, trust and gratitude the motto of management, and has made efforts and contributed to the development of the interior decoration industry. Thanks to all of you, we will celebrate the 70th anniversary of our founding in 2026. I would like to express my deepest gratitude to all of you for your kindness and support. <br><br> We will continue to take on challenges as a group of professionals in the interior industry as we approach our 70th and even 100th anniversary. We will continue to take on new challenges by adding “professional work” and “a group that continues to take on challenges” to our existing management motto. <br><br>
-            Please look forward to Daiichi Kenzai Co., Ltd.
-          </small></p>
-        </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+              <img src="en/pages/5x5/hrNameallgray.jpg" class="img-fluid profile" alt="">
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-bg-dark bg-opacity-25">
+              <div class="right_content">
+                  <p style="margin-top: 25px; font-family: barlow-medium;" class="h5 text-white">Message</p>
+                  <p class="text-white message" style="font-family: barlow-medium;">Since its founding in 1954, Daiichi Kenzai Co., Ltd. has consistently made sincerity, trust and gratitude the motto of management, and has made efforts and contributed to the development of the interior decoration industry. Thanks to all of you, we will celebrate the 70th anniversary of our founding in 2026. I would like to express my deepest gratitude to all of you for your kindness and support. <br><br> We will continue to take on challenges as a group of professionals in the interior industry as we approach our 70th and even 100th anniversary. We will continue to take on new challenges by adding “professional work” and “a group that continues to take on challenges” to our existing management motto. <br><br>
+                  Please look forward to Daiichi Kenzai Co., Ltd.</p>
+              </div>
+          </div>
       </div>
     </div>
-
-       <!-- *** -->
-    <!-- end director img -->
+    <!-- end shachou img -->
 
     <!-- start emp img-->
     <div class="container p-4">
@@ -559,7 +604,7 @@
                 </div>
                 
                   <div class="modal-body">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2024.0613462448293!2d135.48776513881808!3d34.6856417876167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6f85bc0614b%3A0xdd898148e6f567af!2s2-ch%C5%8Dme-11-23%20Ky%C5%8Dmachibori%2C%20Nishi%20Ward%2C%20Osaka%2C%20550-0003%2C%20Japan!5e0!3m2!1sen!2smy!4v1661372059506!5m2!1sen!2smy" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.776740677963!2d135.4890413!3d34.685583799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6f85bc0614b%3A0xdd898148e6f567af!2z5pel5pys44CB44CSNTUwLTAwMDMg5aSn6Ziq5bqc5aSn6Ziq5biC6KW_5Yy65Lqs55S65aCA77yS5LiB55uu77yR77yR4oiS77yS77yT!5e0!3m2!1sja!2smy!4v1664870140491!5m2!1sja!2smy" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </div>
                 
                 <div class="modal-footer">
