@@ -93,9 +93,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* index.html က နောက်ခံပုံအကြည်ထည့်တာ */
 #newsletter {
-    background: url(../../pages/landscape/landscape12.jpg) no-repeat center center fixed;
+    background: url(../../pages/landscape/landscape12.jpg) no-repeat center center fixed transparent;
     background-size: cover;
     /* background-attachment: fixed; */
+    /* background-size: cover; */
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
 }
 
 #newsletterSV {
@@ -104,6 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 100%;
     height: fit-content;
     opacity: 90%;
+    
 }
 
 .title {
