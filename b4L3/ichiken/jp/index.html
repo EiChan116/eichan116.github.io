@@ -73,8 +73,12 @@
         border-radius: 7px;
       }
       .phone {
-        background: url(../en/pages/landscape/landscape3.JPG) repeat center center fixed;/*no-repeat and bg-size:cover*/
-        background-size: 100%;
+        background: url(../en/pages/landscape/landscape3.JPG) no-repeat center center fixed transparent;
+        /* background: url(../en/pages/landscape/landscape3.JPG) repeat center center fixed; */
+        /*no-repeat and bg-size:cover*/
+        background-size: cover;
+        -webkit-background-size: 100%;
+        -moz-background-size: cover;
         border-radius: 9px;
       }
       @media (max-width:768px) and (min-width:426px) {
@@ -490,7 +494,7 @@
             <div class="col-xl-4 col-lg-4  col-sm-12 col-12">
               <div class="row justify-content-center">
                 <div class="col-12">
-                  <p class="h5 text-center bg-light text-primary">第一建材株式会社</p>
+                  <p class="h5 text-center bg-light text-primary" style="font-family: nato-bold;">第一建材株式会社</p>
                 </div>
               </div>
               <div class="bg-light">
@@ -500,7 +504,7 @@
             <div class="col-xl-4 col-lg-4  col-sm-12 col-12">
               <div class="row justify-content-center">
                 <div class="col-12">
-                  <p class="h5 text-center bg-light text-primary">会社所在地</p>
+                  <p class="h5 text-center bg-light text-primary" style="font-family: nato-bold;">会社所在地</p>
                 </div>
               </div>
               <div>
@@ -510,7 +514,7 @@
             <div class="col-xl-4 col-lg-4  col-sm-12 col-12">
               <div class="row justify-content-center">
                 <div class="col-12">
-                  <p class="h5 text-center bg-light text-primary">靭公園の近く</p>
+                  <p class="h5 text-center bg-light text-primary" style="font-family: nato-bold;">靭公園の近く</p>
                 </div>
               </div>
               <div class="bg-light">
