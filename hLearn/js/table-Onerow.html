@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellpadding="10" id="myData">
+        <tr>
+
+        </tr>
+    </table>
+    <table border="2" cellpadding="11">
+        <tbody id="myTable">
+
+        </tbody>
+    </table>
+    <button type="button" onclick="show()">Click</button>
+    <button type="button" onclick="table()">Another table</button>
+    <script>
+        function show() {
+            let data = '';
+            for(let i = 1 ; i <= 10; i ++) {
+                data += `<td>${i}</td>`;
+            }
+            document.getElementById('myData').innerHTML = data;
+        }
+        function table() {
+            let rowData = '';
+            rowData += `<tr>`;
+            for(let j = 1; j <= 10; j++) {
+                rowData += `<td>${j}</td>`;
+            }
+            rowData += `</tr>`;
+            document.getElementById('myTable').innerHTML = rowData;
+        }
+    </script>
+</body>
+</html>

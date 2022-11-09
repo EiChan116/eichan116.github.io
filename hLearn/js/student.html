@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student registert form</h1>
+    <form action="" name="myForm">
+        Name : <input type="text" name = "name" id = "name"><br>
+        Age : <input type="number" name="age" id = "age"><br>
+        city : <input type="text" name="city" id = "city"><br>
+        <button type="button" onclick="showData()">Add Student</button>
+    </form>
+    <h1>Student List</h1>
+    <table cellpadding="9" border="1">
+        <thead>
+            <tr>
+                <td>No</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>City</td>
+            </tr>
+        </thead>
+        <tbody id="myData"></tbody>
+    </table>
+    <script>
+        let stdListArr = [];
+        function showData() {
+            let fname = document.myForm.name.value;
+            let fage = document.myForm.age.value;
+            let fcity = document.getElementById('city').value;
+            // console.log(fcity);
+            let std = { //obj
+                stdname : fname,
+                stdage : fage,
+                stdcity : fcity
+            }
+            // console.log(std); obj has to keep in array
+            stdListArr.push(std); //keey data in a array
+            // console.log(stdListArr);//showdata
+            let arrData = '';
+            for(let i = 0; i < stdListArr.length; i++) {
+                let studentList = stdListArr[i];
+                console.log(studentList);
+                arrData += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${studentList.stdname}</td>
+                        <td>${studentList.stdage}</td>
+                        <td>${studentList.stdcity}</td>
+                    </tr>
+                `;
+            }
+            document.getElementById('myData').innerHTML = arrData;
+        }
+    </script>
+</body>
+</html>

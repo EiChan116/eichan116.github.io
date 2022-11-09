@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(img/img.jpeg)no-repeat center center fixed;
+            background-size: cover;
+
+        }
+        form input {
+            outline: none;
+            width:340px;
+            height:25px;
+            border:none;
+            margin:10px;
+        }
+        button {
+            width:348px;
+            height: 27px;
+            margin-left: 63px;
+            border: none;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(114, 185, 247);
+            font-weight: bold;
+            -webkit-text-stroke-width: 1px;
+            /* -webkit-text-stroke-color: #fff; */
+        }
+        .subTotal table tr .td{
+            width:110px;
+            
+        }
+        .subtotalcss {
+            text-align: right;
+            font-size: 25px;
+            color:gray;
+        }
+        #subTotal {
+            font-size:25px;
+            color:red;
+        }
+        .subTotal {
+            background-image: linear-gradient(to bottom right, rgb(114, 185, 247), rgb(248, 248, 234));
+            height: auto;
+            margin-top:25px;
+            width:500px;
+        }
+        .subTotal table {
+            border-collapse:collapse;
+            border-color: rgb(190, 213, 223);
+        }
+        .subTotal table tbody tr:hover {
+            background-color:rgb(203, 227, 252);
+            cursor: pointer;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Expenses</h1>
+    <center>
+    <div style="width:500px; background-color:rgb(184, 217, 247); border-radius: 2px;">
+        <div style="padding-top: 34px;">
+            <form action="" name="myForm">
+                <table>
+                    <tr>
+                        <td>Date : </td>
+                        <td><input type="date" name="date" id="date"></td>
+                    </tr>
+                    <tr>
+                        <td>Amount : </td>
+                        <td><input type="number" name="amt" id="amt"></td>
+                    </tr>
+                    <tr>
+                        <td>Total : </td>
+                        <td><input type="number" name="tot" id="tot"></td>
+                    </tr>
+                </table><br>
+            </form>
+            <button style="margin-bottom: 34px;" type="button" onclick="subTot()">Add</button>
+        </div>
+    </div>
+
+   
+        <div class="subTotal">
+            <table border="1" cellpadding="9" >
+                <thead>
+                    <tr>
+                        <td class="td">No</td>
+                        <td class="td">Date</td>
+                        <td class="td">Amount</td>
+                        <td class="td">Total</td>
+                    </tr>
+                </thead>
+                <tbody id="data">
+        
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="subtotalcss" colspan="3">Sub total</td>
+                        <td id="subTotal"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </center>
+    <script>
+        
+        let dataArr = [];
+        let subTotal = 0;
+        function subTot() {
+            let date = document.myForm.date.value;
+            let amt = document.myForm.amt.value;
+            let tot = document.myForm.tot.value;
+            // console.log(date, amt, tot);
+            subTotal += parseInt(tot);
+            document.getElementById('subTotal').innerHTML = subTotal;
+
+            //obj
+            let obj =  {
+                date : date,
+                amt : amt,
+                total : tot
+            }
+            // console.log(obj);
+            dataArr.push(obj);
+            // console.log(dataArr);
+            let arrData = '';
+            for(let i = 0; i < dataArr.length; i++) {
+                let list = dataArr[i];
+                console.log(list);
+                arrData += `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${list.date}</td>
+                        <td>${list.amt}</td>
+                        <td>${list.total}</td>
+                    </tr>
+                `;
+            }
+            document.getElementById('data').innerHTML = arrData;
+        }
+        
+
+
+    </script>
+</body>
+</html>
