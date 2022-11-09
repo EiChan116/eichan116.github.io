@@ -1,4 +1,4 @@
-<script>
+
         
 let dataArr = [];
 let subTotal = 0;
@@ -37,4 +37,3 @@ function subTot() {
 
 
 
-</script>
