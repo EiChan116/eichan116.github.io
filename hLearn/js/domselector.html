@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>DOM selectors</h1>
+        <p id="p">This is id <i>selector</i></p>
+        <p class="p">This is class 1 selector</p>
+        <p class="p">This is class <i>2</i> selector</p>
+        <p class="p">This is class 3 selectors</p>
+        <p>This is tag selectpr</p>
+        <p>This is query selector</p>
+        <button type="button" onclick="show()">Test</button>
+        <script>
+            function show() {
+                let pId = document.getElementById('p');
+                console.log(pId);
+                console.log("innerhtml" + pId.innerHTML);
+                console.log("innertext" + pId.innerText);
+                let pClass = document.getElementsByClassName('p');
+                console.log(pClass[1].innerHTML);
+                console.log(pClass[0].innerText);
+                console.log(pClass);
+                let pTag = document.getElementsByTagName('p');
+                console.log(pTag);
+                console.log(pTag[0].innerHTML);
+            }
+        </script>
+</body>
+</html>

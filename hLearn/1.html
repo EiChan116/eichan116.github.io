@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js/style.css">
+</head>
+<body>
+    <h1>Daily Expense</h1>
+    <form action="" name="myForm">
+        Date : <input type="date" name="date" id="date"><br>
+        Amount : <input type="number" name="amt" id="amt"><br>
+        Total : <input type="number" name="tot" id="tot"><br>
+        <button type="button" onclick="add()">Add</button>
+    </form>
+    <table border="1" cellpadding="7">
+        <thead>
+            <th>No</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Total</th>
+        </thead>
+        <tbody id="dailyTot"></tbody>
+        <tfoot id="subTotal"></tfoot>
+    </table>
+    <script>
+        let arr = [];
+        let subTot = 0;
+        function add() {
+            let day = document.myForm.date.value;
+            let amount = document.getElementById('amt').value;
+            let total = document.getElementById('tot').value;
+            subTot += parseInt(total);
+            //create obj
+            let obj = {
+                date : day,
+                amt : amount,
+                total : total,
+                subTot : subTot
+            }
+            
+            //create arr
+            arr.push(obj);
+
+
+            //show data at html
+            let data = '';
+            for(let i = 0; i < arr.length; i ++) {
+                data += `
+                    <tr>
+                        <td>${ i + 1 }</td>
+                        <td>${ arr[i].date }</td>
+                        <td>${ arr[i].amt }</td>
+                        <td>${ arr[i].total }</td>
+                    </tr>
+                `;
+            }
+            document.getElementById('dailyTot').innerHTML = data;
+            let data1 = '';
+            data1 += `
+                <tr>
+                    <td colspan = 3>Sub Total</td>
+                    <td>${ subTot }</td>
+                </tr>
+            `;
+            document.getElementById('subTotal').innerHTML = data1;
+        }
+    </script>
+</body>
+</html>
