@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <h1>DOM selectors</h1>
+        <h1 id="a">DOM selectors</h1>
         <p id="p">This is id <i>selector</i></p>
         <p class="p">This is class 1 selector</p>
         <p class="p">This is class <i>2</i> selector</p>
@@ -26,9 +26,19 @@
                 console.log(pClass[1].innerHTML);
                 console.log(pClass[0].innerText);
                 console.log(pClass);
+
+                //tag selector
                 let pTag = document.getElementsByTagName('p');
                 console.log(pTag);
                 console.log(pTag[0].innerHTML);
+
+                //query selector
+                let pQuery = document.querySelector('#p');
+                console.log(pQuery.innerText);
+                let pQueryClass = document.querySelectorAll('p');
+                console.log(pQueryClass);
+                console.log(document.getElementById('a').innerHTML="TESTING");
+                
             }
         </script>
 </body>

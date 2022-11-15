@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Daily Expense</h1>
+    <form action="" name="myForm">
+        <input type="text" id="name" name="name"><br>
+        <input type="date" id="date" name="date"><br>
+        <input type="number" id="amt" name="amt"><br>
+        <input type="number" id="tot" name="tot"><br>
+        <button type="button" onclick = "calculate()">Add</button>
+    </form>
+    <table border="1" cellpedding="7">
+        <thead>
+            <th>No</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amoung</th>
+            <th>Total</th>
+        </thead>
+        <tbody id="setData"></tbody>
+        <tfoot id="total"></tfoot>
+    </table>
+    <script>
+        let arr = [];
+        let tot = 0;
+        function calculate() {
+            let name = document.myForm.name.value;
+            let date = document.getElementById('date').value;
+            let amount = document.myForm.amt.value;
+            let total = document.getElementById('tot').value;
+            // console.log(name, date, amount, total);
+            tot += parseInt(total);
+            // document.getElementById('total').innerHTML = tot;
+            console.log(tot);
+            let obj = {
+                objName : name,
+                objDate : date,
+                objAmt : amount,
+                objTot : total
+            }
+            // console.log(obj);
+
+            arr.push(obj);
+            // console.log(arr);
+
+            let data = '';
+            for( let i = 0; i < arr.length; i++ ) {
+                let a = arr[i];
+                console.log(a);
+                data += `
+                    <tr>
+                        <td>${ i + 1 }</td>
+                        <td>${ a.objName }</td>
+                        <td>${arr[i].objDate}</td>
+                        <td>${arr[i].objAmt}</td>
+                        <td>${a.objTot}</td>
+                    <tr>
+                `;
+            }
+            let setTotal = '';
+            setTotal += `
+                <tr>
+                    <td colspan = 4>Grand Total</td>
+                    <td>${tot}</td>
+            `;
+            document.getElementById('setData').innerHTML = data;
+            document.getElementById('total').innerHTML = setTotal;
+        }
+    </script>
+</body>
+</html>

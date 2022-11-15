@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head">Dom Selector</h1>
+    <h2 id="head1">Dom Selector</h2>
+    <p id="p">This is p TAg</p>
+    <button type="button" onclick="update()">Update</button>
+    <script>
+        function update() {
+            let update = document.getElementById('head');
+            update.innerHTML = "Dom Selector <i>Update</i>";
+            let updateText = document.getElementById('head1');
+            updateText.innerText = "Dom Selector <i>Update</i>";
+            let p = document.getElementById('p');
+            p.innerHTML = "Change p Tag<i>by Id</i>";
+        }
+    </script>
+</body>
+</html>

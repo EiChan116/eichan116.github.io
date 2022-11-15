@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JS Validation</h1>
+    <form method="get" action="aa.html" onsubmit=" return result()">
+        Name : <input type="text" id="name" name="name"><small id="check"><br>
+        Myanmar : <input type="number" id="mm" name="mm"><small id="check"></small><br>
+        English : <input type="number" id="en" name="en"><small id="check"></small><br>
+        Mathematic : <input type="number" id="mt" name="mt"><small id="check"></small><br>
+        Physics : <input type="number" id="ps" name="ps"><small id="check"></small><br>
+        Chemistry : <input type="number" id="chem" name="chem"><small id="check"></small><br>
+        Biology : <input type="number" id="bio" name="bio"><small id="check"></small><br>
+        <input type="submit" value="result">
+    </form>
+    <table border="1" cellpadding="7">
+        <thead>
+            <th>No</th>
+            <th>Name</th>
+            <th>Myanmar</th>
+            <th>English</th>
+            <th>Mathematic</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Biology</th>
+            <th>Total</th>
+        </thead>
+        <tbody id="data"></tbody>
+        <tfoot id="stdResult">
+        </tfoot>
+    </table>
+    <script>
+        let tot = 0; let arr = [];
+        function result() {
+            let name = document.querySelector('#name').value;
+            let mm = document.querySelector('#mm').value;
+            let en = document.querySelector('#en').value;
+            let math = document.querySelector('#mt').value;
+            let ps = document.querySelector('#ps').value;
+            let chem = document.querySelector('#chem').value;
+            let bio = document.querySelector('#bio').value;
+
+            tot = Number(mm) + Number(en) + Number(math) + Number(ps) + Number(chem) + Number(bio);
+
+            let obj = {
+                objName : name,
+                objMm : mm,
+                objEn : en,
+                objMath : math,
+                objPs : ps,
+                objChem : chem,
+                objBio : bio,
+                objTot : tot
+            }
+            
+            arr.push(obj);
+            console.log(arr);
+            
+            let forData = ''; let chk=0;
+            for(let i = 0; i < arr.length; i++ ) {
+                forData += `
+                    <tr>
+                        <td>${ i + 1 }</td>
+                        <td>${ arr[i].objName }</td>
+                        <td>${ arr[i].objMm }</td>
+                        <td>${ arr[i].objEn }</td>
+                        <td> ${ arr[i].objMath } </td>
+                        <td>${ arr[i].objPs }</td>
+                        <td>${ arr[i].objChem }</td>
+                        <td>${ arr[i].objBio }</td>
+                        <td>${ arr[i].objTot }</td>
+                    </tr>
+                `; break;
+            }
+            if(mm <= 50 || en <= 50 || math <= 50 || ps <= 50 || chem <=50 || bio <=50 ) {
+                chk += `
+                    <tr>
+                        <td colspan = 8> Resul</td>
+                        <td>Fail</td>
+                    </tr>
+                `;
+            }
+            else {
+                chk += `
+                    <tr>
+                        <td colspan = 8> Resul</td>
+                        <td>Pass</td>
+                    </tr>
+                `;
+            }
+            document.getElementById('stdResult').innerHTML = chk;
+            document.getElementById('data').innerHTML = forData;
+
+            return false;           
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student's mark checking</h1>
+    <form onsubmit="return studentResult()" action="student.html"  method="get">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name :</td>
+                    <td><input type="text" id="name" name="name"><small id="check"></small></td>
+
+                </tr>
+                <tr>
+                    <td>Myanmar :</td>
+                    <td><input type="number" id="mm" name="mm"><small id="check"></small></td>
+                </tr>
+                <tr>
+                    <td>English :</td>
+                    <td><input type="number" id="eng" name="eng"><small id="check"></small></td>
+                </tr>
+                <tr>
+                    <td>Mathematic :</td>
+                    <td><input type="number" id="mt" name="mt"><small id="check"></small></td>
+                </tr>
+                <tr>
+                    <td>Physic :</td>
+                    <td><input type="number" id="ps" name="ps"><small id="check"></small></td>
+                </tr>
+                <tr>
+                    <td>Chemistry :</td>
+                    <td><input type="number" id="cm" name="cm"><small id="check"></small></td>
+                </tr>
+                <tr>
+                    <td>Biology :</td>
+                    <td><input type="number" id="bio" name="bio"><small id="check"></small></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input style="width:236px;" type="submit" value="result"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <table border="1" cellpadding="7">
+        <thead>
+            <th>No</th>
+            <th>Name</th>
+            <th>Myanmar</th>
+            <th>English</th>
+            <th>Mathematic</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Biology</th>
+            <th>Total</th>
+        </thead>
+        <tbody id="data"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="8">Result</td>
+                <td id="result"></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        let tot = 0;
+        // function validation() {
+        //     let name = document.querySelector('#name').value;
+        //     let myanmar = document.querySelector('#mm').value;
+        //     let english = document.querySelector('#eng').value;
+        //     let math = document.querySelector('#mt').value;
+        //     let physic = document.querySelector('#ps').value;
+        //     let chem = document.querySelector('#cm').value;
+        //     let bio = document.querySelector('#bio').value;
+        //     console.log(name);
+            
+            
+            
+        // }
+        function studentResult() {
+            let name = document.querySelector('#name').value;
+            
+            console.log(name);
+            return false;
+            
+        }
+    </script>
+</body>
+</html>

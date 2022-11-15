@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="stdRestult.js"></script>
+    <style>
+        .error {
+            border-color: red;
+        }
+        #data tr td:last-child{
+            font-size: 21px;
+        }
+        #stdResult tr td:first-child {
+            text-align: right;
+        }
+        #stdResult tr td:last-child {
+            font-size: 21px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Validation</h1>
+    <center>
+    <form method="get" name="myForm" action="aa.html" onsubmit=" return result()">
+        <table>
+            <tr>
+                <td>Name : </td>
+                <td><input type="text" id="name" name="name"><small id="nameErr"></small></td>
+            </tr>
+            <tr>
+                <td>Myanmar : </td>
+                <td><input type="number" id="mm" name="mm"><small id="mmErr"></small></td>
+            </tr>
+            <tr>
+                <td>English : </td>
+                <td><input type="number" id="en" name="en"><small id="enErr"></small></td>
+            </tr>
+            <tr>
+                <td>Mathematic : </td>
+                <td><input type="number" id="mt" name="mt"><small id="mathErr"></small></td>
+            </tr>
+            <tr>
+                <td>Physics : </td>
+                <td><input type="number" id="ps" name="ps"><small id="psErr"></small></td>
+            </tr>
+            <tr>
+                <td>Chemistry : </td>
+                <td><input type="number" id="chem" name="chem"><small id="chemErr"></small></td>
+            </tr>
+            <tr>
+                <td>Biology : </td>
+                <td><input type="number" id="bio" name="bio"><small id="bioErr"></small></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="width:300px; padding: 11px 50px;" ><input type="submit" value="result"></td>
+            </tr>
+        </table>
+        <br>
+        <br>   
+    </form>
+
+    <table border="1" cellpadding="7">
+        <thead>
+            <th>No</th>
+            <th>Name</th>
+            <th>Myanmar</th>
+            <th>English</th>
+            <th>Mathematic</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Biology</th>
+            <th>Total</th>
+        </thead>
+        <tbody id="data"></tbody>
+        <tfoot id="stdResult">
+        </tfoot>
+    </table>
+    </center>
+</body>
+</html>

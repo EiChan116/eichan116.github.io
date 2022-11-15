@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Style Properties</h1>
+
+    <h2 id="myH2">CSS Style Effect With JS</h2>
+    <button type="button" onclick="effectDesign()">CSS Design</button>
+
+    <script>
+        function effectDesign() {
+            let result = document.querySelector('#myH2');
+            result.style.color = 'pink';//can use .style if you want to set css attr
+            result.style.backgroundColor = 'gray';
+            result.style.textAlign = 'center';
+            result.style.border = '9px solid pink';
+            result.style.padding = '25px 0px';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Node</h1>
+        <!-- create textNode  -->
+    <h2 id="h2"></h2>
+    <button onclick="text_node()" type="button">Text Node</button>
+    <br><br>
+
+    <!-- create element -->
+    <button type="button" onclick="create_element()">Create Element</button><br><br>
+
+    <!-- style css with js(set attribute) -->
+    <div id="div">This is a div, please add me beautiful effect!</div><br>
+    <a href="" id="a">Go now</a><br>
+    <button onclick="addEffect()" type="button">Add effect</button><br><br>
+
+    <!-- get attribute -->
+    <p id="get_attribute"  style="background-color: gray;">This is get attribute</p><br>
+    <p id="take_effect">take effect from get_attribute effect</p>
+    <button type="button" onclick="get_attribute()">Get Arrtibute</button><br><br>
+
+    <!-- remove attribute -->
+    <p id="removeAttr" style="color:blueviolet">Remove Attribute</p>
+    <button type="button" onclick="remove()">change color</button>
+
+    <script>
+        //create textNode
+        function text_node() {
+            let val = document.createTextNode("This is created by Text node!");
+            document.getElementById('h2').appendChild(val);
+        }
+
+        //create element
+        function create_element() {
+            let create_element = document.createElement('center');
+            create_element.innerHTML = 'This is center tag created by createElement!';
+            document.body.appendChild(create_element);
+        }
+
+        //set attribute(style css with js)
+        function addEffect() {
+            let select_tag = document.querySelector('#div');
+            select_tag.setAttribute('style', 'color:blue');
+
+            let select_aLink = document.querySelector('#a');
+            select_aLink.setAttribute('href', 'table-num.html');
+        }
+
+        // get attribute
+        function get_attribute() {
+            let get_effect = document.getElementById('get_attribute');
+            console.log(get_effect.getAttribute('id'));
+            
+            let takeeffect = document.getElementById('take_effect');
+            takeeffect.getAttribute('style');
+        }
+
+        //remove attribute
+        function remove() {
+            let selectTag = document.querySelector('#removeAttr');
+            let getColor = selectTag.getAttribute('style');
+            if(getColor == 'color:blueviolet') {
+                selectTag.setAttribute('style','color:pink');
+            }
+            else {
+                selectTag.setAttribute('style','color:blueviolet');
+            }
+        }
+    </script>
+</body>
+</html>

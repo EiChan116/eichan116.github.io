@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="form.js"></script>
+    <style>
+        form li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        h1 {
+            margin-left: 160px;
+            color: gray;
+            text-shadow: 7px 5px 4px rgb(5, 218, 218);
+        }
+       form ul li label {
+        float: left;
+        clear: left;
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+       }
+       form ul li {
+        position: block;
+       }
+       form ul li:last-child input {
+        width: 200px;
+        height: 34px;
+        border-radius: 7px;
+        border-style: none;
+        margin-left: 100px;
+        margin-top: 30px;
+        background-color: rgb(2, 152, 152);
+        color: rgb(239, 190, 207);
+        font-size: large;
+       }
+    </style>
+</head>
+<body onload="document.registration.userid.focus();">
+    <h1>Registration Form</h1>
+    <form action="" name="registration" onsubmit="return formValidation()">
+        <ul>
+            <li><label for = "userid">User id: </label></li>
+            <li><input type="text" name = "userid" size = "12"></li>
+            <li><label for="passid">Password: </label></li>
+            <li><input type="text" name="passid" size="12"></li>
+            <li><label for="username">Name: </label></li>
+            <li><input type="text" name="username" size="50"></li>
+            <li><label for="address">Address: </label></li>
+            <li><input type="text" name="address" size="50"></li>
+            <li><label for="country">Country: </label></li>
+            <li>
+                <select name="country" id="">
+                    <option value="default">(Please select a country)</option>
+                    <option value="AF">Austria</option>
+                    <option value="AL">Canada</option>
+                    <option value="JP">Japan</option>
+                    <option value="AD">USA</option>
+                    <option value="EU">Europe</option>
+                    <option value="AS">Russia</option>
+                </select>
+            </li>
+            <li><label for="zip">Zip Code: </label></li>
+            <li><input type="text" name="zip" size="50"></li>
+            <li><label for="email">Email: </label></li>
+            <li><input type="text" name="email" size="50"></li>
+            <li><label for="gander">Gander: </label></li>
+            <li><input type="radio" name="male" value="male"><span>Male</span></li>
+            <li><input type="radio" name="female" value="female"><span>Female</span></li>
+            <li><label for="language">Language: </label></li>
+            <li><input type="checkbox" name="en" value="en" checked><span>English</span></li>
+            <li><input type="checkbox" name="nonen" value="nonen"><span>Non English</span></li>
+            <li><label for="desc">About: </label></li>
+            <li><textarea name="desc" id="desc"></textarea></li>
+            <li><input type="submit" name="submit" value="submit" onclick=""></li>
+        </ul>
+    
+    </form>
+</body>
+</html>

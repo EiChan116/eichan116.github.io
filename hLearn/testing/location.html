@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../js/style.css">
+</head>
+<body>
+    <h1>Location browsing</h1>
+    <center>
+        <button type="button" onclick="go()">Click</button>
+    </center>
+
+    <script>
+        function go() {
+            let loc = confirm("Wanna go to google? if NO, go to local file");
+            if(loc) {
+                document.location.href = "https://www.google.com";
+            }
+            else {
+                document.location.href = "tableSetdata.html";
+            }
+        }
+    </script>
+</body>
+</html>
