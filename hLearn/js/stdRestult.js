@@ -48,42 +48,42 @@ function result() {
            
             myanmar.style.border = '1px solid red';
             
-            mmerr.innerHTML = "* Fill student mark for english"
+            mmerr.innerHTML = "* Fill in the Myanmar score";
             mmerr.style.color='red';
         }
         if(en == '') {
             
             english.style.border = '1px solid red';
             
-            enerr.innerHTML = "* Fill student mark for english"
+            enerr.innerHTML = "* Fill in the English score";
             enerr.style.color='red';
         }
         if(math == '') {
             
             mathematic.style.border='1px solid red';
             
-            mterr.innerHTML="* Fill student mark for Mathematic";
+            mterr.innerHTML="* Fill in the Mathematic score";
             mterr.style.color='red';
         }
         if(ps == '') {
             
             physic.style.border = '1px solid red';
             
-            pserr.innerHTML = "* Fill student mark for english"
+            pserr.innerHTML = "* Fill in the Physic score";
             pserr.style.color='red';
         }
         if(chem == '') {
             
             chemistry.style.border = '1px solid red';
             
-            chemerr.innerHTML = "* Fill student mark for english"
+            chemerr.innerHTML = "* Fill in the Chemistry score";
             chemerr.style.color='red';
         }
         if(bio == '') {
             
             biology.style.border = '1px solid red';
             
-            bioerr.innerHTML = "* Fill student mark for english"
+            bioerr.innerHTML = "* Fill in the Biology score";
             bioerr.style.color='red';
         }
         if(name == '') {
