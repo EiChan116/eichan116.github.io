@@ -17,7 +17,7 @@ function result() {
     let physic = document.querySelector('#ps');
     let chemistry = document.querySelector('#chem');
     let biology = document.querySelector('#bio');
-    
+    let stdname = document.querySelector('#name');
   
     let mmerr = document.querySelector('#mmErr');
     let enerr = document.querySelector('#enErr');
@@ -34,7 +34,7 @@ function result() {
         physic.removeAttribute('style');
         chemistry.removeAttribute('style');
         biology.removeAttribute('style');
-
+        stdname.removeAttribute('style');
         
         mmerr.innerHTML='';
         enerr.innerHTML='';
@@ -87,10 +87,27 @@ function result() {
             bioerr.style.color='red';
         }
         if(name == '') {
+            stdname.style.border = '1px solid red';
             stdNameerr.innerHTML="* Fill student Name!";
             stdNameerr.style.color='red';
         }
         return false;
+    }else {
+        myanmar.removeAttribute('style');
+        english.removeAttribute('style');
+        mathematic.removeAttribute('style');
+        physic.removeAttribute('style');
+        chemistry.removeAttribute('style');
+        biology.removeAttribute('style');
+        stdname.removeAttribute('style');
+
+        mmerr.innerHTML='';
+        enerr.innerHTML='';
+        mterr.innerHTML='';
+        pserr.innerHTML='';
+        chemerr.innerHTML='';
+        bioerr.innerHTML='';
+        stdNameerr.innerHTML='';
     }
     
 
@@ -126,10 +143,10 @@ function result() {
             </tr>
         `; break;
     }
-    if(mm <= 50 || en <= 50 || math <= 50 || ps <= 50 || chem <=50 || bio <=50 ) {
+    if(mm < 50 || en < 50 || math < 50 || ps < 50 || chem < 50 || bio < 50 ) {
         chk += `
             <tr>
-                <td colspan = 8> Result of ${name} : </td>
+                <td colspan = 8> Exam result of ${name} : </td>
                 <td style = color:red> Fail!</td>
             </tr>
         `;
@@ -137,7 +154,7 @@ function result() {
     else {
         chk += `
             <tr>
-                <td colspan = 8>Result of ${name} : </td>
+                <td colspan = 8>Exam result of ${name} : </td>
                 <td style = color:blue> Pass!</td>
             </tr>
         `;
