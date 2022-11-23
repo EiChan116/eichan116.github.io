@@ -165,9 +165,10 @@ form .btnsubmit {
     margin-top: 20px;
 }
 button:hover {
-    background-color: white;
-    color: #254051;
-    box-shadow: #254051 7px 7px 7px;
+    color: white;
+    background-color: #090f13;
+    box-shadow: #254051 1px 1px 11px;
+    transition: 1s;
 }
 /* end recruit */
 
