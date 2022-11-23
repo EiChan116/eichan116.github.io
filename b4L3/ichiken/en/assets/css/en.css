@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*start slide img adjust */
 .carousel-item img {
-    height: 72vh; /*view heigh*/
+    height: 71vh; /*view heigh*/
     object-fit: cover;
 }
 /* end slide img */
@@ -195,6 +195,9 @@ button:hover {
     color: #fba95c;
 }
 
+#tableImg img{
+    width:36px;
+}
 /* end footer */
 
 /*start recruitment.html */

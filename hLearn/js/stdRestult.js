@@ -48,7 +48,7 @@ function result() {
            
             myanmar.style.border = '1px solid red';
             
-            mmerr.innerHTML = "* Fill in the Myanmar score";
+            mmerr.innerHTML = "* Fill in the Myanmar Score!"
             mmerr.style.color='red';
         }
         if(en == '') {

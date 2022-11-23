@@ -34,7 +34,7 @@
             display: flex; 
             align-items: center;
             background-image: linear-gradient(rgba(0,0,0,0.1),#030303), url(en/pages/landscape/landscape2.JPG);
-            min-height: 380px;
+            min-height: 630px;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -122,11 +122,18 @@
             .message {
                 line-height: 27px;
                 font-size: 14px;
-                padding:16px
+                padding:16px;
+            }
+            .message-header {
+              padding-top:25px;
             }
             .profile {
               margin-left: 21px;
             }
+            .graycolor {
+              font-size:small;
+            }
+            
         }
         @media (max-width:768px) and (min-width:426px) {
             .profile {
@@ -182,6 +189,9 @@
             .logotext {
               font-size: 14px;
             }
+            .graycolor {
+              font-size:small;
+        }
         }
         @media (max-width: 990px) and (min-width:426px) {
           .logotext {
@@ -193,7 +203,7 @@
             font-size: 20px;
           }
         }
-
+       
       /* end shachou div */
 
       #scrollImg2 .ani-div .h1{ /*without class will be long line*/
@@ -228,6 +238,9 @@
       opacity: 80%;
       color: white;
     }
+    .daiichikenzai-footer {
+        font-size:25px;
+      }
     </style>
 </head>
 <body>
@@ -412,15 +425,15 @@
 
     <!-- start shachou img -->
 
-    <div class="container shachouImg1">
+    <div class="container shachouImg1 mt-1 mb-5">
       <div class="row justify-content-center">
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
               <img src="en/pages/5x5/hrNameallgray.jpg" class="img-fluid profile" alt="">
           </div>
           <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-bg-dark bg-opacity-25">
               <div class="right_content">
-                  <p style="margin-top: 25px; font-family: barlow-medium;" class="h5 text-white">ご挨拶</p>
-                  <p class="text-white message" style="font-family: barlow-medium;">Since its 第一建材株式会社は、昭和29年の創立以来一貫して、誠実・信頼・感謝を経営のモットーとし、内装業の発展に尽力・寄与してまいりました。お陰様で令和6年に創立70周年を迎えるに至ります。これも偏に皆様方のご厚情とご支援の賜物と深く感謝申し上げております。<br>
+                  <p style="margin-top: 25px; font-family: barlow-medium;" class="h5 message-header text-white">ご挨拶</p>
+                  <p class="text-white message" style="font-family: barlow-medium;">第一建材株式会社は、昭和29年の創立以来一貫して、誠実・信頼・感謝を経営のモットーとし、内装業の発展に尽力・寄与してまいりました。お陰様で令和6年に創立70周年を迎えるに至ります。これも偏に皆様方のご厚情とご支援の賜物と深く感謝申し上げております。<br>
                       当社は、来る70周年に向け、そして、更に100周年に向け、内装業のプロフェッショナル集団として挑戦を続けてまいります。従来の経営のモットーに『プロフェッショナルの仕事』『挑戦し続ける集団』を新たに加え、挑戦を続けます。<br><br>
                       第一建材株式会社に、どうぞご期待ください。</p>
               </div>
@@ -479,12 +492,12 @@
             </div>
     </div>
       <!-- office staff img -->
-    <div class="container"> 
+    <div class="container mb-5"> 
       <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-8 col-md-12z col-sm-12 col-12">
           
           <!-- <p style="text-align: center;" class="center h4 text-bg-secondary">会社の風景</p><br> -->
-          <p style="text-align: center;" class="center h4 bg-secondary p-2 text-white bg-opacity-50">会社の風景</p><br>
+          <p style="text-align: center;" class="center h4 bg-secondary p-2 mt-5 text-white bg-opacity-50">会社の風景</p><br>
           
         </div>
       </div>
@@ -624,10 +637,10 @@
                   <img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 16%; height:auto;" alt="">
                 <p class="fs-4">第一建材株式会社</p>
                 </div> -->
-                <table>
+                <table id="tableImg"> 
                   <tr>
-                    <td><img src="en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 46px;" alt=""></td>
-                    <td><label for="" style="font-size: 25px;">第一建材株式会社</label></td>
+                    <td><img src="en/pages/image/logoFooterBlue.png" class="img-fluid"  alt=""></td>
+                    <td><label for="" class="daiichikenzai-footer">第一建材株式会社</label></td>
                   </tr>
                 </table>
               </div>

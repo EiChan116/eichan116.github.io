@@ -39,7 +39,7 @@
             display: flex; 
             align-items: center;
             background-image: linear-gradient(rgba(0,0,0,0.1),#022a3d), url(../en/pages/landscape/landscape4.jpg);
-            min-height: 380px;
+            min-height: 630px;
 
             /* Center and scale the image nicely */
             background-position: center;
@@ -73,6 +73,11 @@
       @media (min-width: 320px) and (max-width:375px) {
         .header {
           padding-top: 45px;
+        }
+      }
+      @media (max-width:768px) and (min-width:426px) {
+        .aniLetter {
+          font-size:25px;
         }
       }
       @media (min-width:320px) and (max-width:425px) {
@@ -467,10 +472,10 @@
                   <p class="mb-0">Saturday: Closed</p>
                   <p class="mb-0">Sunday: Closed</p>
                   <br><br><br>
-                  <table>
+                  <table id="tableImg"> 
                     <tr>
-                      <td><img src="../en/pages/image/logoFooterBlue.png" class="img-fluid" style="width: 46px;" alt=""></td>
-                      <td><h1 style="font-size: 25px;">第一建材株式会社</h1></td>
+                      <td><img src="../en/pages/image/logoFooterBlue.png" class="img-fluid"  alt=""></td>
+                      <td><h1 style="font-size: 21px;">第一建材株式会社</h1></td>
                     </tr>
                   </table>
                 </div>
