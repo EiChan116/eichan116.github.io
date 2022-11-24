@@ -5,8 +5,327 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../sneaker/assets/css/fonts.css">
+    <link rel="stylesheet" href="../sneaker/assets/fontawesome/css/all.min.css">
+    <style>
+        .logo {
+            font-family: edu;
+            font-weight: bolder;
+        }
+        .bg-color {
+            background-color: rgb(47, 75, 75);
+        }
+        .color {
+            color:brown;
+            font-family: roboto-regular;
+            text-transform: uppercase;
+        }
+        @media (max-width:425px) and (min-width:320px) {
+            .div-title h1, p {
+                text-align: justify;
+            }
+            
+        }
+        .chili {
+            color: red;
+        }
+        .gallary {
+            letter-spacing: 0.4em;
+            /* text-align: center; */
+            margin-bottom: 45px;
+            font-weight: 600;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-family: roboto-regular;
+
+        }
+        .gallary-img div img {
+            height:93%;
+        }
+        .about-div .about {
+            line-height: 39px;
+            text-align: justify;
+        }
+
+        @media (max-width:1400px) and (min-width:1123px) {
+            
+        .about-div .about {
+            line-height: 19px;
+            text-align: justify;
+        }
+        }
+        @media (max-width:1124px) and (min-width:769px) {
+            .about-div .about {
+                line-height:22px;
+                font-size: 15px;
+            }
+        }
+        @media (max-width:789px) and (min-width:768px) {
+            .about-div .about {
+                line-height:14px;
+                font-size: 12px;
+            }
+            .about-div h3 {
+                margin-bottom: -10px;
+            }
+        }
+        @media (max-width:998px) and (min-width:790px) {
+            .about-div .about {
+                line-height:14px;
+                font-size: 12px;
+            }
+            .about-div h3 {
+                margin-bottom: -10px;
+            }
+        }
+        @media (max-width:425px) and (min-width:320px) {
+            .about-div .about {
+                line-height:24px;
+                font-size: 16px;
+            }
+        }
+        footer a {
+            text-decoration: none;
+            color:gray;
+        }
+        @media (max-width:767px) and (min-width:320px) {
+            .link {
+                width:70%;
+                font-size:14px;
+                margin-right: 134px;
+            }
+            footer p {
+                font-size:14px;
+                
+            }
+        }
+        .title-div {
+            margin-top:75px;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-color shadow-sm fixed-top">
+        <div class="container">
+            <p class="fs-3 text-white logo">mala<big style="color:rgb(175, 38, 38);">Hotpot</big> </p>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navBar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-brand navbar-collapse" id="navBar">
+                <ul class="navbar-nav ms-auto"><!--from right ms-auto-->
+                    <li class="nav-item me-5"><a href="#" class="nav-link">Gallery</a></li>
+                    <li class="nav-item me-5"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item me-5"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- start title -->
+    <div class="container-fluid mb-5 title-div">
+        <div class="row">
+            <div class="col bg-light div-title p-5">
+                <h1 class="fs-1 fw-bold color">Spicy hotpot</h1>
+                <p class="pt-2">Established in 2016, thefirst "Spicy Spicy Spicy Hot Pot"! Food is any substance to provide.</p>
+                <hr>
+                
+                <p>
+                    <small>Reminisce about the original intenetion and enjoy the spiciness of life. Food us usuallt ti plant or animal origin essential, such as carbohydrates, fats, proteins, vitamins or minerals.</small>
+                </p>
+                <a class="btn btn-outline-danger" href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/">Look at the menu</a>
+            </div>
+        </div>
+    </div>
+    <!-- end title -->
+
+    <!-- start popular food -->
+    <p class="text-center fs-1 color pb-3">Popular Foods</p>
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu1.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Slightly spicy &nbsp; <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">Pepper Fried Chicken Nuggets</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu2.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">extremely spicy <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i> <i class="fa-solid fa-pepper-hot chili"></i> <i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">Spicy Chicken</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card" >
+                    <img src="images/malamenu3.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">extremely spicy&nbsp; <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i><i class="fa-solid fa-pepper-hot chili"></i><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">poached fillet</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu4.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Slightly spicy &nbsp; <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">Salted Egg Fried Chicken Nuggets</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu5.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Slightly spicy &nbsp; <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">Preserved Eggs in Red Oil</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu6.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Spicy dynamic &nbsp; <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">Spicy Lobster</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu7.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Slightly spicy &nbsp; <small>(level) &nbsp;</small><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">fried scallion eggs</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-xl-3 col-md-4 col-sm-6 col-12 py-2">
+                <div class="card">
+                    <img src="images/malamenu8.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Spicy dynamic &nbsp; <small>(level)</small> <i class="fa-solid fa-pepper-hot chili"></i><i class="fa-solid fa-pepper-hot chili"></i> </h5>
+                      <p class="card-text">Red Oil Chao Shou</p>
+                      <a href="#" class="btn btn-outline-danger w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end popular food -->
+
+    <!-- start gallary -->
+    <div class="container my-5">
+        <div class="col-12">
+            <p class="text-center gallary fs-1 color pb-3">gallary</p>
+        </div>
+        <div class="row gallary-img">
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary1.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary1.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary2.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary3.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary4.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary6.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary7.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary8.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                <a href="https://xllmalahotpot.my/%e9%a6%99%e8%be%a3%e8%be%a3%e8%8f%9c%e5%8d%95/"><img src="images/galary9.jpeg" class="img-fluid w-100" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- end gallary -->
+
+    <!-- start about -->
+    <div class="container mb-1">
+        <div class="col-12">
+            <p class="text-center gallary fs-1 color pb-3">about</p>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 py-2">
+                <img src="images/mala.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 about-div py-2">
+                <h3 class="text-secondary pt-2 pb-3">Origin Mala</h3>
+                <p class="about">
+                    Amy's father is a well-known chef and has worked as a full-time chef in Guangxi, Chongqing, and Shenzhen for many years. He returned to China in 2015 to develop, and jointly founded the "Spicy Spicy Spicy Hot Pot" with Amy, which became a hit in Johor Bahru and became popular in the market.
+                    <br><br>
+                    Meal introduction "Spicy and spicy hot pot" is a non-halal delicacy, with about 80 kinds of ingredients, including meat, vegetables, beans, mushrooms, claws, seafood and so on. In order to meet the tastes of different consumers,  spicy fermented bean curd; soup pots include: spicy soup, pork bone soup.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+
+    <!-- start contact -->
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 py-2">
+                <div class="card h-100 py-2">
+                    <h5 class="px-3 py-2 text-secondary" style="font-family: roboto-regular;">Phone</h5>
+                    <p class="px-3 text-secondary" style="font-size: 13px;">0123456789</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 py-2">
+                <div class="card h-100 py-2">
+                    <h5 class="px-3 py-2 text-secondary" style="font-family: roboto-regular;">Email</h5>
+                    <p class="px-3 text-secondary" style="font-size: 13px;">malahotpot@hotmail.com</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 py-2">
+                <div class="card h-100 py-2">
+                    <h5 class="px-3 py-2 text-secondary" style="font-family: roboto-regular;">Address</h5>
+                    <p class="px-3 text-secondary" style="font-size: 13px;">12/Jalan Indah 15/3. Taman bukit indah. 81200 seri raja chulan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end contact -->
+    <footer>
+        <hr class="bg-light col-12">
+      <div class="container py-3">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            <p class="text-secondary ">Copyrights © 2020 ShopiLaunch. All rights reserved.</p>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 text-end link">
+            <a href="#">facebook |</a> 
+            <a href="#">Instagram |</a> 
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
