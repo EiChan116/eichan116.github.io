@@ -27,9 +27,21 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 72px;
     max-width: 250px;
 }
-
+@media(max-width:375px) and (min-width:320px) {
+    .logo-responsive {
+      width: 180px;
+      height: 45px;
+      /* margin-left: 25px; */
+    } 
+     .sticky-top a {
+        font-size:12px;
+      } 
+  }
 
 /* start for language menu */
+.sticky-top {
+    margin: 0px 7px;
+}
 .sticky-top a{
     text-decoration: none; 
     color: #fff;
@@ -40,9 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 /* end for language menu */
 
 /* start logo and menu adjustment */
-.navbar-brand .logo-responsive {
+/* .navbar-brand .logo-responsive {
     margin-left: 25px;
-}
+} */
 
 .collapse ul li .nav-link {
     text-transform: uppercase;

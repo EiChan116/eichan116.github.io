@@ -44,7 +44,7 @@
             object-fit: cover;
         }
         .bg-img {
-            margin-top: 31px;
+            margin-top: 27px;
             /* The image used */
             background-image: url("en/pages/image/contactUs.jpg");
 
@@ -60,16 +60,19 @@
         }
         .topbanner {
             overflow: hidden;
-            /* background-color: #333; */
+            /* padding-top: 111px; */
         }
+        
         .topbanner h1 {
-            margin-top: 16px;
+            margin-top: 66px;
         }
         .topbanner p {
             text-align: center;
             color: aliceblue;
             word-spacing: 2px;
             font-size: 27px;
+            padding:45px 0px;
+            margin-top: 70px;
         }
         .topbanner hr {
             margin: auto;
@@ -78,6 +81,7 @@
             border: none; 
             background-color: aliceblue; 
         }
+        
         @media (min-width: 320px) and (max-width: 375px) {  
         .bg-img {
             padding-top: 55px;
@@ -91,6 +95,12 @@
         @media (min-width: 320px) and (max-width: 425px) {
         .phNo{
           font-size: 11px;
+        }
+        .topbanner big {
+          font-size: 21px;
+        }
+        .topbanner p {
+          font-size: 15px;
         }
       }
         @media (min-width: 769px) and (max-width:1024px) {
@@ -158,6 +168,8 @@
 </head>
 <body>
     <!--start nav bar-->
+
+
     
     <nav class="navbar navbar-expand-lg navbar-dark customnav-color fixed-top">
       <nav class="container">
@@ -169,10 +181,6 @@
             <img src="en/pages/image/LOGO-EN-brw.png" class="logo-responsive w-75" alt="">
           </a>
 
-            
-          <!-- <a class="navbar-brand" href="#">
-            <img class="logo" src="assets/images/logo/" class="w-75" alt="">
-          </a> -->
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -195,12 +203,10 @@
               <li class="nav-item px-2">
                 <a class="nav-link" href="about.html">About</a>
               </li>
-              <li class="nav-item px-2"><!--left/right padding-->
+              <li class="nav-item px-2">
                 <a class="nav-link" href="recruitment.html">Recruit</a>
               </li>
-              <!-- <li class="nav-item px-2">
-                <a class="nav-link" href="employee.html">Employee</a>
-              </li> -->
+
               <li class="nav-item px-2">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
@@ -218,11 +224,12 @@
     <div class="bg-img">
                     <div class="container">
                       <div class="topbanner">
-                        <h1 class="fs-1">For more information</h1> <hr>
-                        <p>
-                             <br>
-                            please fill in our contact Form below.
-                            We will be pleased to answer your queries.
+                        
+                        
+                        <p class="bannermsg bg-dark bg-text-white bg-opacity-25">
+                          <big>For more information, <br></big>
+                          please fill in our contact Form below.
+                          We will be pleased to answer your queries.
                         </p>
                       </div>
                     </div>
@@ -470,7 +477,7 @@
                 <table id="tableImg"> 
                   <tr>
                     <td><img src="en/pages/image/logoFooterBlue.png" class="img-fluid"  alt=""></td>
-                    <td><h5 class="text-secondary" style="font-size: 21px;">第一建材株式会社</h5></td>
+                    <td><h5 class="text-secondary" style="font-size: 21px;">&nbsp; 第一建材株式会社</h5></td>
                   </tr>
                 </table>
               </div>
