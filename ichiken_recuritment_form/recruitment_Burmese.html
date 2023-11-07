@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="第一建材は、内装工事を専門に行う建築会社です。">
+    <meta name="keywords" content="内装工事, 軽天ボード, クロス貼り, 石膏ボード, インテリア, リノベーション, LGS, ichiken, construction, renovation, decoration, wall paper, ceiling, floor">
+    <meta name="robots" content="index, nofollow">
+    <meta name="copyright" content="Allright reserve">
+    <meta name="language" content="EN">
+    <meta name="generator" content="FreeMetaTagGenerator.com">
+    <title>第一建材株式会社</title>
+    <!--favicon-->
+    <link rel="icon" href="assets/assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/assets/favicon.png">
+
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="assets/assets/bootstrap/css/bootstrap.min.css">
+
+    <!--fontawesome-->
+    <link rel="stylesheet" href="assets/assets/fontawesome/css/all.min.css">
+
+  
+</head>
+<body>
+<!-- modify this form HTML and place wherever you want your form -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center text-secondary">
+    <h3 class="text-center text-secondary">第一建材株式
+    </h3>
+    <div class="col-md-6 bg-info bg-opacity-10 pt-3 pb-5 px-4 shadow">
+      <h5 class="text-center ">採用情報</h4>
+      <form id="my-form" action="https://formspree.io/f/xvojyvwo" method="POST">
+        <div class="mb-3">
+        <label for="name" class="form-label">名前:</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="名前" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">連絡先番号:</label>
+        <input type="number" class="form-control" name="phone" id="phone" placeholder="電話番号" required>
+      </div>
+
+      <div class="mb-3 py-3 bg-secondary bg-opacity-10 p-3">
+        <label for="gender" class="form-label">性別</label> <br>
+        <div class="form-check d-inline-block px-5">
+          <input class="form-check-input" type="radio" name="genter" value="Female" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            男性
+          </label>
+        </div>
+        <div class="form-check d-inline-block">
+          <input class="form-check-input" type="radio" name="gender" value="Female" id="flexRadioDefault2">
+          <label class="form-check-label" for="flexRadioDefault2">
+            女性
+          </label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="mail" class="form-label">電子メールアドレス</label>
+        <input type="email" class="form-control" name="mail" id="mail" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">メッセージ:</label>
+        <textarea class="form-control" name="message" id="message" rows="3"></textarea>
+      </div>
+        <button class="btn btn-outline-secondary px-5" id="my-form-button">送信</button>
+        <p id="my-form-status"></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Place this script at the end of the body tag -->
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+          
+       
+<!--end recruit form-->
+
+    <!--bootstrap js-->
+    <script type="text/javascript" src="../en/assets/bootstrap/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
