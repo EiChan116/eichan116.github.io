@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>jQuery is Awesome!</h1>
+    <p id="p">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum iure, eos necessitatibus soluta rem ex, laborum incidunt excepturi magni voluptatum cumque doloribus corporis velit at eaque. Exercitationem voluptates quis voluptate impedit aliquam. Dolor architecto voluptatibus nisi, quibusdam harum, quaerat neque dolore quisquam, doloremque tempore quo eligendi et perferendis! Nobis culpa repellat non dolorum facilis inventore laborum accusantium suscipit dignissimos doloribus. Voluptatem saepe vero quas iste ut, quod ratione? Maxime eius ea suscipit explicabo reiciendis fugit iusto, recusandae ad sint voluptatem consectetur, numquam placeat aut! Atque quae iste amet iusto tempore obcaecati beatae tempora dolore non inventore voluptates veniam consequatur quibusdam ducimus consectetur maiores, sunt quia similique dolor blanditiis error? Atque fugit officiis veniam nihil quae consequatur dolore maiores incidunt vero perspiciatis pariatur velit aliquam laudantium, ipsa accusantium est sequi ducimus minus tempora recusandae magni consectetur dolorum, similique enim. Autem fuga esse voluptatum saepe numquam corrupti, ut ex quae. Excepturi dolores provident inventore vel fugiat qui soluta repudiandae quidem modi? Voluptate dolore dolorem autem doloribus expedita? Odit, rerum ipsam libero ut obcaecati exercitationem blanditiis assumenda, vel earum consequatur error recusandae voluptas. Porro, maiores illo quod aliquam quo incidunt cum eaque facilis dolorum vel? Tenetur rem quisquam enim aperiam ipsam debitis officiis.</p>
+    <button id="hide">Hide</button>
+    <button onclick="show()" id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="fadeIn">fade in</button>
+    <button id="fadeOut">fade out</button>
+    <button id="fadeToggle">fade toggle</button>
+    <button onclick="fadeto()" id="fadeTo">fade to</button>
+    <button class="mybtn">myBtn</button>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        function show() {
+            let header = document.querySelector('#hide');
+            console.log(header);
+            let show = document.querySelector('#show');
+            header.style.color='red';
+        }
+        function fadeto() {
+            document.querySelector('#p').style.color='red';
+            
+        }
+        $(document).ready(function() {
+            $('#hide').click(function(e) {
+                $('h1').hide('fade');
+                e.preventDefault();
+            });
+            $('#show').click(function() {
+                $('h1').show('slow');
+            });
+            $('#toggle').click(function() {
+                $('p').toggle(3000);
+            });
+            $('#fadeIn').click(function() {
+                $('p').fadeIn(2000, function() {
+                    alert('the paragraph is fadeIn now')
+                });
+            });
+            $('#fadeOut').click(function() {
+                $('p').fadeOut('slow');
+            });
+            $('#fadeToggle').click(function() {
+                $('p').fadeToggle('slow');
+            });
+            $('#fadeTo').click(function() {
+                $('p').fadeTo(1000,0.3,function() {//callback function 
+                    $('p').fadeTo(1000,1);
+                });
+            });
+            $('.mybtn').on('click', function() {
+                alert('hi this is mybtn');
+                console.log($(this));
+            });
+        });
+        
+    </script>
+</body>
+</html>

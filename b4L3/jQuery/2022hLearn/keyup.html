@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #about {
+            width: 450px;
+            height: 210px;
+            background-color: cadetblue;
+            padding: 11px;
+            margin: 25px;
+            color: #fff;
+        }
+        #power {
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="about"></div>
+    <br>
+    <input type="text" name="power" id="power" value="" style="padding-left:11px" placeholder="type here">
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#power").keyup(function() {
+                $("#about").html($(this).val());
+            });
+            $("#about").click(function() {
+                if($(this).html() === 'you clicked me!') {
+                    $(this).html('clicked me again!');
+                }
+                else {
+                    $(this).html('you clicked me!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

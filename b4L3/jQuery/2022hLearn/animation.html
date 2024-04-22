@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ani {
+            width: 170px;
+            height: auto;
+            background-color: mediumturquoise;
+            padding: 50px 0;
+            text-align: center;
+            color: #fff;
+            position: relative;/*for animation*/
+        }
+    </style>
+</head>
+<body>
+    <p id="ani">Animation</p>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#start").on("click", function() {
+                $("#ani").animate({left:'350px'},1000);
+                $("#ani").animate({top:'350px'},1000);
+                $("#ani").animate({left:'0px'},1000);
+                $("#ani").animate({top:'0px'},1000);
+            });
+        });
+    </script>
+</body>
+</html>

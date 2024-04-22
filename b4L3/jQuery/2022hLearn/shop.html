@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light shadow py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Mala</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Item</a>
+              <a class="nav-link position-relative" href="item.html">shop 
+                <span class="position-absolute top-0 start-100 translate-middle badge px-2 bg-danger  rounded-pill" id="count_number">
+                  </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-5">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-2 col-2">
+                <div class="card">
+                    <img src="2grid.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Item1</h5>
+                      <p class="card-text">$110</p>
+                      <a href="#" class="btn btn-danger addToCard" data-id="1" data-name="item1" data-price="110">Add to Cart</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-2 col-2">
+                <div class="card">
+                    <img src="2grid.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Item2</h5>
+                      <p class="card-text">$120</p>
+                      <a href="#" class="btn btn-danger addToCard" data-id="2" data-name="item2" data-price="120">Add to Cart</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-2 col-2">
+                <div class="card">
+                    <img src="2grid-1.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Item3</h5>
+                      <p class="card-text">$90</p>
+                      <a href="#" class="btn btn-danger addToCard" data-id="3" data-name="item3" data-price="90">Add to Cart</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-2 col-2">
+                <div class="card">
+                    <img src="2grid-1.jpeg" class="card-img-top img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Item4</h5>
+                      <p class="card-text">$150</p>
+                      <a href="#" class="btn btn-danger addToCard" data-id="4" data-name="item4" data-price="150">Add to Cart</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+      </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="count.js"></script>
+    <script>
+        $(document).ready(function() {
+            count();
+            
+            $(".addToCard").click(function(e) {
+                e.preventDefault();
+                let id = $(this).data('id');
+                let name = $(this).data('name');
+                let price = $(this).data('price');
+                console.log(id, name, price);
+
+                let items = {
+                    item_id : id, 
+                    item_name : name, 
+                    item_price : price,
+                    qty : 1, //for count
+                };
+                let itemString = localStorage.getItem("shop");
+                let itemArray;
+                if(itemString == null) {
+                    itemArray = [];
+                } else {
+                    itemArray = JSON.parse(itemString);
+                }
+
+                var status = false;
+                $.each(itemArray, function(i, v) {
+                    if(id == v.item_id) {
+                        status = true;
+                        v.qty++;
+                    }
+                });
+                if(status == false) {
+                    itemArray.push(items);
+                }
+
+                
+                let itemData = JSON.stringify(itemArray);
+                localStorage.setItem("shop",itemData);
+                count();
+            });
+            
+
+        });
+    </script>
+</body>
+</html>

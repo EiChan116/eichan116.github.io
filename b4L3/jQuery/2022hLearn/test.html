@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="user name"><br><br>
+        <input type="text" name="age" id="age" placeholder="age"><br><br>
+        <input type="radio" name="mStatus" id="single" checked value="0">
+        <label for="single">Single</label>
+        <input type="radio" name="mStatus" id="married" value="1">
+        <label for="married">Married</label><br><br>
+        <input type="text" id="spouse" name="spouse" placeholder="spouse name"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <form id="myForm" action="">
+        <input type="text" name="userName" id="userName" placeholder="User Name"><br><br>
+        <label for="item">Choose item</label>
+        <select name="items" id="items">
+            <optgroup label="choose item">
+                <option value="1">Mango</option>
+                <option value="2">Orange</option>
+                <option value="3">Apple</option>
+                <option value="4">Coconut</option>
+            </optgroup>
+        </select><br><br>
+        <label for="dis">discount % </label>
+        <input type="number" name="dis" id="dis" value="15" readonly><br><br>
+        <input type="submit" value="Buy">
+    </form>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#spouse").hide();
+
+            $("#married").on("click", function() {
+                $("#spouse").show();
+            });
+            $("#single").on("click", function() {
+                $("#spouse").hide();
+            });
+            
+
+            //when you click submit btn 
+            $("form").on("submit", function(e) {
+                e.preventDefault();
+                let name = $("input[ name = name ]").val();
+                let age = $("input[ name = 'age']").val();
+                let status = $("input[ name = mStatus]:checked").val();
+                let spouse = $("input[name = spouse]").val();
+                console.log(name, age, status);
+                data = '';
+                if(status == 1) {
+                    data = `Name is ${name} and ${age} year old. Spouse name is ${spouse}.`;
+                    alert(data);
+                }else if( status == 0) {
+                    data = `Name is ${name} and ${age} year old. He is Single.`;
+                    alert(data);
+                }
+            });
+            
+            $("select[name = 'items']").on("change", function() {
+                let selectedItem = $("select[name = 'items'").val();
+                
+                if(selectedItem == 1) {
+                    dis = 15;
+                }
+                else if(selectedItem == 2) {
+                    dis = 5;
+                } else if(selectedItem == 3) {
+                    dis = 25;
+                } else if(selectedItem == 4) {
+                    dis =11;
+                }
+                $("input[ name = 'dis']").val(dis);
+            });
+            $("#myForm").on("submit", function(e) {
+                e.preventDefault();
+                let name = $("input[name = userName]").val();
+                let item = $("select[name = items]").val();
+                console.log(name, item);
+            });
+        });
+    </script>
+</body>
+</html>

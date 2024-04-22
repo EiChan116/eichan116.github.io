@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <ul v-if="students.length > 0">
+            <li v-for="std in adult">
+                {{std.name}}-{{std.age}}-{{std.gender}}
+            </li>
+        </ul>
+    </div>
+    <script>
+        const day4Computed = Vue.createApp ({
+            data() {
+                return {
+                    students : [
+                        { name : 'Alex', age : 21, gender : 'Male'},
+                        { name : 'Jennifer', age : 18, gender : 'Female'},
+                        { name : 'Yasuhiro', age : 16, gender : 'Male'}
+                    ],
+
+                }
+            },
+            mounted() {
+
+            },
+            methods : {
+
+            },
+            computed : {
+                boys() {
+                    return this.students.filter(row => row.gender == 'Male')
+                },
+                adult() {
+                    return this.students.filter(row => row.age >18 )
+                }
+            }
+        }).mount("#app");
+    </script>
+</body>
+</html>

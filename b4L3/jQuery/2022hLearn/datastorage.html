@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="addStudent">
+        <h3>Add new students</h3>
+        Name : <input type="text" name="name" id="name"><br><br>
+        Email : <input type="email" name="email" id="email"><br><br>
+        Phone : <input type="number" name="ph" id="ph"><br><br>
+        Grade : <select name="" id="year">
+            <option value="">Choose graduate</option>
+            <option value="1">B.C.Sc</option>
+            <option value="2">M.C.Sc</option>
+            <option value="3">B.C.Tech</option>
+            <option value="4">M.C.Tech</option>
+        </select><br><br>
+        <button id="add">Add student</button>
+    </div>
+
+    <div id="editStudent">
+        <h3>Edit student's data</h3>
+        <input type="hidden" name="id" id="stdId"><!--edit တဲ့အခါ id နဲ့သယ်သွားမှာမို့လို့-->
+        Name : <input type="text" name="name" id="edit_name"><br><br>
+        Email : <input type="email" name="email" id="edit_email"><br><br>
+        Phone : <input type="number" name="ph" id="edit_ph"><br><br>
+        Grade : <select name="" id="edit_year">
+            <option value="">Choose graduate</option>
+            <option value="1">B.C.Sc</option>
+            <option value="2">M.C.Sc</option>
+            <option value="3">B.C.Tech</option>
+            <option value="4">M.C.Tech</option>
+        </select><br><br>
+        <button id="edit">Edit student</button>
+    </div>
+    <h3>Student List</h3>
+    <table border="1" cellspacing="0" cellpadding="16">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>#</th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#editStudent").hide();
+
+            $("#add").click(function() {
+                let name = $("#name").val();
+                let email = $("#email").val();
+                let ph = $("#ph").val();
+                let year = $("#year").val();
+                // console.log(name, email, ph, year);
+
+                let students = {
+                    stdName : name, 
+                    stdEmail : email, 
+                    stdPh : ph, 
+                    stdYear : year
+                }
+                // console.log(students);
+                let studentString = localStorage.getItem("students");
+                // let studentArray;
+                if(studentString == null) {
+                    let studentArray = [];
+                } else {
+                    studentArray = JSON.parse(studentString);
+                }
+                studentArray.push(students);
+                console.log(studentArray);
+                let studentData = JSON.stringify(studentArray);
+                localStorage.setItem("students", studentData);
+                getData();
+            });
+
+            getData();
+            function getData() {
+                let getStdData = localStorage.getItem("students");
+                if(getStdData) {
+                    let stuDataArray = JSON.parse(getStdData);
+
+                    let data = ''; let j = 0;
+                    $.each(stuDataArray, function(i, v) {
+                        // console.log(i, v.stdYear);
+                        data += `
+                            <tr>
+                                <td>${++j}</td>  
+                                <td>${v.stdName}</td>
+                                <td>${v.stdEmail}</td>
+                                <td>${v.stdPh}</td>
+                                <td>${v.stdYear}</td>  
+                                <td>
+                                    <button id="edit" data-id="${i}" data-name="${v.stdName}" data-email="${v.stdEmail}" data-ph="${v.stdPh}" data-year="${v.stdYear}">edit</button>
+                                    <button id="del" data-did="${i}">delete</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    $("#tbody").html(data);
+                }
+            }
+
+
+            //table ထဲမှာရှိတဲ့ edit ဆိုတဲ့ btn ကိုနှိပ်တဲ့အခါ
+            $("#tbody").on("click", "#edit", function() {
+                $("#editStudent").show();
+                $("#addStudent").hide();
+
+                let stdId = $(this).data('id');
+                let name = $(this).data('name');
+                let email = $(this).data('email');
+                let ph = $(this).data('ph');
+                let year = $(this).data('year');
+                console.log(stdId, name, email, year);
+
+                //table ထဲက edit btn ကိုနှိပ်ပြီး ယူလာတဲ့ data တွေကို input box ထဲ ပြန်ပြဖို့(တကယ်က ပြပြီး edit လုပ်ဖို့)
+                $("#stdId").val(stdId);
+                $("#edit_name").val(name);
+                $("#edit_email").val(email);
+                $("#edit_ph").val(ph);
+                $("#edit_year").val(year);
+            });
+
+            //div edit btn ကိုနှိပ်တဲ့အခါ
+            $("#edit").click(function(e) {
+                e.preventDefault();
+                //အရင် data လက်ခံရမယ်
+                let id = $("#stdId").val();
+                let name = $("#edit_name").val();
+                let email = $("#edit_email").val();
+                let ph = $("#edit_ph").val();
+                let year = $("#edit_year").val();
+                console.log(id, name, email, ph, year);
+
+                //data ယူပြီးပြီဆိုတော့ တကယ်သွားထည့်မယ်
+                let stdString = localStorage.getItem("students");
+                if(stdString) {
+                    let stdArr = JSON.parse(stdString);
+                    stdArr[id].stdName = name;//ဒါတွေက localstorage name တွေကိုလှမ်းခေါ်တာ from obj data
+                    stdArr[id].stdEmail = email;
+                    stdArr[id].stdPh = ph;
+                    stdArr[id].stdYear = year;
+
+                    let stdData = JSON.stringify(stdArr);
+                    localStorage.setItem("students", stdData);
+                    getData();
+                    $("#editStudent").hide();
+                    $("#addStudent").show();
+                }
+            })
+
+            $("#tbody").on("click", "#del", function() {//calling by pair (nestedနဲ့ဆိုရင် on.clickနဲ့ခေါ်ရမယ် clickန ဲ့အဆင်မပြေပါ)
+                let id = $(this).data('did');
+                console.log(id);
+
+                let del = confirm("Are you sure you want delete?");
+                if(del) {
+                    let stuString = localStorage.getItem("students");
+                    if(stuString) {
+                    let stuArray = JSON.parse(stuString);
+                    stuArray.splice(id, 1);
+                    let stuData = JSON.stringify(stuArray);
+                    localStorage.setItem("students", stuData);
+                    getData();
+                }
+                }
+
+
+            });
+        });
+    </script>
+</body>
+</html>

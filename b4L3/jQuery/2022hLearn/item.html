@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        .total {
+            text-align: right;
+            color:darkblue;
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .res {
+            color:darkblue;
+            font-size: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-light shadow py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Mala</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Item</a>
+              <a class="nav-link position-relative" href="item.html">shop 
+                <span class="position-absolute top-0 start-100 translate-middle badge px-2 bg-danger  rounded-pill" id="count_number">
+                  </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container mt-5">
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <table width="100%" class="mytable" border="1" cellspacing="0" cellpadding="10">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            
+                            <th>Item quantity</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id = "cartitems">
+            
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      </div>
+      <div class="row m-5">
+        <div class="offset-md-4 col-md-4">
+            <div class="d-grid gap-2">
+                <button class="btn btn-secondary order" type="button">Order Now</button>
+            </div>
+        </div>
+      </div>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="count.js"></script>
+    <script>
+        $(document).ready(function() {
+            
+            count();
+            getData();
+            function getData() {
+
+                var cartStr = localStorage.getItem('shop');
+                console.log(cartStr);
+                if(cartStr) {
+                    var cartArr = JSON.parse(cartStr);
+                
+                var data='';
+                var total = 0;
+                let num = 0;
+                $.each(cartArr, function(i, v) {
+                    total += v.qty * v.item_price;
+                    
+
+                    data += `<tr>
+                            <td>${++num}
+                            </td>
+                            <td>${v.item_name}</td>
+                            <td>${v.item_price}</td>
+                            
+                            <td>
+                            <button class = "min btn btn-secondary" data-index = "${i}">-</button> &nbsp;
+                            ${v.qty} &nbsp;
+                            <button class = "max btn btn-secondary" data-index = "${i}">+</button>
+                            </td>
+                            <td>$ ${v.qty * v.item_price}</td>
+                    </tr>`
+                });
+
+                data += `<tr>
+                        <td colspan = "4" class="total">Total: &nbsp; </td>
+                        <td class="res">$${total}</td>
+                </tr>`
+                $("#cartitems").html(data);
+            } else {
+                let data = '';
+                $("#cartitems").html(data);
+                getData();
+                count();
+            }              
+        }
+
+        //min
+        $("#cartitems").on("click", ".min", function() {
+            // alert('hi')
+            let item_index = $(this).data('index');
+            let itemStr = localStorage.getItem('shop');
+            if(itemStr) {
+                let itemArr = JSON.parse(itemStr);
+                $.each(itemArr, function(i, v) {
+                    if(item_index == i) {
+                        v.qty--;
+                        if(v.qty <= 0) {
+                            itemArr.splice(item_index, 1);
+                        }
+                    }
+                });
+                let itemData = JSON.stringify(itemArr);
+                localStorage.setItem('shop', itemData);
+                getData();
+                count();
+            }
+        });
+        //max
+        $("#cartitems").on('click', '.max', function() {
+            let item_index = $(this).data('index');
+           
+            let itemStr = localStorage.getItem('shop');
+            
+            if(itemStr) {
+                let itemArr = JSON.parse(itemStr);
+                $.each(itemArr, function(i, v) {
+                    if(item_index == i) {
+                        v.qty++;
+                    }
+                });
+                let itemData = JSON.stringify(itemArr);
+                localStorage.setItem('shop', itemData);
+                getData();
+                count();
+            }
+            
+        });
+        //btn
+        $(".order").click(function(e) {
+            e.preventDefault();
+            localStorage.clear();
+            getData();
+            count();
+        });
+
+        });
+    </script>
+</body>
+</html>

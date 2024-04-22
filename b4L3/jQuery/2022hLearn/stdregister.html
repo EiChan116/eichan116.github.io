@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="addStudent">
+        <h3>Add new Student</h3>
+        Name : <input type="text" id="name" name="name"><br><br>
+        Email : <input type="email" id="email" name="email"><br><br>
+        Phone : <input type="number" id="ph" name="ph"><br><br>
+        Year : <select name="grade" id="grade">
+            <option value="">Choose graduate</option>
+            <option value="1">B.C.Sc</option>
+            <option value="2">B.C.Tech</option>
+            <option value="3">M.C.Sc</option>
+        </select><br><br>
+        <button id="add">Add Student</button>
+    </div>
+
+    <div id="updateStudent">
+        <h3>Update Student</h3>
+        <input type="hidden" name="id" id="uId">
+        Name : <input type="text" name="name" id="edit_name"><br><br>
+        Email : <input type="email" name="email" id="edit_email"><br><br>
+        Phone : <input type="number" name="ph" id="edit_ph"><br><br>
+        Year : <select name="grade" id="edit_grade">
+            <option value="">Choose graduate</option>
+            <option value="1">B.C.Sc</option>
+            <option value="2">B.C.Tech</option>
+            <option value="3">M.C.Sc</option>
+        </select><br><br>
+        <button id="update">Update Student</button>
+    </div>
+
+    <h3>Students List</h3>
+    <table cellspacing="0" cellpadding="20" border="1">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Graduate</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(function() {
+            getData();
+
+            $("#updateStudent").hide();
+
+
+            $("#add").on('click', function(e) {
+                e.preventDefault();
+                let name = $('#name').val();
+                let email = $("#email").val();
+                let ph = $("#ph").val();
+                let grade = $("#grade").val();
+                console.log(name, email, ph, grade);
+
+                //obj
+                let students = {
+                    stu_name : name,
+                    stu_email : email,
+                    stu_ph : ph,
+                    stu_grade : grade
+                }
+                console.log(students);
+
+                let stuString = localStorage.getItem('students');//getitem name = students
+                console.log(stuString)
+                let stuArray;
+                if(stuString == null) {
+                    stuArray = [];
+                }
+                else {
+                    stuArray = JSON.parse(stuString);//string to array obj
+                }
+                stuArray.push(students);//arrayပြောင်းပြီး arrayထဲထည့်မယ်
+                
+                //to put data into ls(need to change from obj to string back)
+                let stuData = JSON.stringify(stuArray);//obj arr to string
+                localStorage.setItem("students", stuData);//setitem name = students
+                getData();
+            });
+            
+            
+            $("#tbody").on("click", "#edit", function() {
+                $("#updateStudent").show();
+                $("#addStudent").hide();
+
+                //select value from current place
+                let id = $(this).data('id');
+                let name = $(this).data('name');
+                let email = $(this).data('email');
+                let phone = $(this).data('ph');
+                let grade = $(this).data('grade');
+                console.log(id, name, email, phone, grade);
+
+                //put value at the input box
+                $("#uId").val(id);
+                $("#edit_name").val(name);
+                $("#edit_email").val(email);
+                $("#edit_ph").val(phone);
+                $("#edit_grade").val(grade);
+
+            });
+
+            $("#update").click(function(e) {
+                e.preventDefault();
+                //select data from update table input
+                let id = $("#uId").val();
+                let name = $("#edit_name").val();
+                let email = $("#edit_email").val();
+                let phone = $("#edit_ph").val();
+                let grade = $("#edit_grade").val();
+                console.log(id, name, email, phone, grade);
+
+                //to set edit data into table
+                let studentString = localStorage.getItem('students');
+                if(studentString) {
+                    let studentArr = JSON.parse(studentString);
+                    studentArr[id].stu_name = name; //set into obj 
+                    studentArr[id].stu_email = email;
+                    studentArr[id].stu_ph = phone;
+                    studentArr[id].stu_grade = grade;
+
+                    let studentData = JSON.stringify(studentArr);
+                    localStorage.setItem('students', studentData);
+
+                   
+                    getData();
+                }
+            })
+
+
+            getData();
+            function getData() {
+                var stuGetData = localStorage.getItem("students");
+                if(stuGetData) {
+                    var stuDataArr = JSON.parse(stuGetData);
+                    let data = ''; let j = 1;
+                    $.each(stuDataArr, function(i, v) { // data- is attribute
+                        data += `
+                            <tr>
+                                <td>${j++}</td>
+                                <td>${v.stu_name}</td>    
+                                <td>${v.stu_email}</td>
+                                <td>${v.stu_ph}</td>
+                                <td>${v.stu_grade}</td>
+                                <td>
+                                    <button id="edit" data-id="${i}" data-name="${v.stu_name}" data-email="${v.stu_email}" data-ph="${v.stu_ph}" data-grade="${v.stu_grade}">Edit</button>
+                                    <button id="del" data-did = "${i}">Delete</button>
+                                </td> 
+                                
+                            </tr>
+                        `;
+                    });
+                    $("#tbody").html(data);
+                }
+            }
+            $("#tbody").on('click', '#del', function() {
+                let getId = $(this).data('did');
+                console.log(getId);
+
+                let status = confirm('Are you sure you want to delete?');
+                if(status) {
+                    let stuString = localStorage.getItem("students");
+                    if(stuString) {
+                        let stuArray = JSON.parse(stuString);
+                        stuArray.splice(getId, 1);
+                        let stuData = JSON.stringify(stuArray);
+                        localStorage.setItem("students", stuData);
+
+                        getData();
+                    }
+                }   
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" id="name" placeholder="UserName"><br><br>
+        <input type="age" name="age" id="age" placeholder="age"><br><br>
+        <input type="radio" name="chk" id="single" value="0" checked>
+        <label for="single">Single</label>
+        <input type="radio" name="chk" id="marriaged" value="1">
+        <label for="marriaged">Marriaged</label><br><br>
+        <div class="spouse">
+            <input type="text" id="spouse" name="spouse" placeholder="spouse">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        $(function() {
+            $(document).ready(function() {
+                $(".spouse").hide();
+            });
+            $("#single").click(function() {
+                $(".spouse").hide(1000);
+            });
+            $("#marriaged").click(function() {
+                $(".spouse").show(1000);
+            });
+
+            $("form").on("submit", function(e) {
+                e.preventDefault();
+                let name = $("input[name = 'name']").val();
+                let age = $("input[name = 'age']").val();
+                let spouse = $("input[name = 'spouse']").val();
+                let stat = $("input[name='chk']:checked").val();
+                console.log(name, age, stat);
+                let tempData = "";
+                if(stat == 1) {
+                    tempData += `User name is ${name} and ${age} old. Wife name is ${spouse}.`;
+                } 
+                if(stat == 0) {
+                    tempData += `User name is ${name} and ${age} old. And He is single.`;
+                }
+                alert(tempData);
+            });
+        });
+    </script>
+</body>
+</html>

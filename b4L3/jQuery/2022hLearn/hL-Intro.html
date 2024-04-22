@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Im header</h1>
+    <script src="jquery-3.6.1.min.js"></script>
+    <script>
+        let fun = function() { //nameless function
+            alert('hi');
+        }
+        fun();
+        jQuery(document).ready(function() {
+            $('h1').click(function() {
+                $('h1').hide(1000);
+            });
+        });
+    </script>
+</body>
+</html>

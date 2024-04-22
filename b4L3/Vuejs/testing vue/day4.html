@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script><!--api use ဖို့-->
+    <script src="https://unpkg.com/vue@3"></script>
+    
+</head>
+<body>
+    
+    <div id="app">
+        <span v-if="status"><h1>It is true</h1></span>
+        <h2>{{name}}</h2>
+        <button @click="getData">Get Data</button>
+        <!-- <span v-if="item.length > 0">{{item}}</span> -->
+        <div v-if = "item.length > 0">
+            <img :src="data.url" alt="" v-for="data in item">
+        </div>
+
+    </div>
+    
+       <script>
+        const day4 = Vue.createApp ({
+            data() {
+                return {
+                    status: true,
+                    name : 'Toyoda',
+                    items : null, //ဘာမှန်းမသိသေးရင် nullထည့်ထားလို့ရတယ်။ memeapi အတွက်
+                    item : Array(),
+                }
+            }, 
+            mounted () {//အလိုအလျောက်အလုပ်လုပ်တဲ့ default method = mounted();
+                console.log(`The component is now mounted`);
+                this.name = this.name.split('').reverse().join('');//adoyoT
+
+                axios.get("https://api.imgflip.com/get_memes")
+                    .then(response => {
+                        // handle success
+                        console.log(response.data.data.memes);
+                        if(response.data.success == true) {
+                            this.item = response.data.data.memes
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    }) 
+            },
+            methods : {
+                getData() {
+                                   
+                }
+            }
+        }).mount("#app")
+       </script>
+</body>
+</html>
